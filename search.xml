@@ -95,30 +95,6 @@
       </tags>
   </entry>
   <entry>
-    <title>树莓派系统安装和基本配置</title>
-    <url>/posts/52852.html</url>
-    <content><![CDATA[<h2 id="树莓派系统安装、"><a href="#树莓派系统安装、" class="headerlink" title="树莓派系统安装、"></a>树莓派系统安装、</h2><h3 id="需要的工具："><a href="#需要的工具：" class="headerlink" title="需要的工具："></a>需要的工具：</h3><ol>
-<li>树莓派一个</li>
-<li>8G以上SD卡一张</li>
-<li>读卡器</li>
-<li>电脑<h3 id="1-树莓派系统下载"><a href="#1-树莓派系统下载" class="headerlink" title="1. 树莓派系统下载:"></a>1. 树莓派系统下载:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">系统下载地址:https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;raspberry-pi-os-images&#x2F;raspios_armhf&#x2F;images&#x2F;raspios_armhf-2020-12-04&#x2F;2020-12-02-raspios-buster-armhf.zip</span><br></pre></td></tr></table></figure>
-<img src="https://gitee.com/Haikez/images_bed/raw/master/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E5%92%8C%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/20210227081725.png"><a id="more"></a>
-
-</li>
-</ol>
-<h3 id="2-烧录树莓派系统"><a href="#2-烧录树莓派系统" class="headerlink" title="2. 烧录树莓派系统"></a>2. 烧录树莓派系统</h3><h4 id="需要的软件"><a href="#需要的软件" class="headerlink" title="需要的软件:"></a>需要的软件:</h4><p><img src="https://gitee.com/Haikez/images_bed/raw/master/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E5%92%8C%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/20210227081637.png"></p>
-<h4 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址:"></a>下载地址:</h4><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">https:<span class="regexp">//</span>www.balena.io<span class="regexp">/etcher/</span></span><br></pre></td></tr></table></figure>
-<h4 id="烧录镜像"><a href="#烧录镜像" class="headerlink" title="烧录镜像:"></a>烧录镜像:</h4><p><img src="https://gitee.com/Haikez/images_bed/raw/master/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E5%92%8C%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/20210227081652.png"></p>
-<h4 id="烧录完成后重新插拔读卡器"><a href="#烧录完成后重新插拔读卡器" class="headerlink" title="烧录完成后重新插拔读卡器"></a>烧录完成后重新插拔读卡器</h4><h3 id="3-开启ssh服务"><a href="#3-开启ssh服务" class="headerlink" title="3. 开启ssh服务"></a>3. 开启ssh服务</h3><h4 id="新建文件名为ssh的文件。"><a href="#新建文件名为ssh的文件。" class="headerlink" title="新建文件名为ssh的文件。"></a>新建文件名为ssh的文件。</h4><h4 id="将ssh文件拖入SD卡的boot分区。"><a href="#将ssh文件拖入SD卡的boot分区。" class="headerlink" title="将ssh文件拖入SD卡的boot分区。"></a>将ssh文件拖入SD卡的boot分区。</h4><h3 id="4-使树莓派开机自动连接Wi-Fi"><a href="#4-使树莓派开机自动连接Wi-Fi" class="headerlink" title="4. 使树莓派开机自动连接Wi-Fi"></a>4. 使树莓派开机自动连接Wi-Fi</h3><h4 id="新建名为wpa-supplicant-conf的文件。"><a href="#新建名为wpa-supplicant-conf的文件。" class="headerlink" title="新建名为wpa_supplicant.conf的文件。"></a>新建名为wpa_supplicant.conf的文件。</h4><h4 id="编辑文件内容为"><a href="#编辑文件内容为" class="headerlink" title="编辑文件内容为"></a>编辑文件内容为</h4><p><img src="https://gitee.com/Haikez/images_bed/raw/master/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E5%92%8C%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/20210227081703.png"></p>
-<h4 id="将文件wpa-supplicant-conf拖入SD卡的boot分区。"><a href="#将文件wpa-supplicant-conf拖入SD卡的boot分区。" class="headerlink" title="将文件wpa_supplicant.conf拖入SD卡的boot分区。"></a>将文件wpa_supplicant.conf拖入SD卡的boot分区。</h4><h3 id="5-将SD卡插入树莓派开机即可"><a href="#5-将SD卡插入树莓派开机即可" class="headerlink" title="5. 将SD卡插入树莓派开机即可"></a>5. 将SD卡插入树莓派开机即可</h3>]]></content>
-      <categories>
-        <category>树莓派的反击</category>
-      </categories>
-      <tags>
-        <tag>树莓派历练</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SSH秘钥安装到服务器</title>
     <url>/posts/44546.html</url>
     <content><![CDATA[<h2 id="SSH秘钥安装到服务器"><a href="#SSH秘钥安装到服务器" class="headerlink" title="SSH秘钥安装到服务器"></a>SSH秘钥安装到服务器</h2><h3 id="一、本机秘钥生成"><a href="#一、本机秘钥生成" class="headerlink" title="一、本机秘钥生成"></a>一、本机秘钥生成</h3><p>终端输入:</p>
@@ -371,6 +347,30 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
       </tags>
   </entry>
   <entry>
+    <title>树莓派系统安装和基本配置</title>
+    <url>/posts/52852.html</url>
+    <content><![CDATA[<h2 id="树莓派系统安装、"><a href="#树莓派系统安装、" class="headerlink" title="树莓派系统安装、"></a>树莓派系统安装、</h2><h3 id="需要的工具："><a href="#需要的工具：" class="headerlink" title="需要的工具："></a>需要的工具：</h3><ol>
+<li>树莓派一个</li>
+<li>8G以上SD卡一张</li>
+<li>读卡器</li>
+<li>电脑<h3 id="1-树莓派系统下载"><a href="#1-树莓派系统下载" class="headerlink" title="1. 树莓派系统下载:"></a>1. 树莓派系统下载:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">系统下载地址:https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;raspberry-pi-os-images&#x2F;raspios_armhf&#x2F;images&#x2F;raspios_armhf-2020-12-04&#x2F;2020-12-02-raspios-buster-armhf.zip</span><br></pre></td></tr></table></figure>
+<img src="https://gitee.com/Haikez/images_bed/raw/master/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E5%92%8C%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/20210227081725.png"><a id="more"></a>
+
+</li>
+</ol>
+<h3 id="2-烧录树莓派系统"><a href="#2-烧录树莓派系统" class="headerlink" title="2. 烧录树莓派系统"></a>2. 烧录树莓派系统</h3><h4 id="需要的软件"><a href="#需要的软件" class="headerlink" title="需要的软件:"></a>需要的软件:</h4><p><img src="https://gitee.com/Haikez/images_bed/raw/master/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E5%92%8C%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/20210227081637.png"></p>
+<h4 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址:"></a>下载地址:</h4><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">https:<span class="regexp">//</span>www.balena.io<span class="regexp">/etcher/</span></span><br></pre></td></tr></table></figure>
+<h4 id="烧录镜像"><a href="#烧录镜像" class="headerlink" title="烧录镜像:"></a>烧录镜像:</h4><p><img src="https://gitee.com/Haikez/images_bed/raw/master/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E5%92%8C%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/20210227081652.png"></p>
+<h4 id="烧录完成后重新插拔读卡器"><a href="#烧录完成后重新插拔读卡器" class="headerlink" title="烧录完成后重新插拔读卡器"></a>烧录完成后重新插拔读卡器</h4><h3 id="3-开启ssh服务"><a href="#3-开启ssh服务" class="headerlink" title="3. 开启ssh服务"></a>3. 开启ssh服务</h3><h4 id="新建文件名为ssh的文件。"><a href="#新建文件名为ssh的文件。" class="headerlink" title="新建文件名为ssh的文件。"></a>新建文件名为ssh的文件。</h4><h4 id="将ssh文件拖入SD卡的boot分区。"><a href="#将ssh文件拖入SD卡的boot分区。" class="headerlink" title="将ssh文件拖入SD卡的boot分区。"></a>将ssh文件拖入SD卡的boot分区。</h4><h3 id="4-使树莓派开机自动连接Wi-Fi"><a href="#4-使树莓派开机自动连接Wi-Fi" class="headerlink" title="4. 使树莓派开机自动连接Wi-Fi"></a>4. 使树莓派开机自动连接Wi-Fi</h3><h4 id="新建名为wpa-supplicant-conf的文件。"><a href="#新建名为wpa-supplicant-conf的文件。" class="headerlink" title="新建名为wpa_supplicant.conf的文件。"></a>新建名为wpa_supplicant.conf的文件。</h4><h4 id="编辑文件内容为"><a href="#编辑文件内容为" class="headerlink" title="编辑文件内容为"></a>编辑文件内容为</h4><p><img src="https://gitee.com/Haikez/images_bed/raw/master/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E5%92%8C%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/20210227081703.png"></p>
+<h4 id="将文件wpa-supplicant-conf拖入SD卡的boot分区。"><a href="#将文件wpa-supplicant-conf拖入SD卡的boot分区。" class="headerlink" title="将文件wpa_supplicant.conf拖入SD卡的boot分区。"></a>将文件wpa_supplicant.conf拖入SD卡的boot分区。</h4><h3 id="5-将SD卡插入树莓派开机即可"><a href="#5-将SD卡插入树莓派开机即可" class="headerlink" title="5. 将SD卡插入树莓派开机即可"></a>5. 将SD卡插入树莓派开机即可</h3>]]></content>
+      <categories>
+        <category>树莓派的反击</category>
+      </categories>
+      <tags>
+        <tag>树莓派历练</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git+Nginx搭建远程Web服务器</title>
     <url>/posts/26452.html</url>
     <content><![CDATA[<h2 id="Git-Nginx搭建远程Web服务器"><a href="#Git-Nginx搭建远程Web服务器" class="headerlink" title="Git+Nginx搭建远程Web服务器"></a>Git+Nginx搭建远程Web服务器</h2><h3 id="一、服务器端配置"><a href="#一、服务器端配置" class="headerlink" title="一、服务器端配置"></a>一、服务器端配置</h3><h4 id="1-创建git文件夹用于存放网站文件"><a href="#1-创建git文件夹用于存放网站文件" class="headerlink" title="1. 创建git文件夹用于存放网站文件"></a>1. 创建git文件夹用于存放网站文件</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span></span><br><span class="line">$ mkdir .myblog</span><br><span class="line">$ <span class="built_in">cd</span> .myblog/</span><br><span class="line">$ git init --bare</span><br></pre></td></tr></table></figure>
@@ -402,6 +402,40 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
       </categories>
       <tags>
         <tag>树莓派服务器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git基操</title>
+    <url>/posts/58639.html</url>
+    <content><![CDATA[<h2 id="Git-—-必须得懂的版本管理工具"><a href="#Git-—-必须得懂的版本管理工具" class="headerlink" title="Git — 必须得懂的版本管理工具"></a>Git — 必须得懂的版本管理工具</h2><h3 id="一、-Git最基本操作"><a href="#一、-Git最基本操作" class="headerlink" title="一、 Git最基本操作"></a>一、 Git最基本操作</h3><h4 id="1-初始化git文件夹-—-git-init"><a href="#1-初始化git文件夹-—-git-init" class="headerlink" title="1. 初始化git文件夹 — git init"></a>1. 初始化git文件夹 — git init</h4><p>设项目文件夹为gittest</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> gittest        <span class="comment">#cd到项目文件夹</span></span><br><span class="line">$ git init          <span class="comment">#初始化git文件夹</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-查看当前仓库状态-—-git-status"><a href="#2-查看当前仓库状态-—-git-status" class="headerlink" title="2. 查看当前仓库状态 — git status"></a>2. 查看当前仓库状态 — git status</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/Haikez/images_bed/raw/master/Git%E5%9F%BA%E6%93%8D/20210227082934.png"></p>
+<h4 id="3-添加更改（追踪）-—-git-add"><a href="#3-添加更改（追踪）-—-git-add" class="headerlink" title="3. 添加更改（追踪） — git add ."></a>3. 添加更改（追踪） — git add .</h4><a id="more"></a>
+<p><img src="https://gitee.com/Haikez/images_bed/raw/master/Git%E5%9F%BA%E6%93%8D/20210227083004.png"></p>
+<h4 id="4-查看更改内容-—-git-diff"><a href="#4-查看更改内容-—-git-diff" class="headerlink" title="4. 查看更改内容 — git diff"></a>4. 查看更改内容 — git diff</h4><p><img src="https://gitee.com/Haikez/images_bed/raw/master/Git%E5%9F%BA%E6%93%8D/20210227083138.png"><br>按q退出</p>
+<h4 id="5-撤回追踪-—-git-reset"><a href="#5-撤回追踪-—-git-reset" class="headerlink" title="5. 撤回追踪 — git reset"></a>5. 撤回追踪 — git reset</h4><p><img src="https://gitee.com/Haikez/images_bed/raw/master/Git%E5%9F%BA%E6%93%8D/20210227083155.png"></p>
+<h4 id="6-提交更改-—-git-commit"><a href="#6-提交更改-—-git-commit" class="headerlink" title="6. 提交更改 — git commit"></a>6. 提交更改 — git commit</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git commit -m <span class="string">&quot;本次提交的描述&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git commit -a     <span class="comment">#自动添加并提交已追踪的修改</span></span><br></pre></td></tr></table></figure>
+<h4 id="7-设置一些不提交的文件-—-创建-gitignore"><a href="#7-设置一些不提交的文件-—-创建-gitignore" class="headerlink" title="7. 设置一些不提交的文件 — 创建.gitignore"></a>7. 设置一些不提交的文件 — 创建.gitignore</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git rm --cached 文件名        <span class="comment">#删除已经存在的追踪</span></span><br><span class="line">$ vim .gitignore        <span class="comment">#在该文件下写入不想提交的文件名称</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/Haikez/images_bed/raw/master/Git%E5%9F%BA%E6%93%8D/20210227083210.png"><br>在.gitignore文件中写入不想提交的文件名<br><img src="https://gitee.com/Haikez/images_bed/raw/master/Git%E5%9F%BA%E6%93%8D/20210227083218.png"><br>git status 查看追踪列表中少了 “nocommit.md”<br><img src="https://gitee.com/Haikez/images_bed/raw/master/Git%E5%9F%BA%E6%93%8D/20210227083233.png"></p>
+<h4 id="8-删除已经存在的追踪"><a href="#8-删除已经存在的追踪" class="headerlink" title="8. 删除已经存在的追踪"></a>8. 删除已经存在的追踪</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git rm --cached 文件名        <span class="comment">#删除已经存在的追踪</span></span><br></pre></td></tr></table></figure>
+<p>从git系统中删除该文件，但依旧存在项目文件夹中，只是停止追踪而已。</p>
+<h3 id="二、Git分支-—-不同的时间线"><a href="#二、Git分支-—-不同的时间线" class="headerlink" title="二、Git分支 — 不同的时间线"></a>二、Git分支 — 不同的时间线</h3><p>设新分支名为: newbranch</p>
+<h4 id="1-添加新的分支"><a href="#1-添加新的分支" class="headerlink" title="1. 添加新的分支"></a>1. 添加新的分支</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git branch newbranch</span><br></pre></td></tr></table></figure>
+<h4 id="2-查看分支"><a href="#2-查看分支" class="headerlink" title="2. 查看分支"></a>2. 查看分支</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git branch        <span class="comment">#查看当前项目分支有哪些</span></span><br></pre></td></tr></table></figure>
+<h4 id="3-切换分支"><a href="#3-切换分支" class="headerlink" title="3. 切换分支"></a>3. 切换分支</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git checkout newbranch</span><br></pre></td></tr></table></figure>
+<h4 id="4-合并分支"><a href="#4-合并分支" class="headerlink" title="4. 合并分支"></a>4. 合并分支</h4><p>在当前分支执行:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git merge 另一个分支名称</span><br></pre></td></tr></table></figure>
+<h4 id="5-删除分支"><a href="#5-删除分支" class="headerlink" title="5. 删除分支"></a>5. 删除分支</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git branch -d newbranch       <span class="comment">#删除已经合并或提交的分支</span></span><br><span class="line">$ git branch -D newbranch2      <span class="comment">#强制删除分支</span></span><br></pre></td></tr></table></figure>
+<h3 id="三、Git的提交"><a href="#三、Git的提交" class="headerlink" title="三、Git的提交"></a>三、Git的提交</h3><h4 id="1-指定远程仓库"><a href="#1-指定远程仓库" class="headerlink" title="1. 指定远程仓库"></a>1. 指定远程仓库</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git remote add origin https://github......       </span><br></pre></td></tr></table></figure>
+<h4 id="2-推送到远程端"><a href="#2-推送到远程端" class="headerlink" title="2. 推送到远程端"></a>2. 推送到远程端</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git push --set-upstream origin master</span><br></pre></td></tr></table></figure>
+<h4 id="3-下载更新远程端的项目"><a href="#3-下载更新远程端的项目" class="headerlink" title="3. 下载更新远程端的项目"></a>3. 下载更新远程端的项目</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git pull</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>是基操啦</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -517,40 +551,6 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
       </tags>
   </entry>
   <entry>
-    <title>Git基操</title>
-    <url>/posts/58639.html</url>
-    <content><![CDATA[<h2 id="Git-—-必须得懂的版本管理工具"><a href="#Git-—-必须得懂的版本管理工具" class="headerlink" title="Git — 必须得懂的版本管理工具"></a>Git — 必须得懂的版本管理工具</h2><h3 id="一、-Git最基本操作"><a href="#一、-Git最基本操作" class="headerlink" title="一、 Git最基本操作"></a>一、 Git最基本操作</h3><h4 id="1-初始化git文件夹-—-git-init"><a href="#1-初始化git文件夹-—-git-init" class="headerlink" title="1. 初始化git文件夹 — git init"></a>1. 初始化git文件夹 — git init</h4><p>设项目文件夹为gittest</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> gittest        <span class="comment">#cd到项目文件夹</span></span><br><span class="line">$ git init          <span class="comment">#初始化git文件夹</span></span><br></pre></td></tr></table></figure>
-<h4 id="2-查看当前仓库状态-—-git-status"><a href="#2-查看当前仓库状态-—-git-status" class="headerlink" title="2. 查看当前仓库状态 — git status"></a>2. 查看当前仓库状态 — git status</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure>
-<p><img src="https://gitee.com/Haikez/images_bed/raw/master/Git%E5%9F%BA%E6%93%8D/20210227082934.png"></p>
-<h4 id="3-添加更改（追踪）-—-git-add"><a href="#3-添加更改（追踪）-—-git-add" class="headerlink" title="3. 添加更改（追踪） — git add ."></a>3. 添加更改（追踪） — git add .</h4><a id="more"></a>
-<p><img src="https://gitee.com/Haikez/images_bed/raw/master/Git%E5%9F%BA%E6%93%8D/20210227083004.png"></p>
-<h4 id="4-查看更改内容-—-git-diff"><a href="#4-查看更改内容-—-git-diff" class="headerlink" title="4. 查看更改内容 — git diff"></a>4. 查看更改内容 — git diff</h4><p><img src="https://gitee.com/Haikez/images_bed/raw/master/Git%E5%9F%BA%E6%93%8D/20210227083138.png"><br>按q退出</p>
-<h4 id="5-撤回追踪-—-git-reset"><a href="#5-撤回追踪-—-git-reset" class="headerlink" title="5. 撤回追踪 — git reset"></a>5. 撤回追踪 — git reset</h4><p><img src="https://gitee.com/Haikez/images_bed/raw/master/Git%E5%9F%BA%E6%93%8D/20210227083155.png"></p>
-<h4 id="6-提交更改-—-git-commit"><a href="#6-提交更改-—-git-commit" class="headerlink" title="6. 提交更改 — git commit"></a>6. 提交更改 — git commit</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git commit -m <span class="string">&quot;本次提交的描述&quot;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git commit -a     <span class="comment">#自动添加并提交已追踪的修改</span></span><br></pre></td></tr></table></figure>
-<h4 id="7-设置一些不提交的文件-—-创建-gitignore"><a href="#7-设置一些不提交的文件-—-创建-gitignore" class="headerlink" title="7. 设置一些不提交的文件 — 创建.gitignore"></a>7. 设置一些不提交的文件 — 创建.gitignore</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git rm --cached 文件名        <span class="comment">#删除已经存在的追踪</span></span><br><span class="line">$ vim .gitignore        <span class="comment">#在该文件下写入不想提交的文件名称</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://gitee.com/Haikez/images_bed/raw/master/Git%E5%9F%BA%E6%93%8D/20210227083210.png"><br>在.gitignore文件中写入不想提交的文件名<br><img src="https://gitee.com/Haikez/images_bed/raw/master/Git%E5%9F%BA%E6%93%8D/20210227083218.png"><br>git status 查看追踪列表中少了 “nocommit.md”<br><img src="https://gitee.com/Haikez/images_bed/raw/master/Git%E5%9F%BA%E6%93%8D/20210227083233.png"></p>
-<h4 id="8-删除已经存在的追踪"><a href="#8-删除已经存在的追踪" class="headerlink" title="8. 删除已经存在的追踪"></a>8. 删除已经存在的追踪</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git rm --cached 文件名        <span class="comment">#删除已经存在的追踪</span></span><br></pre></td></tr></table></figure>
-<p>从git系统中删除该文件，但依旧存在项目文件夹中，只是停止追踪而已。</p>
-<h3 id="二、Git分支-—-不同的时间线"><a href="#二、Git分支-—-不同的时间线" class="headerlink" title="二、Git分支 — 不同的时间线"></a>二、Git分支 — 不同的时间线</h3><p>设新分支名为: newbranch</p>
-<h4 id="1-添加新的分支"><a href="#1-添加新的分支" class="headerlink" title="1. 添加新的分支"></a>1. 添加新的分支</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git branch newbranch</span><br></pre></td></tr></table></figure>
-<h4 id="2-查看分支"><a href="#2-查看分支" class="headerlink" title="2. 查看分支"></a>2. 查看分支</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git branch        <span class="comment">#查看当前项目分支有哪些</span></span><br></pre></td></tr></table></figure>
-<h4 id="3-切换分支"><a href="#3-切换分支" class="headerlink" title="3. 切换分支"></a>3. 切换分支</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git checkout newbranch</span><br></pre></td></tr></table></figure>
-<h4 id="4-合并分支"><a href="#4-合并分支" class="headerlink" title="4. 合并分支"></a>4. 合并分支</h4><p>在当前分支执行:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git merge 另一个分支名称</span><br></pre></td></tr></table></figure>
-<h4 id="5-删除分支"><a href="#5-删除分支" class="headerlink" title="5. 删除分支"></a>5. 删除分支</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git branch -d newbranch       <span class="comment">#删除已经合并或提交的分支</span></span><br><span class="line">$ git branch -D newbranch2      <span class="comment">#强制删除分支</span></span><br></pre></td></tr></table></figure>
-<h3 id="三、Git的提交"><a href="#三、Git的提交" class="headerlink" title="三、Git的提交"></a>三、Git的提交</h3><h4 id="1-指定远程仓库"><a href="#1-指定远程仓库" class="headerlink" title="1. 指定远程仓库"></a>1. 指定远程仓库</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git remote add origin https://github......       </span><br></pre></td></tr></table></figure>
-<h4 id="2-推送到远程端"><a href="#2-推送到远程端" class="headerlink" title="2. 推送到远程端"></a>2. 推送到远程端</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git push --set-upstream origin master</span><br></pre></td></tr></table></figure>
-<h4 id="3-下载更新远程端的项目"><a href="#3-下载更新远程端的项目" class="headerlink" title="3. 下载更新远程端的项目"></a>3. 下载更新远程端的项目</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git pull</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>是基操啦</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PicGo+Github白嫖图床</title>
     <url>/posts/2118.html</url>
     <content><![CDATA[<h2 id="PicGo-Github白嫖图床"><a href="#PicGo-Github白嫖图床" class="headerlink" title="PicGo+Github白嫖图床"></a>PicGo+Github白嫖图床</h2><h3 id="一、简介："><a href="#一、简介：" class="headerlink" title="一、简介："></a>一、简介：</h3><h4 id="图床就是个人云图库，我们可以把照片放到图床里，图床就会为照片生成超链接，我们通过浏览器就能访问到里面的照片，非常方便！所以图床几乎成了各大博主开发个人博客的必备工具。但这样的云服务几乎都是收费的。然而Github这个开源的云仓库为免费图床的搭建提供了平台。"><a href="#图床就是个人云图库，我们可以把照片放到图床里，图床就会为照片生成超链接，我们通过浏览器就能访问到里面的照片，非常方便！所以图床几乎成了各大博主开发个人博客的必备工具。但这样的云服务几乎都是收费的。然而Github这个开源的云仓库为免费图床的搭建提供了平台。" class="headerlink" title="图床就是个人云图库，我们可以把照片放到图床里，图床就会为照片生成超链接，我们通过浏览器就能访问到里面的照片，非常方便！所以图床几乎成了各大博主开发个人博客的必备工具。但这样的云服务几乎都是收费的。然而Github这个开源的云仓库为免费图床的搭建提供了平台。"></a>图床就是个人云图库，我们可以把照片放到图床里，图床就会为照片生成超链接，我们通过浏览器就能访问到里面的照片，非常方便！所以图床几乎成了各大博主开发个人博客的必备工具。但这样的云服务几乎都是收费的。然而Github这个开源的云仓库为免费图床的搭建提供了平台。</h4><p><img src="https://gitee.com/Haikez/images_bed/raw/master/PicGo-Github%E7%99%BD%E5%AB%96%E5%9B%BE%E5%BA%8A/20210227085305.jpg"></p>
@@ -661,6 +661,19 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
       </categories>
   </entry>
   <entry>
+    <title>Java构造方法</title>
+    <url>/posts/55491.html</url>
+    <content><![CDATA[<h1 id="Java构造方法"><a href="#Java构造方法" class="headerlink" title="Java构造方法"></a>Java构造方法</h1><h2 id="定义-构造方法是在类的实例化时自动调用的方法。"><a href="#定义-构造方法是在类的实例化时自动调用的方法。" class="headerlink" title="定义: 构造方法是在类的实例化时自动调用的方法。"></a>定义: 构造方法是在类的实例化时自动调用的方法。</h2><h2 id="特点"><a href="#特点" class="headerlink" title="特点:"></a>特点:</h2><h3 id="1-必须与类的名字相同"><a href="#1-必须与类的名字相同" class="headerlink" title="1.必须与类的名字相同"></a>1.必须与类的名字相同</h3><h3 id="2-必须没有返回值类型，也不能写void"><a href="#2-必须没有返回值类型，也不能写void" class="headerlink" title="2.必须没有返回值类型，也不能写void"></a>2.必须没有返回值类型，也不能写void</h3><h2 id="一、无参构造方法"><a href="#一、无参构造方法" class="headerlink" title="一、无参构造方法"></a>一、无参构造方法</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//一个类即使什么都不写也会存在一个无参构造方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name=<span class="string">&quot;张三&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="二、有参构造（在定义了一个有参构造方法时，无参构造必须得写！！！）"><a href="#二、有参构造（在定义了一个有参构造方法时，无参构造必须得写！！！）" class="headerlink" title="二、有参构造（在定义了一个有参构造方法时，无参构造必须得写！！！）"></a>二、有参构造（在定义了一个有参构造方法时，无参构造必须得写！！！）</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span></span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name=name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//在定义了一个有参构造方法时，无参构造必须得写</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Person person = <span class="keyword">new</span> Person(<span class="string">&quot;张三&quot;</span>);</span><br><span class="line">        <span class="comment">//1.使用new关键字，本质就是在调用构造方法</span></span><br><span class="line">        <span class="comment">//2.构造方法主要是用于初始化值 </span></span><br><span class="line">    &#125; </span><br><span class="line">    System.out.println(person.name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="三、IDEA快捷生成有-无参构造方法"><a href="#三、IDEA快捷生成有-无参构造方法" class="headerlink" title="三、IDEA快捷生成有/无参构造方法"></a>三、IDEA快捷生成有/无参构造方法</h2><h3 id="Mac下的快捷键-ctrl-enter"><a href="#Mac下的快捷键-ctrl-enter" class="headerlink" title="Mac下的快捷键 ctrl+enter"></a>Mac下的快捷键 <strong><em>ctrl+enter</em></strong></h3><p><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210417153510.png"><br><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210417153519.png"><br><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210417153525.png"></p>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Java方法的定义与调用</title>
     <url>/posts/6749.html</url>
     <content><![CDATA[<h1 id="Java方法的定义与调用"><a href="#Java方法的定义与调用" class="headerlink" title="Java方法的定义与调用"></a>Java方法的定义与调用</h1><h2 id="一、方法的定义"><a href="#一、方法的定义" class="headerlink" title="一、方法的定义:"></a>一、方法的定义:</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">修饰符 返回值类型 方法名(参数列表) 抛出异常&#123;</span></span><br><span class="line"><span class="comment">    方法体</span></span><br><span class="line"><span class="comment">    return 返回值;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">sayHello</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;hello,world&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -683,19 +696,6 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
 <blockquote>
 <p>类似于C语言的指针，方法会改变引用类型所指的值。 </p>
 </blockquote>
-]]></content>
-      <categories>
-        <category>Java基础</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Java构造方法</title>
-    <url>/posts/55491.html</url>
-    <content><![CDATA[<h1 id="Java构造方法"><a href="#Java构造方法" class="headerlink" title="Java构造方法"></a>Java构造方法</h1><h2 id="定义-构造方法是在类的实例化时自动调用的方法。"><a href="#定义-构造方法是在类的实例化时自动调用的方法。" class="headerlink" title="定义: 构造方法是在类的实例化时自动调用的方法。"></a>定义: 构造方法是在类的实例化时自动调用的方法。</h2><h2 id="特点"><a href="#特点" class="headerlink" title="特点:"></a>特点:</h2><h3 id="1-必须与类的名字相同"><a href="#1-必须与类的名字相同" class="headerlink" title="1.必须与类的名字相同"></a>1.必须与类的名字相同</h3><h3 id="2-必须没有返回值类型，也不能写void"><a href="#2-必须没有返回值类型，也不能写void" class="headerlink" title="2.必须没有返回值类型，也不能写void"></a>2.必须没有返回值类型，也不能写void</h3><h2 id="一、无参构造方法"><a href="#一、无参构造方法" class="headerlink" title="一、无参构造方法"></a>一、无参构造方法</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//一个类即使什么都不写也会存在一个无参构造方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name=<span class="string">&quot;张三&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="二、有参构造（在定义了一个有参构造方法时，无参构造必须得写！！！）"><a href="#二、有参构造（在定义了一个有参构造方法时，无参构造必须得写！！！）" class="headerlink" title="二、有参构造（在定义了一个有参构造方法时，无参构造必须得写！！！）"></a>二、有参构造（在定义了一个有参构造方法时，无参构造必须得写！！！）</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span></span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name=name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//在定义了一个有参构造方法时，无参构造必须得写</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Person person = <span class="keyword">new</span> Person(<span class="string">&quot;张三&quot;</span>);</span><br><span class="line">        <span class="comment">//1.使用new关键字，本质就是在调用构造方法</span></span><br><span class="line">        <span class="comment">//2.构造方法主要是用于初始化值 </span></span><br><span class="line">    &#125; </span><br><span class="line">    System.out.println(person.name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="三、IDEA快捷生成有-无参构造方法"><a href="#三、IDEA快捷生成有-无参构造方法" class="headerlink" title="三、IDEA快捷生成有/无参构造方法"></a>三、IDEA快捷生成有/无参构造方法</h2><h3 id="Mac下的快捷键-ctrl-enter"><a href="#Mac下的快捷键-ctrl-enter" class="headerlink" title="Mac下的快捷键 ctrl+enter"></a>Mac下的快捷键 <strong><em>ctrl+enter</em></strong></h3><p><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210417153510.png"><br><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210417153519.png"><br><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210417153525.png"></p>
 ]]></content>
       <categories>
         <category>Java基础</category>
@@ -726,19 +726,6 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
       </categories>
   </entry>
   <entry>
-    <title>Java的封装</title>
-    <url>/posts/57497.html</url>
-    <content><![CDATA[<h1 id="Java的封装"><a href="#Java的封装" class="headerlink" title="Java的封装"></a>Java的封装</h1><h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><p><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210417212632.png"></p>
-<h2 id="重点记住-属性私有，get-set"><a href="#重点记住-属性私有，get-set" class="headerlink" title="重点记住:属性私有，get/set"></a>重点记住:属性私有，get/set</h2><a id="more"></a>
-<h2 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作:"></a>具体操作:</h2><h3 id="1-用private关键字对类中的属性进行修饰，被修饰的属性不能直接被调用。"><a href="#1-用private关键字对类中的属性进行修饰，被修饰的属性不能直接被调用。" class="headerlink" title="1. 用private关键字对类中的属性进行修饰，被修饰的属性不能直接被调用。"></a>1. 用private关键字对类中的属性进行修饰，被修饰的属性不能直接被调用。</h3><p><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210417213825.png"></p>
-<h3 id="2-在本类中提供一些set、get方法可以操作该属性。"><a href="#2-在本类中提供一些set、get方法可以操作该属性。" class="headerlink" title="2. 在本类中提供一些set、get方法可以操作该属性。"></a>2. 在本类中提供一些set、get方法可以操作该属性。</h3><p><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210417214414.png"></p>
-<h3 id="3-IDEA一键生成get-set方法。"><a href="#3-IDEA一键生成get-set方法。" class="headerlink" title="3.IDEA一键生成get/set方法。"></a>3.IDEA一键生成get/set方法。</h3><h4 id="Mac下按ctrl-enter"><a href="#Mac下按ctrl-enter" class="headerlink" title="Mac下按ctrl+enter"></a>Mac下按ctrl+enter</h4><p><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210417214718.png"><br><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210417214841.png"><br><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210417214851.png"></p>
-]]></content>
-      <categories>
-        <category>Java基础</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Java的多种内部类</title>
     <url>/posts/39461.html</url>
     <content><![CDATA[<h1 id="Java的多种内部类"><a href="#Java的多种内部类" class="headerlink" title="Java的多种内部类"></a>Java的多种内部类</h1><h2 id="1-成员内部类"><a href="#1-成员内部类" class="headerlink" title="1.成员内部类"></a>1.成员内部类</h2><h3 id="1-通过外部类实例化成员内部类"><a href="#1-通过外部类实例化成员内部类" class="headerlink" title="1. 通过外部类实例化成员内部类"></a>1. 通过外部类实例化成员内部类</h3><p><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210420162757.png"><br><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210420163344.png"></p>
@@ -748,6 +735,19 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
 <h2 id="3-局部内部类"><a href="#3-局部内部类" class="headerlink" title="3. 局部内部类"></a>3. 局部内部类</h2><h3 id="写在方法区的内部类"><a href="#写在方法区的内部类" class="headerlink" title="写在方法区的内部类"></a>写在方法区的内部类</h3><p><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210420164801.png"></p>
 <h2 id="4-匿名内部类"><a href="#4-匿名内部类" class="headerlink" title="4. 匿名内部类"></a>4. 匿名内部类</h2><h3 id="没有名字初始化类，不用将实例保存到变量中"><a href="#没有名字初始化类，不用将实例保存到变量中" class="headerlink" title="没有名字初始化类，不用将实例保存到变量中"></a>没有名字初始化类，不用将实例保存到变量中</h3><p><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210420164318.png"></p>
 <h3 id="可以用匿名内部类实现接口"><a href="#可以用匿名内部类实现接口" class="headerlink" title="可以用匿名内部类实现接口"></a>可以用匿名内部类实现接口</h3><p><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210420164406.png"><br><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210420164417.png"></p>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Java的封装</title>
+    <url>/posts/57497.html</url>
+    <content><![CDATA[<h1 id="Java的封装"><a href="#Java的封装" class="headerlink" title="Java的封装"></a>Java的封装</h1><h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><p><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210417212632.png"></p>
+<h2 id="重点记住-属性私有，get-set"><a href="#重点记住-属性私有，get-set" class="headerlink" title="重点记住:属性私有，get/set"></a>重点记住:属性私有，get/set</h2><a id="more"></a>
+<h2 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作:"></a>具体操作:</h2><h3 id="1-用private关键字对类中的属性进行修饰，被修饰的属性不能直接被调用。"><a href="#1-用private关键字对类中的属性进行修饰，被修饰的属性不能直接被调用。" class="headerlink" title="1. 用private关键字对类中的属性进行修饰，被修饰的属性不能直接被调用。"></a>1. 用private关键字对类中的属性进行修饰，被修饰的属性不能直接被调用。</h3><p><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210417213825.png"></p>
+<h3 id="2-在本类中提供一些set、get方法可以操作该属性。"><a href="#2-在本类中提供一些set、get方法可以操作该属性。" class="headerlink" title="2. 在本类中提供一些set、get方法可以操作该属性。"></a>2. 在本类中提供一些set、get方法可以操作该属性。</h3><p><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210417214414.png"></p>
+<h3 id="3-IDEA一键生成get-set方法。"><a href="#3-IDEA一键生成get-set方法。" class="headerlink" title="3.IDEA一键生成get/set方法。"></a>3.IDEA一键生成get/set方法。</h3><h4 id="Mac下按ctrl-enter"><a href="#Mac下按ctrl-enter" class="headerlink" title="Mac下按ctrl+enter"></a>Mac下按ctrl+enter</h4><p><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210417214718.png"><br><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210417214841.png"><br><img src="https://gitee.com/Haikez/images_bed/raw/master/Java%E5%9F%BA%E7%A1%80/20210417214851.png"></p>
 ]]></content>
       <categories>
         <category>Java基础</category>
@@ -915,14 +915,6 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
       </categories>
   </entry>
   <entry>
-    <title>ReentrantLock锁--可重入锁</title>
-    <url>/posts/3866.html</url>
-    <content><![CDATA[<h1 id="ReentrantLock锁–可重入锁"><a href="#ReentrantLock锁–可重入锁" class="headerlink" title="ReentrantLock锁–可重入锁"></a>ReentrantLock锁–可重入锁</h1><h2 id="ReentrantLock是Lock接口的实现类，它拥有和synchronized相同的并发性和内存语义，通常使用ReentrantLock锁进行安全控制。它可以实现显示加锁、释放锁。"><a href="#ReentrantLock是Lock接口的实现类，它拥有和synchronized相同的并发性和内存语义，通常使用ReentrantLock锁进行安全控制。它可以实现显示加锁、释放锁。" class="headerlink" title="ReentrantLock是Lock接口的实现类，它拥有和synchronized相同的并发性和内存语义，通常使用ReentrantLock锁进行安全控制。它可以实现显示加锁、释放锁。"></a>ReentrantLock是Lock接口的实现类，它拥有和synchronized相同的并发性和内存语义，通常使用ReentrantLock锁进行安全控制。它可以实现显示加锁、释放锁。</h2><h2 id="ReentrantLock锁的实现步骤："><a href="#ReentrantLock锁的实现步骤：" class="headerlink" title="ReentrantLock锁的实现步骤："></a>ReentrantLock锁的实现步骤：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Lock lock = <span class="keyword">new</span> ReentrantLock();</span><br><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    lock.lock();<span class="comment">//加锁操作</span></span><br><span class="line">&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">    lock.unlock();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Java的多线程</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Servlet详解</title>
     <url>/posts/34142.html</url>
     <content><![CDATA[<h1 id="Servlet详解"><a href="#Servlet详解" class="headerlink" title="Servlet详解"></a>Servlet详解</h1><h2 id="一、什么是Servlet"><a href="#一、什么是Servlet" class="headerlink" title="一、什么是Servlet"></a>一、什么是Servlet</h2><p>1、Servlet 是 JavaEE 规范之一。规范就是接口<br>2、Servlet 就 JavaWeb 三大组件之一。三大组件分别是：Servlet 程序、Filter 过滤器、Listener 监听器。<br>3、Servlet 是运行在服务器上的一个 java 小程序，它可以接收客户端发送过来的请求，并响应数据给客户端.<br>4、把实现了Servlet接口的Java程序叫做，Servlet。</p>
@@ -999,6 +991,14 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
 ]]></content>
       <categories>
         <category>JavaWeb学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ReentrantLock锁--可重入锁</title>
+    <url>/posts/3866.html</url>
+    <content><![CDATA[<h1 id="ReentrantLock锁–可重入锁"><a href="#ReentrantLock锁–可重入锁" class="headerlink" title="ReentrantLock锁–可重入锁"></a>ReentrantLock锁–可重入锁</h1><h2 id="ReentrantLock是Lock接口的实现类，它拥有和synchronized相同的并发性和内存语义，通常使用ReentrantLock锁进行安全控制。它可以实现显示加锁、释放锁。"><a href="#ReentrantLock是Lock接口的实现类，它拥有和synchronized相同的并发性和内存语义，通常使用ReentrantLock锁进行安全控制。它可以实现显示加锁、释放锁。" class="headerlink" title="ReentrantLock是Lock接口的实现类，它拥有和synchronized相同的并发性和内存语义，通常使用ReentrantLock锁进行安全控制。它可以实现显示加锁、释放锁。"></a>ReentrantLock是Lock接口的实现类，它拥有和synchronized相同的并发性和内存语义，通常使用ReentrantLock锁进行安全控制。它可以实现显示加锁、释放锁。</h2><h2 id="ReentrantLock锁的实现步骤："><a href="#ReentrantLock锁的实现步骤：" class="headerlink" title="ReentrantLock锁的实现步骤："></a>ReentrantLock锁的实现步骤：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Lock lock = <span class="keyword">new</span> ReentrantLock();</span><br><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    lock.lock();<span class="comment">//加锁操作</span></span><br><span class="line">&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">    lock.unlock();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Java的多线程</category>
       </categories>
   </entry>
   <entry>
@@ -1894,46 +1894,6 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
       </categories>
   </entry>
   <entry>
-    <title>Spring简介</title>
-    <url>/posts/47931.html</url>
-    <content><![CDATA[<h2 id="一、Spring简介"><a href="#一、Spring简介" class="headerlink" title="一、Spring简介"></a>一、Spring简介</h2><ul>
-<li>Spring：春天—&gt;给软件行业带来春天</li>
-<li>2002年首次推出spring雏形：interface 21架构</li>
-<li>spring理念：使现有的技术更加容易使用，本身是一个大杂烩，整合了现有的技术框架！</li>
-<li>SSH：Struct2+Spring+Hibernate</li>
-<li>SSM：SpringMVC+Spring+Mybatis<a id="more"></a>
-官网：<a href="https://spring.io/projects/spring-framework#overview">https://spring.io/projects/spring-framework#overview</a></li>
-</ul>
-<p>官方下载地址：<a href="https://repo.spring.io/release/org/springframework/spring/">https://repo.spring.io/release/org/springframework/spring/</a></p>
-<p>Github地址：<a href="https://github.com/spring-projects/spring-framework">https://github.com/spring-projects/spring-framework</a></p>
-<p>导入jar包</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-webmvc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.3.7<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-jdbc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.3.7<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="二、优点"><a href="#二、优点" class="headerlink" title="二、优点"></a>二、优点</h2><ul>
-<li>Spring是一个开源的免费的框架（容器）！</li>
-<li>Spring是一个轻量级的、非入侵式的框架！</li>
-<li>控制反转（IOC），面向切面编程（AOP）</li>
-<li>支持事务处理，对框架整合的支持！</li>
-</ul>
-<p>总结一句话：Spring就是一个轻量级的控制反转（IOC）和面向切面编程的框架！</p>
-<h2 id="三、组成"><a href="#三、组成" class="headerlink" title="三、组成"></a>三、组成</h2><p><img src="https://img-blog.csdn.net/20180914091500764?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5nMTE3ODM4Nzg0OA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"></p>
-<h2 id="四、扩展"><a href="#四、扩展" class="headerlink" title="四、扩展"></a>四、扩展</h2><p>在Spring的官网有这个介绍：现代化的java开发就是基于Spring的开发！</p>
-<p>构建一切 Spring Boot build Anything<br>协调一切 Spring cloud coordinate Anything<br>连接一切 Spring cloud Data Flow Connect Everything</p>
-<h3 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h3><ul>
-<li>一个快速开发的脚手架</li>
-<li>基于SpringBoot可以快速开发单个微服务。</li>
-<li>约定大于配置</li>
-</ul>
-<h3 id="SpringCloud"><a href="#SpringCloud" class="headerlink" title="SpringCloud"></a>SpringCloud</h3><ul>
-<li>SpringCloud是基于SpringBoot实现的</li>
-</ul>
-<p>因为现在大多数公司都在使用SpringBoot开发，学习SpringBoot前提是，需要完全掌握Spring及SpringMVC！Spring起承上启下的作用！</p>
-<p>弊端：发展太久之后，违背了原来的理念！配置十分繁琐，人称：”配置地狱！”</p>
-]]></content>
-      <categories>
-        <category>Spring5学习</category>
-      </categories>
-  </entry>
-  <entry>
     <title>动态SQL详解</title>
     <url>/posts/62398.html</url>
     <content><![CDATA[<h1 id="动态SQL详解"><a href="#动态SQL详解" class="headerlink" title="动态SQL详解"></a>动态SQL详解</h1><h2 id="什么是动态SQL：动态SQL就是指根据不同的条件生成不同的SQL语句"><a href="#什么是动态SQL：动态SQL就是指根据不同的条件生成不同的SQL语句" class="headerlink" title="什么是动态SQL：动态SQL就是指根据不同的条件生成不同的SQL语句"></a>什么是动态SQL：动态SQL就是指根据不同的条件生成不同的SQL语句</h2><figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">如果你之前用过 JSTL 或任何基于类 XML 语言的文本处理器，你对动态 SQL 元素可能会感觉似曾相识。在 MyBatis 之前的版本中，需要花时间了解大量的元素。借助功能强大的基于 OGNL 的表达式，MyBatis 3 替换了之前的大部分元素，大大精简了元素种类，现在要学习的元素种类比原来的一半还要少。</span><br><span class="line">if</span><br><span class="line">choose (when, otherwise)</span><br><span class="line">trim (where, set)</span><br><span class="line">foreach</span><br></pre></td></tr></table></figure>
@@ -1992,6 +1952,46 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
 ]]></content>
       <categories>
         <category>Mybatis学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Spring简介</title>
+    <url>/posts/47931.html</url>
+    <content><![CDATA[<h2 id="一、Spring简介"><a href="#一、Spring简介" class="headerlink" title="一、Spring简介"></a>一、Spring简介</h2><ul>
+<li>Spring：春天—&gt;给软件行业带来春天</li>
+<li>2002年首次推出spring雏形：interface 21架构</li>
+<li>spring理念：使现有的技术更加容易使用，本身是一个大杂烩，整合了现有的技术框架！</li>
+<li>SSH：Struct2+Spring+Hibernate</li>
+<li>SSM：SpringMVC+Spring+Mybatis<a id="more"></a>
+官网：<a href="https://spring.io/projects/spring-framework#overview">https://spring.io/projects/spring-framework#overview</a></li>
+</ul>
+<p>官方下载地址：<a href="https://repo.spring.io/release/org/springframework/spring/">https://repo.spring.io/release/org/springframework/spring/</a></p>
+<p>Github地址：<a href="https://github.com/spring-projects/spring-framework">https://github.com/spring-projects/spring-framework</a></p>
+<p>导入jar包</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-webmvc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.3.7<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-jdbc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.3.7<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="二、优点"><a href="#二、优点" class="headerlink" title="二、优点"></a>二、优点</h2><ul>
+<li>Spring是一个开源的免费的框架（容器）！</li>
+<li>Spring是一个轻量级的、非入侵式的框架！</li>
+<li>控制反转（IOC），面向切面编程（AOP）</li>
+<li>支持事务处理，对框架整合的支持！</li>
+</ul>
+<p>总结一句话：Spring就是一个轻量级的控制反转（IOC）和面向切面编程的框架！</p>
+<h2 id="三、组成"><a href="#三、组成" class="headerlink" title="三、组成"></a>三、组成</h2><p><img src="https://img-blog.csdn.net/20180914091500764?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5nMTE3ODM4Nzg0OA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"></p>
+<h2 id="四、扩展"><a href="#四、扩展" class="headerlink" title="四、扩展"></a>四、扩展</h2><p>在Spring的官网有这个介绍：现代化的java开发就是基于Spring的开发！</p>
+<p>构建一切 Spring Boot build Anything<br>协调一切 Spring cloud coordinate Anything<br>连接一切 Spring cloud Data Flow Connect Everything</p>
+<h3 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h3><ul>
+<li>一个快速开发的脚手架</li>
+<li>基于SpringBoot可以快速开发单个微服务。</li>
+<li>约定大于配置</li>
+</ul>
+<h3 id="SpringCloud"><a href="#SpringCloud" class="headerlink" title="SpringCloud"></a>SpringCloud</h3><ul>
+<li>SpringCloud是基于SpringBoot实现的</li>
+</ul>
+<p>因为现在大多数公司都在使用SpringBoot开发，学习SpringBoot前提是，需要完全掌握Spring及SpringMVC！Spring起承上启下的作用！</p>
+<p>弊端：发展太久之后，违背了原来的理念！配置十分繁琐，人称：”配置地狱！”</p>
+]]></content>
+      <categories>
+        <category>Spring5学习</category>
       </categories>
   </entry>
   <entry>
