@@ -2090,12 +2090,11 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
 <h2 id="安装Nerdfont字体"><a href="#安装Nerdfont字体" class="headerlink" title="安装Nerdfont字体"></a>安装Nerdfont字体</h2><h3 id="1-直接到官网中下载字体"><a href="#1-直接到官网中下载字体" class="headerlink" title="1. 直接到官网中下载字体"></a>1. 直接到官网中下载字体</h3><p>官网:<br><a href="https://www.nerdfonts.com/">https://www.nerdfonts.com/</a></p>
 <p><img src="https://gitee.com/Haikez/images_bed/raw/master/iTerm2%E7%BE%8E%E5%8C%96%E9%85%8D%E7%BD%AE/20210827205743.png"></p>
 <h3 id="2-使用Mac自带的字体册将字体添加到系统中"><a href="#2-使用Mac自带的字体册将字体添加到系统中" class="headerlink" title="2. 使用Mac自带的字体册将字体添加到系统中"></a>2. 使用Mac自带的字体册将字体添加到系统中</h3><p><img src="https://gitee.com/Haikez/images_bed/raw/master/iTerm2%E7%BE%8E%E5%8C%96%E9%85%8D%E7%BD%AE/20210827210003.png"></p>
-<p><img src="https://gitee.com/Haikez/images_bed/raw/master/iTerm2%E7%BE%8E%E5%8C%96%E9%85%8D%E7%BD%AE/20210827211152.png"></p>
 <p><img src="https://gitee.com/Haikez/images_bed/raw/master/iTerm2%E7%BE%8E%E5%8C%96%E9%85%8D%E7%BD%AE/20210827212112.png"></p>
 <h2 id="安装Oh-My-Zsh主题"><a href="#安装Oh-My-Zsh主题" class="headerlink" title="安装Oh-My-Zsh主题"></a>安装Oh-My-Zsh主题</h2><h3 id="1-安装-P10k主题"><a href="#1-安装-P10k主题" class="headerlink" title="1.安装 P10k主题"></a>1.安装 P10k主题</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $&#123;ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom&#125;/themes/powerlevel10k</span><br></pre></td></tr></table></figure>
 <p>Gitee 镜像</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth=1 https://gitee.com/romkatv/powerlevel10k.git <span class="variable">$&#123;ZSH_CUSTOM:-<span class="variable">$HOME</span>/.oh-my-zsh/custom&#125;</span>/themes/powerlevel10k</span><br></pre></td></tr></table></figure>
-<h3 id="2-在-zshrc-中设置-ZSH-THEME"><a href="#2-在-zshrc-中设置-ZSH-THEME" class="headerlink" title="2.在　~/.zshrc 中设置 ZSH_THEME"></a>2.在　~/.zshrc 中设置 ZSH_THEME</h3><p>ZSH_THEME=”powerlevel10k/powerlevel10k”</p>
+<h3 id="2-在-zshrc-中设置-ZSH-THEME"><a href="#2-在-zshrc-中设置-ZSH-THEME" class="headerlink" title="2.在　~/.zshrc 中设置 ZSH_THEME"></a>2.在　~/.zshrc 中设置 ZSH_THEME</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ZSH_THEME=<span class="string">&quot;powerlevel10k/powerlevel10k&quot;</span></span><br></pre></td></tr></table></figure>
 <h3 id="3-重启命令行"><a href="#3-重启命令行" class="headerlink" title="3.重启命令行"></a>3.重启命令行</h3><h3 id="4-设置-P10k"><a href="#4-设置-P10k" class="headerlink" title="4.设置 P10k"></a>4.设置 P10k</h3>]]></content>
       <tags>
         <tag>iTerm2</tag>
