@@ -2050,7 +2050,7 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
     <title>iTerm2美化配置</title>
     <url>/posts/11083.html</url>
     <content><![CDATA[<p><img src="https://gitee.com/Haikez/images_bed/raw/master/iTerm2%E7%BE%8E%E5%8C%96%E9%85%8D%E7%BD%AE/20210827193307.png"></p>
-<h1 id="iTerm2配置和美化"><a href="#iTerm2配置和美化" class="headerlink" title="iTerm2配置和美化"></a>iTerm2配置和美化</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今日换了新电脑，软件和环境需要重新配置，就关于iTerm2的配置和美化整理一份文章出来，方便自己之后的工作。</p>
+<h1 id="iTerm2配置和美化"><a href="#iTerm2配置和美化" class="headerlink" title="iTerm2配置和美化"></a>iTerm2配置和美化</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>近日换了新电脑，软件和环境需要重新配置，就关于iTerm2的配置和美化整理一份文章出来，方便自己之后的工作。</p>
 <a id="more"></a>
 <h2 id="一、安装iTerm2"><a href="#一、安装iTerm2" class="headerlink" title="一、安装iTerm2"></a>一、安装iTerm2</h2><p>首先，下载iTerm2来替换默认终端。</p>
 <p><a href="https://iterm2.com/">https://iterm2.com/</a></p>
@@ -2058,7 +2058,8 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
 <p>iTerm2 is a replacement for Terminal and the successor to iTerm. It works on Macs with macOS 10.12 or newer. iTerm2 brings the terminal into the modern age with features you never knew you always wanted.</p>
 </blockquote>
 <p>iTerm2是默认终端的替代品，也是目前Mac系统下最好用的 <strong>终端工具</strong> ，集颜值和效率于一身。</p>
-<h3 id="配置iTerm2主题配色"><a href="#配置iTerm2主题配色" class="headerlink" title="配置iTerm2主题配色"></a>配置iTerm2主题配色</h3><p>由于我已经配置好了iTerm2的配置文件，所以只需要在iTerm2中导入配置文件即可。<br>下载所需要的配置文件: <a href="https://github.com/Haikez/iTerm2Config.git">https://github.com/Haikez/iTerm2Config.git</a></p>
+<h3 id="配置iTerm2主题配色"><a href="#配置iTerm2主题配色" class="headerlink" title="配置iTerm2主题配色"></a>配置iTerm2主题配色</h3><p>由于我已经配置好了iTerm2的配置文件，所以只需要在iTerm2中导入配置文件即可。<br>下载所需要的配置文件: </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/Haikez/iTerm2Config.git</span><br></pre></td></tr></table></figure>
 <p>然后在新电脑中导入:<br>如下图 import JSON Profiles，然后设置为默认配置。<br><img src="https://gitee.com/Haikez/images_bed/raw/master/iTerm2%E7%BE%8E%E5%8C%96%E9%85%8D%E7%BD%AE/20210827201339.png"></p>
 <h2 id="二、安装brew包管理器"><a href="#二、安装brew包管理器" class="headerlink" title="二、安装brew包管理器"></a>二、安装brew包管理器</h2><h3 id="HomeBrew简介"><a href="#HomeBrew简介" class="headerlink" title="HomeBrew简介"></a>HomeBrew简介</h3><blockquote>
 <p>我们在使用Linux系统的时候，都很喜欢 (Debian/Ubuntu)系列的apt包管理系统和(Redhat/Fedora)系列的yum包管理系统。Mac OS X系统下面有apple的官方Mac App Store。但是好多软件是找不到的，所以我们也向在苹果下找到一款比较方便的包管理系统，就是Homebrew。<br>什么是Homebrew呢？Homebrew is the easiest and most flexible way to install the UNIX tools Apple didn’t include with OS X. 官方的解释非常明了，Homebrew是一个包管理器，用于在Mac上安装一些OS X没有的UNIX工具（比如著名的wget），能在Mac中方便的安装软件或者卸载软件，可以说Homebrew就是mac下的apt-get、yum神器。</p>
@@ -2095,7 +2096,8 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
 <p>Gitee 镜像</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth=1 https://gitee.com/romkatv/powerlevel10k.git <span class="variable">$&#123;ZSH_CUSTOM:-<span class="variable">$HOME</span>/.oh-my-zsh/custom&#125;</span>/themes/powerlevel10k</span><br></pre></td></tr></table></figure>
 <h3 id="2-在-zshrc-中设置-ZSH-THEME"><a href="#2-在-zshrc-中设置-ZSH-THEME" class="headerlink" title="2.在　~/.zshrc 中设置 ZSH_THEME"></a>2.在　~/.zshrc 中设置 ZSH_THEME</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ZSH_THEME=<span class="string">&quot;powerlevel10k/powerlevel10k&quot;</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-重启命令行"><a href="#3-重启命令行" class="headerlink" title="3.重启命令行"></a>3.重启命令行</h3><h3 id="4-设置-P10k"><a href="#4-设置-P10k" class="headerlink" title="4.设置 P10k"></a>4.设置 P10k</h3>]]></content>
+<h3 id="3-重启命令行"><a href="#3-重启命令行" class="headerlink" title="3.重启命令行"></a>3.重启命令行</h3><h3 id="4-设置-P10k"><a href="#4-设置-P10k" class="headerlink" title="4.设置 P10k"></a>4.设置 P10k</h3><p>手动设置:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">p10k configure</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>iTerm2</tag>
       </tags>
