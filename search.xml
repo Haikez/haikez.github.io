@@ -145,7 +145,7 @@
         <category>树莓派的反击</category>
       </categories>
       <tags>
-        <tag>树莓派历练</tag>
+        <tag>树莓派</tag>
       </tags>
   </entry>
   <entry>
@@ -366,9 +366,6 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
       <categories>
         <category>数据结构学习</category>
       </categories>
-      <tags>
-        <tag>链表</tag>
-      </tags>
   </entry>
   <entry>
     <title>PicGo+Github白嫖图床</title>
@@ -2297,6 +2294,9 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
       <categories>
         <category>树莓派的反击</category>
       </categories>
+      <tags>
+        <tag>智能家居</tag>
+      </tags>
   </entry>
   <entry>
     <title>树莓派HomeAssistant智能家居</title>
@@ -2321,6 +2321,9 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
       <categories>
         <category>树莓派的反击</category>
       </categories>
+      <tags>
+        <tag>智能家居</tag>
+      </tags>
   </entry>
   <entry>
     <title>树莓派安装HomeBridge</title>
@@ -2353,6 +2356,9 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
       <categories>
         <category>树莓派的反击</category>
       </categories>
+      <tags>
+        <tag>智能家居</tag>
+      </tags>
   </entry>
   <entry>
     <title>树莓派温湿度传感器DHT11</title>
@@ -2370,6 +2376,9 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
       <categories>
         <category>树莓派的反击</category>
       </categories>
+      <tags>
+        <tag>智能家居</tag>
+      </tags>
   </entry>
   <entry>
     <title>ESP-01S实现智能灯控</title>
@@ -2443,8 +2452,8 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
 <p>现在我们就可以在 iOS 设备上通过 HomeKit 控制灯泡了。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>优点: ESP-01s脱离了树莓派的控制，是一个单独的模块。所以具有更强的稳定性和实用性。由于是单片机，在单方面的性能上更好，延迟更低，是个非常有意义的项目。</p>
 ]]></content>
-      <categories>
-        <category>智能家居</category>
-      </categories>
+      <tags>
+        <tag>智能家居</tag>
+      </tags>
   </entry>
 </search>
