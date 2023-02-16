@@ -3243,3 +3243,9 @@ body {
   color: #333;
   border-bottom: 1px solid #333;
 }
+.post-toc .nav .nav-child {
+  display: block;
+}
+.post-toc ol {
+  font-size: 13px;
+}
