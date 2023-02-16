@@ -436,7 +436,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2023-02-16 17:43:23" itemprop="dateModified" datetime="2023-02-16T17:43:23+08:00">2023-02-16</time>
+        <time title="修改时间：2023-02-16 17:44:12" itemprop="dateModified" datetime="2023-02-16T17:44:12+08:00">2023-02-16</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -471,53 +471,19 @@
 </ul>
 <p>在Spring中有三种装配的方式:</p>
 <ol>
-<li>在xml中显示的配置</li>
-<li>在java中显示配置</li>
-<li>隐式的自动装配bean</li>
-</ol>
-<h1 id="一、测试"><a href="#一、测试" class="headerlink" title="一、测试"></a>一、测试</h1><p> 环境搭建:一个人有两个宠物！</p>
-<h1 id="二、ByName自动装配"><a href="#二、ByName自动装配" class="headerlink" title="二、ByName自动装配"></a>二、ByName自动装配</h1><p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85/202302161631106.jpg"></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--</span><br><span class="line">    byName:会自动在容器上下文中查找，和自己对象Set方法后面的值对应的beanid</span><br><span class="line">--&gt;</span><br><span class="line">&lt;bean id=<span class="string">&quot;people&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;com.nichu.pojo.People&quot;</span> autowire=<span class="string">&quot;byName&quot;</span>&gt;</span><br><span class="line">    &lt;property name=<span class="string">&quot;name&quot;</span> value=<span class="string">&quot;倪&quot;</span>/&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/202302161635614.jpg"></p>
-<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/202302161635303.jpg"></p>
-<h1 id="三、ByType自动装配"><a href="#三、ByType自动装配" class="headerlink" title="三、ByType自动装配"></a>三、ByType自动装配</h1><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=<span class="string">&quot;cat&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;com.nichu.pojo.Cat&quot;</span>/&gt;</span><br><span class="line">&lt;bean id=<span class="string">&quot;dog&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;com.nichu.pojo.Dog&quot;</span>/&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">    byName:会自动在容器上下文中查找，和自己对象Set方法后面的值对应的beanid</span><br><span class="line">    byType:会自动在容器上下文中查找，和自己对象属性类型相同的beanid</span><br><span class="line">--&gt;</span><br><span class="line">&lt;bean id=<span class="string">&quot;people&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;com.nichu.pojo.People&quot;</span> autowire=<span class="string">&quot;byType&quot;</span>&gt;</span><br><span class="line">    &lt;property name=<span class="string">&quot;name&quot;</span> value=<span class="string">&quot;倪&quot;</span>/&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
-<p>小结：</p>
-<ul>
-<li>byName的时候，需要保证所有bean的id唯一，并且这个bean需要和自动注入的属性的set方法一致！</li>
-<li>byType的时候，需要保证所有bean的class唯一，并且这个bean需要和自动注入的属性类型一致！</li>
-</ul>
-<h1 id="四、使用注解实现自动装配"><a href="#四、使用注解实现自动装配" class="headerlink" title="四、使用注解实现自动装配"></a>四、使用注解实现自动装配</h1><p>要使用注解须知：</p>
-<ol>
-<li>导入约束：context约束</li>
-<li>配置注解的支持：context:annotation-config</li>
-</ol>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:context</span>=<span class="string">&quot;http://www.springframework.org/schema/context&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://www.springframework.org/schema/beans</span></span></span><br><span class="line"><span class="tag"><span class="string">        https://www.springframework.org/schema/beans/spring-beans.xsd</span></span></span><br><span class="line"><span class="tag"><span class="string">        http://www.springframework.org/schema/context</span></span></span><br><span class="line"><span class="tag"><span class="string">        https://www.springframework.org/schema/context/spring-context.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">context:annotation-config</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="4-1-Autowired"><a href="#4-1-Autowired" class="headerlink" title="4.1 @Autowired"></a>4.1 @Autowired</h2><ul>
-<li><p>直接在属性上使用即可！也可以在set方法上使用！</p>
+<li><p>在xml中显示的配置</p>
 </li>
-<li><p>使用Autowired我们可以不用编写Set方法了，前提是你这个自动装配的属性在IOC（Spring）容器中存在，且符合名字byName！</p>
+<li><p>在java中显示配置</p>
 </li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Nullable 字段标记了这个注解，说明这个字段可以为null</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Autowired &#123;</span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">required</span><span class="params">()</span> <span class="keyword">default</span> <span class="keyword">true</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>测试代码</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">People</span> </span>&#123;</span><br><span class="line">    <span class="comment">//如果显示定义了Autowired的require值为false，说明这个对象可以为null，否则不允许为空</span></span><br><span class="line">    <span class="meta">@Autowired(required = false)</span></span><br><span class="line">    <span class="keyword">private</span> Cat cat;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> Dog dog;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果@Autowired自动装配的环境比较复杂，自动装配无法通过一个注解【@Autowired】完成的时候，我们可以使用@Qualifier(value = “xxx”)去配合@Autowired的使用，指定一个唯一的bean对象注入！</p>
-<h2 id="4-2-Resource"><a href="#4-2-Resource" class="headerlink" title="4.2 @Resource"></a>4.2 @Resource</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">People</span> </span>&#123;</span><br><span class="line">		<span class="meta">@Resource(name=&quot;cat2&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Cat cat;</span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    <span class="keyword">private</span> Dog dog;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>@Resource既有byName也有byType</li>
-<li>当byName找不到时，会自动使用byType</li>
-<li>当byType重复时，可以通过@Resource(name=”xxx”)去指定</li>
-</ul>
-<p>小结：</p>
-<p>@Resource和@Autowired的区别：</p>
-<ol>
-<li>都是用来自动装配的，都可以放在属性字段上</li>
-<li>@Autowired通过byType的方式实现，而且必须要求这个对象存在！【常用】</li>
-<li>@Resource默认通过byName的方式实现，如果找不到名字，则通过byType实现！如果两个都找不到的情况下，就报错。【常用】</li>
-<li>执行顺序不同：@Autowired通过byType的方式实现，@Resource默认通过byName的方式实现。</li>
-</ol>
-
+<li><p>隐式的自动装配bean</p></li></ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/47955.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
     
