@@ -20,12 +20,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"haikez.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":13},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="Tomcat详解1、安装Tomcat1.1、下载Tomcat官网：https:&#x2F;&#x2F;tomcat.apache.org&#x2F;">
+<meta name="description" content="Tomcat详解 1、安装Tomcat 1.1、下载 Tomcat官网：https:&#x2F;&#x2F;tomcat.apache.org&#x2F;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tomcat详解">
 <meta property="og:url" content="https://haikez.github.io/posts/35449.html">
 <meta property="og:site_name" content="倪矗的BLOG">
-<meta property="og:description" content="Tomcat详解1、安装Tomcat1.1、下载Tomcat官网：https:&#x2F;&#x2F;tomcat.apache.org&#x2F;">
+<meta property="og:description" content="Tomcat详解 1、安装Tomcat 1.1、下载 Tomcat官网：https:&#x2F;&#x2F;tomcat.apache.org&#x2F;">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427162705.png">
 <meta property="og:image" content="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427162715.png">
@@ -159,7 +159,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tomcat%E8%AF%A6%E8%A7%A3"><span class="nav-text">Tomcat详解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85Tomcat"><span class="nav-text">1、安装Tomcat</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1%E3%80%81%E4%B8%8B%E8%BD%BD"><span class="nav-text">1.1、下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2%E3%80%81%E5%AE%89%E8%A3%85"><span class="nav-text">1.2、安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3%E3%80%81%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%88Mac%E7%94%B5%E8%84%91%EF%BC%89"><span class="nav-text">1.3、配置环境变量（Mac电脑）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81Tomcat%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"><span class="nav-text">2、Tomcat的简单使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81Tomcat%E7%9A%84%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE"><span class="nav-text">3、Tomcat的一些配置</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">Tomcat详解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85Tomcat"><span class="nav-text">1、安装Tomcat</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1%E3%80%81%E4%B8%8B%E8%BD%BD"><span class="nav-text">1.1、下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2%E3%80%81%E5%AE%89%E8%A3%85"><span class="nav-text">1.2、安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3%E3%80%81%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%88Mac%E7%94%B5%E8%84%91%EF%BC%89"><span class="nav-text">1.3、配置环境变量（Mac电脑）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81Tomcat%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"><span class="nav-text">2、Tomcat的简单使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81Tomcat%E7%9A%84%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE"><span class="nav-text">3、Tomcat的一些配置</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -175,7 +175,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-count">81</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -313,22 +313,45 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="Tomcat详解"><a href="#Tomcat详解" class="headerlink" title="Tomcat详解"></a>Tomcat详解</h1><h2 id="1、安装Tomcat"><a href="#1、安装Tomcat" class="headerlink" title="1、安装Tomcat"></a>1、安装Tomcat</h2><h3 id="1-1、下载"><a href="#1-1、下载" class="headerlink" title="1.1、下载"></a>1.1、下载</h3><p>Tomcat官网：<a target="_blank" rel="noopener" href="https://tomcat.apache.org/">https://tomcat.apache.org/</a><br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427162705.png"><br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427162715.png"></p>
+        <h1>Tomcat详解</h1>
+<h2 id="1、安装Tomcat">1、安装Tomcat</h2>
+<h3 id="1-1、下载">1.1、下载</h3>
+<p>Tomcat官网：<a target="_blank" rel="noopener" href="https://tomcat.apache.org/">https://tomcat.apache.org/</a><br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427162705.png" alt><br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427162715.png" alt></p>
 <a id="more"></a>
-<h3 id="1-2、安装"><a href="#1-2、安装" class="headerlink" title="1.2、安装"></a>1.2、安装</h3><p>解压下载完的压缩包到指定路径。<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427162936.png"></p>
-<h3 id="1-3、配置环境变量（Mac电脑）"><a href="#1-3、配置环境变量（Mac电脑）" class="headerlink" title="1.3、配置环境变量（Mac电脑）"></a>1.3、配置环境变量（Mac电脑）</h3><ul>
-<li>在宿主目录下编辑 <strong>.bash_profile</strong> 文件<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427163358.png"></li>
-<li>添加环境变量<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TOMCAT_HOME=/Users/haikez/Environment/apache-tomcat-10.0.5</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$TOMCAT_HOME</span>/bin</span><br></pre></td></tr></table></figure>
-<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427163438.png"></li>
-<li>配置完环境变量就可以在命令行启动Tomcat<h2 id="2、Tomcat的简单使用"><a href="#2、Tomcat的简单使用" class="headerlink" title="2、Tomcat的简单使用"></a>2、Tomcat的简单使用</h2></li>
+<h3 id="1-2、安装">1.2、安装</h3>
+<p>解压下载完的压缩包到指定路径。<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427162936.png" alt></p>
+<h3 id="1-3、配置环境变量（Mac电脑）">1.3、配置环境变量（Mac电脑）</h3>
+<ul>
+<li>在宿主目录下编辑 <strong>.bash_profile</strong> 文件<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427163358.png" alt></li>
+<li>添加环境变量</li>
+</ul>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TOMCAT_HOME=/Users/haikez/Environment/apache-tomcat-10.0.5</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$TOMCAT_HOME</span>/bin</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427163438.png" alt></p>
+<ul>
+<li>配置完环境变量就可以在命令行启动Tomcat</li>
+</ul>
+<h2 id="2、Tomcat的简单使用">2、Tomcat的简单使用</h2>
+<ul>
 <li>打开bin目录执行startup文件,就可以启动Tomcat</li>
-<li>打开浏览器输入localhost:8080端口就能看到效果<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427164029.png"></li>
-<li>Tomcat会默认展示 <strong>/webapps/ROOT</strong>目录下的index.html<h2 id="3、Tomcat的一些配置"><a href="#3、Tomcat的一些配置" class="headerlink" title="3、Tomcat的一些配置"></a>3、Tomcat的一些配置</h2></li>
+<li>打开浏览器输入localhost:8080端口就能看到效果<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427164029.png" alt></li>
+<li>Tomcat会默认展示 <strong>/webapps/ROOT</strong>目录下的index.html</li>
+</ul>
+<h2 id="3、Tomcat的一些配置">3、Tomcat的一些配置</h2>
+<ul>
 <li>Tomcat的核心配置文件为 <strong>/conf/server.xml</strong></li>
 <li>通过修改server.xml文件对Tomcat进行配置</li>
-<li>更改端口<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427164958.png"></li>
-<li>更改主机<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427165021.png"><br>更改主机名时需要对本机的主机进行同步修改，Mac电脑下通过修改 <strong>/etc/hosts</strong>文件，将<strong>127.0.0.1</strong>映射到更改的主机名。<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427165438.png"></li>
-<li>Tomcat服务器下网站应有的结构<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427170032.png"></li>
+<li>更改端口<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427164958.png" alt></li>
+<li>更改主机<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427165021.png" alt><br>
+更改主机名时需要对本机的主机进行同步修改，Mac电脑下通过修改 <strong>/etc/hosts</strong>文件，将<strong>127.0.0.1</strong>映射到更改的主机名。<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427165438.png" alt></li>
+<li>Tomcat服务器下网站应有的结构<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427170032.png" alt></li>
 </ul>
 
     </div>
@@ -412,7 +435,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">195k</span>
+    <span title="站点总字数">198k</span>
   </span>
 </div><!-- <a href="https://icp.gov.moe/?keyword=20180708" rel="external nofollow noreferrer" target="_blank" data-pjax-state="" style="
     border-bottom-width: 0px;

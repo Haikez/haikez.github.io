@@ -20,12 +20,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"haikez.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":13},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="离散存储–链表定义: n 个结点离散分配  彼此通过指针相连    每个结点只有一个前驱结点，每个结点只有一个后继结点。    首结点没有前驱结点，尾结点没有后继结点专业术语: 首结点 第一个有效结点   尾结点 最后一个有效结点   头结点 第一个有效结点前的那个结点 头结点不存放有效数据 加头结点的目的主要是为了方便对链表的操作   头指针 指向头结点的指针变量   尾指针 指向尾结点的指针变">
+<meta name="description" content="离散存储–链表 定义:  n 个结点离散分配 彼此通过指针相连 每个结点只有一个前驱结点，每个结点只有一个后继结点。 首结点没有前驱结点，尾结点没有后继结点  专业术语:  首结点  第一个有效结点   尾结点  最后一个有效结点   头结点  第一个有效结点前的那个结点头结点不存放有效数据 加头结点的目的主要是为了方便对链表的操作   头指针  指向头结点的指针变量   尾指针  指向尾结点的指">
 <meta property="og:type" content="article">
 <meta property="og:title" content="链表">
 <meta property="og:url" content="https://haikez.github.io/posts/54862.html">
 <meta property="og:site_name" content="倪矗的BLOG">
-<meta property="og:description" content="离散存储–链表定义: n 个结点离散分配  彼此通过指针相连    每个结点只有一个前驱结点，每个结点只有一个后继结点。    首结点没有前驱结点，尾结点没有后继结点专业术语: 首结点 第一个有效结点   尾结点 最后一个有效结点   头结点 第一个有效结点前的那个结点 头结点不存放有效数据 加头结点的目的主要是为了方便对链表的操作   头指针 指向头结点的指针变量   尾指针 指向尾结点的指针变">
+<meta property="og:description" content="离散存储–链表 定义:  n 个结点离散分配 彼此通过指针相连 每个结点只有一个前驱结点，每个结点只有一个后继结点。 首结点没有前驱结点，尾结点没有后继结点  专业术语:  首结点  第一个有效结点   尾结点  最后一个有效结点   头结点  第一个有效结点前的那个结点头结点不存放有效数据 加头结点的目的主要是为了方便对链表的操作   头指针  指向头结点的指针变量   尾指针  指向尾结点的指">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-15T07:05:20.000Z">
 <meta property="article:modified_time" content="2022-05-25T08:31:28.000Z">
@@ -148,7 +148,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A6%BB%E6%95%A3%E5%AD%98%E5%82%A8%E2%80%93%E9%93%BE%E8%A1%A8"><span class="nav-text">离散存储–链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-text">定义:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD"><span class="nav-text">专业术语:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E5%B8%8C%E6%9C%9B%E9%80%9A%E8%BF%87%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E6%9D%A5%E5%AF%B9%E9%93%BE%E8%A1%A8%E8%BF%9B%E8%A1%8C%E5%A4%84%E7%90%86%EF%BC%8C%E6%88%91%E4%BB%AC%E8%87%B3%E5%B0%91%E9%9C%80%E8%A6%81%E6%8E%A5%E6%94%B6%E9%93%BE%E8%A1%A8%E7%9A%84%E5%93%AA%E4%BA%9B%E5%8F%82%E6%95%B0"><span class="nav-text">如果希望通过一个函数来对链表进行处理，我们至少需要接收链表的哪些参数:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9"><span class="nav-text">构建一个结点:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-text">分类:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%AE%97%E6%B3%95"><span class="nav-text">单链表算法:</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">离散存储–链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-text">定义:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD"><span class="nav-text">专业术语:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E5%B8%8C%E6%9C%9B%E9%80%9A%E8%BF%87%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E6%9D%A5%E5%AF%B9%E9%93%BE%E8%A1%A8%E8%BF%9B%E8%A1%8C%E5%A4%84%E7%90%86%EF%BC%8C%E6%88%91%E4%BB%AC%E8%87%B3%E5%B0%91%E9%9C%80%E8%A6%81%E6%8E%A5%E6%94%B6%E9%93%BE%E8%A1%A8%E7%9A%84%E5%93%AA%E4%BA%9B%E5%8F%82%E6%95%B0"><span class="nav-text">如果希望通过一个函数来对链表进行处理，我们至少需要接收链表的哪些参数:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9"><span class="nav-text">构建一个结点:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-text">分类:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%AE%97%E6%B3%95"><span class="nav-text">单链表算法:</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -164,7 +164,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-count">81</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -302,49 +302,73 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="离散存储–链表"><a href="#离散存储–链表" class="headerlink" title="离散存储–链表"></a>离散存储–链表</h1><h3 id="定义"><a href="#定义" class="headerlink" title="定义:"></a>定义:</h3><ol>
+        <h1>离散存储–链表</h1>
+<h3 id="定义">定义:</h3>
+<ol>
 <li>n 个结点离散分配</li>
-<li> 彼此通过指针相连</li>
-<li>   每个结点只有一个前驱结点，每个结点只有一个后继结点。</li>
-<li>   首结点没有前驱结点，尾结点没有后继结点<h3 id="专业术语"><a href="#专业术语" class="headerlink" title="专业术语:"></a>专业术语:</h3></li>
-<li>首结点<blockquote>
+<li>彼此通过指针相连</li>
+<li>每个结点只有一个前驱结点，每个结点只有一个后继结点。</li>
+<li>首结点没有前驱结点，尾结点没有后继结点</li>
+</ol>
+<h3 id="专业术语">专业术语:</h3>
+<ol start="5">
+<li>首结点
+<blockquote>
 <p>第一个有效结点</p>
 </blockquote>
 </li>
-<li>尾结点<blockquote>
+<li>尾结点
+<blockquote>
 <p>最后一个有效结点</p>
 </blockquote>
 </li>
-<li>头结点<blockquote>
-<p>第一个有效结点前的那个结点<br> 头结点不存放有效数据<br> 加头结点的目的主要是为了方便对链表的操作</p>
+<li>头结点
+<blockquote>
+<p>第一个有效结点前的那个结点头结点不存放有效数据<br>
+加头结点的目的主要是为了方便对链表的操作</p>
 </blockquote>
 </li>
-<li>头指针<blockquote>
+<li>头指针
+<blockquote>
 <p>指向头结点的指针变量</p>
 </blockquote>
 </li>
-<li>尾指针<blockquote>
+<li>尾指针
+<blockquote>
 <p>指向尾结点的指针变量</p>
 </blockquote>
-<h4 id="如果希望通过一个函数来对链表进行处理，我们至少需要接收链表的哪些参数"><a href="#如果希望通过一个函数来对链表进行处理，我们至少需要接收链表的哪些参数" class="headerlink" title="如果希望通过一个函数来对链表进行处理，我们至少需要接收链表的哪些参数:"></a>如果希望通过一个函数来对链表进行处理，我们至少需要接收链表的哪些参数:</h4> 只需要一个参数：头指针<br> 因为我们通过头指针可以推算出链表的其他所有信息。<h4 id="构建一个结点"><a href="#构建一个结点" class="headerlink" title="构建一个结点:"></a>构建一个结点:</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> data; <span class="comment">//数据域</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> * <span class="title">pNext</span>;</span> <span class="comment">//指针域</span></span><br><span class="line">&#125;* PNODE,NODE; <span class="comment">//NODE等价于struct Node,  </span></span><br><span class="line"><span class="comment">//PNODE等价于struct Node *</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="如果希望通过一个函数来对链表进行处理，我们至少需要接收链表的哪些参数">如果希望通过一个函数来对链表进行处理，我们至少需要接收链表的哪些参数:</h4>
+<pre><code>只需要一个参数：头指针  
+因为我们通过头指针可以推算出链表的其他所有信息。
+</code></pre>
+<h4 id="构建一个结点">构建一个结点:</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> data; <span class="comment">//数据域</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> * <span class="title">pNext</span>;</span> <span class="comment">//指针域</span></span><br><span class="line">&#125;* PNODE,NODE; <span class="comment">//NODE等价于struct Node,  </span></span><br><span class="line"><span class="comment">//PNODE等价于struct Node *</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="分类"><a href="#分类" class="headerlink" title="分类:"></a>分类:</h3></li>
+<h3 id="分类">分类:</h3>
+<ol>
 <li>单链表</li>
-<li>双链表:<blockquote>
+<li>双链表:
+<blockquote>
 <p>每个结点有两个指针域</p>
 </blockquote>
 </li>
-<li>循环链表:<blockquote>
-<p> 能通过任何一个结点找到其他所有结点</p>
+<li>循环链表:
+<blockquote>
+<p>能通过任何一个结点找到其他所有结点</p>
 </blockquote>
 </li>
-<li>非循环链表  <h3 id="单链表算法"><a href="#单链表算法" class="headerlink" title="单链表算法:"></a>单链表算法:</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">定义链表结点:</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ElemType <span class="comment">//不一定是int型,ElemType是需求类型</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElemType data;       <span class="comment">//存放元素值</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">LNose</span> * <span class="title">next</span>;</span> <span class="comment">//指向后继结点</span></span><br><span class="line">&#125;LinkNode;               <span class="comment">//单链表结点类型</span></span><br></pre></td></tr></table></figure>
+<li>非循环链表</li>
+</ol>
+<h3 id="单链表算法">单链表算法:</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">定义链表结点:</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ElemType <span class="comment">//不一定是int型,ElemType是需求类型</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElemType data;       <span class="comment">//存放元素值</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">LNose</span> * <span class="title">next</span>;</span> <span class="comment">//指向后继结点</span></span><br><span class="line">&#125;LinkNode;               <span class="comment">//单链表结点类型</span></span><br></pre></td></tr></table></figure>
 <details> <summary>初始化 InitList(&L)</summary>
 <pre><code>
 void InitList(LinkNode *&L)
 &#123;
- L = (LinkNode *)malloc(sizeof(LinkNode));
- L->next s= NULL;
+    L = (LinkNode *)malloc(sizeof(LinkNode));
+    L->next s= NULL;
 &#125;
 </code></pre>
 </details>
@@ -352,14 +376,14 @@ void InitList(LinkNode *&L)
 <pre><code>
 void DestoryList(LinkNode *&L)
 &#123;
- LinkNode * pre = L,*p = L->next;
- while(p != NULL)
- &#123;
-     free(pre);
-     pre = p;
-     p = pre->next;
- &#125;
- free(pre);
+    LinkNode * pre = L,*p = L->next;
+    while(p != NULL)
+    &#123;
+        free(pre);
+        pre = p;
+        p = pre->next;
+    &#125;
+    free(pre);
 &#125;
 </code></pre>
 </details>
@@ -367,7 +391,7 @@ void DestoryList(LinkNode *&L)
 <pre><code>
 bool ListEmpty(LinkNode * L)
 &#123;
- return(L->next = NULL);
+    return(L->next = NULL);
 &#125;
 </code></pre>
 </details>
@@ -375,20 +399,17 @@ bool ListEmpty(LinkNode * L)
 <pre><code>
 int ListLength(LinkNode * L)
 &#123;
- LinkNode * p = L;
- int n=0;
- while(p->next != NULL)
- &#123;
-     n++;
-     p = p->next;
- &#125;
- return(n);
+    LinkNode * p = L;
+    int n=0;
+    while(p->next != NULL)
+    &#123;
+        n++;
+        p = p->next;
+    &#125;
+    return(n);
 &#125;
-
-</code></pre></details></li>
-</ol>
-<p></p>
-
+<p></p></code></pre><p></p>
+</details>
 <details> <summary>输出 DispList(L)</summary>
 <pre><code>
 void DispList(LinkNode * L)
@@ -562,7 +583,7 @@ bool ListDelete(LinkNode *&L,int i,ElemType &e)
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">195k</span>
+    <span title="站点总字数">198k</span>
   </span>
 </div><!-- <a href="https://icp.gov.moe/?keyword=20180708" rel="external nofollow noreferrer" target="_blank" data-pjax-state="" style="
     border-bottom-width: 0px;

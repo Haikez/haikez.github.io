@@ -20,12 +20,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"haikez.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":13},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="前言ArchLinux是通用 x86-64 GNU&#x2F;Linux 发行版，同时也是一个非常简洁的Linux。它将简洁定义为将简洁定义为：避免任何不必要的添加、修改和复杂增加。甚至连vim都不自带！这也给它的安装带来了难度。但与此同时它也提供了非常详细并且更新及时的Wiki（帮助文档），供开发者学习使用。 Arction:">
+<meta name="description" content="前言 ArchLinux是通用 x86-64 GNU&#x2F;Linux 发行版，同时也是一个非常简洁的Linux。它将简洁定义为将简洁定义为：避免任何不必要的添加、修改和复杂增加。甚至连vim都不自带！这也给它的安装带来了难度。但与此同时它也提供了非常详细并且更新及时的Wiki（帮助文档），供开发者学习使用。 Arction:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ArchLinux安装">
 <meta property="og:url" content="https://haikez.github.io/posts/54936.html">
 <meta property="og:site_name" content="倪矗的BLOG">
-<meta property="og:description" content="前言ArchLinux是通用 x86-64 GNU&#x2F;Linux 发行版，同时也是一个非常简洁的Linux。它将简洁定义为将简洁定义为：避免任何不必要的添加、修改和复杂增加。甚至连vim都不自带！这也给它的安装带来了难度。但与此同时它也提供了非常详细并且更新及时的Wiki（帮助文档），供开发者学习使用。 Arction:">
+<meta property="og:description" content="前言 ArchLinux是通用 x86-64 GNU&#x2F;Linux 发行版，同时也是一个非常简洁的Linux。它将简洁定义为将简洁定义为：避免任何不必要的添加、修改和复杂增加。甚至连vim都不自带！这也给它的安装带来了难度。但与此同时它也提供了非常详细并且更新及时的Wiki（帮助文档），供开发者学习使用。 Arction:">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-15T07:05:20.000Z">
 <meta property="article:modified_time" content="2022-05-25T08:31:28.000Z">
@@ -165,7 +165,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-count">81</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -303,69 +303,100 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>ArchLinux是通用 x86-64 GNU/Linux 发行版，同时也是一个非常简洁的Linux。它将简洁定义为将简洁定义为：避免任何不必要的添加、修改和复杂增加。甚至连vim都不自带！这也给它的安装带来了难度。但与此同时它也提供了非常详细并且更新及时的Wiki（帮助文档），供开发者学习使用。</p>
-<h2 id="Arction"><a href="#Arction" class="headerlink" title="Arction:"></a>Arction:</h2><a id="more"></a>
-
-<h3 id="1-下载安装镜像到U盘"><a href="#1-下载安装镜像到U盘" class="headerlink" title="1.下载安装镜像到U盘"></a>1.下载安装镜像到U盘</h3><blockquote>
+        <h2 id="前言">前言</h2>
+<p>ArchLinux是通用 x86-64 GNU/Linux 发行版，同时也是一个非常简洁的Linux。它将简洁定义为将简洁定义为：避免任何不必要的添加、修改和复杂增加。甚至连vim都不自带！这也给它的安装带来了难度。但与此同时它也提供了非常详细并且更新及时的Wiki（帮助文档），供开发者学习使用。</p>
+<h2 id="Arction">Arction:</h2>
+<a id="more"></a>
+<h3 id="1-下载安装镜像到U盘">1.下载安装镜像到U盘</h3>
+<blockquote>
 <p>镜像地址:  <a target="_blank" rel="noopener" href="http://mirrors.163.com/archlinux/iso">http://mirrors.163.com/archlinux/iso</a></p>
 </blockquote>
-<h3 id="2-登入系统给磁盘分区"><a href="#2-登入系统给磁盘分区" class="headerlink" title="2.登入系统给磁盘分区"></a>2.登入系统给磁盘分区</h3><p>同步时间：</p>
+<h3 id="2-登入系统给磁盘分区">2.登入系统给磁盘分区</h3>
+<p>同步时间：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] timedatectl set-ntp <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>查看当前磁盘各个分区：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] lsblk</span><br></pre></td></tr></table></figure>
 <p>设置分区：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] cfdisk /dev/sdx  <span class="comment">#选gpt设置分区,sdx为你想要安装的那个分区</span></span><br></pre></td></tr></table></figure>
-<h4 id="当电脑里面已经有别的系统且也是UEFI引导时："><a href="#当电脑里面已经有别的系统且也是UEFI引导时：" class="headerlink" title="当电脑里面已经有别的系统且也是UEFI引导时："></a>当电脑里面已经有别的系统且也是UEFI引导时：</h4><p>分区方案：<br>sdx1—————1G————–swap分区<br>sdx2—————nG————–主分区</p>
-<h4 id="当电脑还是空机时"><a href="#当电脑还是空机时" class="headerlink" title="当电脑还是空机时"></a>当电脑还是空机时</h4><p>分区方案：<br>sdx1—————1G————–swap分区<br>sdx2—————nG————–主分区<br>sdx3—————500M————ESP分区</p>
-<h4 id="格式化分区"><a href="#格式化分区" class="headerlink" title="格式化分区"></a>格式化分区</h4><p>对于 root、home 分区等直接使用 ext4 文件系统进行初始化。</p>
+<h4 id="当电脑里面已经有别的系统且也是UEFI引导时：">当电脑里面已经有别的系统且也是UEFI引导时：</h4>
+<p>分区方案：<br>
+sdx1---------------1G--------------swap分区<br>
+sdx2---------------nG--------------主分区</p>
+<h4 id="当电脑还是空机时">当电脑还是空机时</h4>
+<p>分区方案：<br>
+sdx1---------------1G--------------swap分区<br>
+sdx2---------------nG--------------主分区<br>
+sdx3---------------500M------------ESP分区</p>
+<h4 id="格式化分区">格式化分区</h4>
+<p>对于 root、home 分区等直接使用 ext4 文件系统进行初始化。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] mkfs.ext4 /dev/sdx2</span><br></pre></td></tr></table></figure>
 <p>对于交换分区，不能使用上述命令进行格式化，而需要使用 mkswap 将其初始化。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] mkswap /dev/sdx1</span><br><span class="line">[root@archiso~] swapon /dev/sdx1</span><br></pre></td></tr></table></figure>
 <p>电脑为空机执行:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] mkfs.fat -F32 /dev/sda1</span><br></pre></td></tr></table></figure>
 <p>(格式化ESP分区)</p>
-<h4 id="挂载分区"><a href="#挂载分区" class="headerlink" title="挂载分区"></a>挂载分区</h4><blockquote>
+<h4 id="挂载分区">挂载分区</h4>
+<blockquote>
 <p>假设系统内的ESP分区为sdxn</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 挂载根分区</span></span><br><span class="line">[root@archiso~] mount /dev/sdx2 /mnt</span><br><span class="line"><span class="comment"># 在根分区下新建boot文件夹</span></span><br><span class="line">[root@archiso~] mkdir /mnt/boot</span><br><span class="line"><span class="comment"># 挂载boot分区</span></span><br><span class="line">[root@archiso~] mount /dev/sdxn /mnt/boot</span><br></pre></td></tr></table></figure>
-<h4 id="更换软件源"><a href="#更换软件源" class="headerlink" title="更换软件源"></a>更换软件源</h4><p>使用reflector来获取速度最快的6个镜像，并将地址保存至/etc/pacman.d/mirrorlist</p>
+<h4 id="更换软件源">更换软件源</h4>
+<p>使用reflector来获取速度最快的6个镜像，并将地址保存至/etc/pacman.d/mirrorlist</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] reflector -c China -a 6 --sort rate --save /etc/pacman.d/mirrorlist</span><br></pre></td></tr></table></figure>
-<h3 id="3-安装系统"><a href="#3-安装系统" class="headerlink" title="3.安装系统"></a>3.安装系统</h3><p>执行:</p>
+<h3 id="3-安装系统">3.安装系统</h3>
+<p>执行:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] pacstrap -i /mnt base base-devel linux linux-firmware</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>安装完系统后会在/mnt/boot下生成几个文件。这对下面配置grub引导文件至关重要，下面生成grub配置文件时会扫描这几个文件</p>
 </blockquote>
-<h3 id="4-配置系统"><a href="#4-配置系统" class="headerlink" title="4.配置系统"></a>4.配置系统</h3><h4 id="1-配置fstab"><a href="#1-配置fstab" class="headerlink" title="(1)配置fstab"></a>(1)配置fstab</h4><p>执行:</p>
+<h3 id="4-配置系统">4.配置系统</h3>
+<h4 id="1-配置fstab">(1)配置fstab</h4>
+<p>执行:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</span><br></pre></td></tr></table></figure>
-<h4 id="2-切换到新系统"><a href="#2-切换到新系统" class="headerlink" title="(2)切换到新系统"></a>(2)切换到新系统</h4><p>执行:</p>
+<h4 id="2-切换到新系统">(2)切换到新系统</h4>
+<p>执行:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] arch-chroot /mnt</span><br><span class="line">[root@archiso~] pacman -S vim <span class="comment">#安装vim</span></span><br></pre></td></tr></table></figure>
-<h4 id="3-进行本地语言设置"><a href="#3-进行本地语言设置" class="headerlink" title="(3)进行本地语言设置"></a>(3)进行本地语言设置</h4><p>执行:</p>
+<h4 id="3-进行本地语言设置">(3)进行本地语言设置</h4>
+<p>执行:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] vim /etc/locale.gen</span><br></pre></td></tr></table></figure>
-<p>反注释（删掉前面的#）<br>en_US.UTF-8 UTF-8<br>zh_CN.UTF-8 UTF-8<br>这两个，退出保存<br>执行：</p>
+<p>反注释（删掉前面的#）<br>
+en_US.UTF-8 UTF-8<br>
+zh_CN.UTF-8 UTF-8<br>
+这两个，退出保存执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] locale-gen</span><br></pre></td></tr></table></figure>
 <p>执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] <span class="built_in">echo</span> LANG=en_US.UTF-8 &gt; /etc/locale.conf</span><br></pre></td></tr></table></figure>
-<h4 id="4-设置时区"><a href="#4-设置时区" class="headerlink" title="(4)设置时区"></a>(4)设置时区</h4><p>执行:</p>
+<h4 id="4-设置时区">(4)设置时区</h4>
+<p>执行:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span><br></pre></td></tr></table></figure>
-<p>设置时区。<br>执行:</p>
+<p>设置时区。执行:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] hwclock --systohc --utc</span><br></pre></td></tr></table></figure>
-<h4 id="5-设置主机名和网络"><a href="#5-设置主机名和网络" class="headerlink" title="(5)设置主机名和网络"></a>(5)设置主机名和网络</h4><p>设置主机名：</p>
+<h4 id="5-设置主机名和网络">(5)设置主机名和网络</h4>
+<p>设置主机名：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] vim /etc/hostname</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>主机名<br>~<br>~<br>~</p>
+<p>主机名<br>
+~<br>
+~<br>
+~</p>
 </blockquote>
 <p>设置网络：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] vim /etc/hosts</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>127.0.0.1&emsp;&emsp;localhost<br>::1&emsp;&emsp;&emsp;&emsp;&emsp;localhost<br>127.0.0.1&emsp;&emsp;主机名.localdomain&emsp;&emsp;主机名</p>
+<p>127.0.0.1  localhost<br>
+::1     localhost<br>
+127.0.0.1  主机名.localdomain  主机名</p>
 </blockquote>
 <p>设置网络DNS</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] vim /etc/resolv.conf.head</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>nameserver&emsp;&emsp;218.2.2.2&emsp;—江苏电信<br>nameserver&emsp;&emsp;223.5.5.5&emsp;—阿里</p>
+<p>nameserver  218.2.2.2 —江苏电信<br>
+nameserver  223.5.5.5 —阿里</p>
 </blockquote>
-<h4 id="6-安装网络工具"><a href="#6-安装网络工具" class="headerlink" title="(6)安装网络工具"></a>(6)安装网络工具</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] pacman -S dhcpcd</span><br><span class="line">[root@archiso~] systemctl start dhcpcd</span><br><span class="line">[root@archiso~] systemctl <span class="built_in">enable</span> dhcpcd</span><br></pre></td></tr></table></figure>
-<h3 id="5-引导系统"><a href="#5-引导系统" class="headerlink" title="5.引导系统"></a>5.引导系统</h3><p>GRUB进行UEFI引导<br>执行：</p>
+<h4 id="6-安装网络工具">(6)安装网络工具</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] pacman -S dhcpcd</span><br><span class="line">[root@archiso~] systemctl start dhcpcd</span><br><span class="line">[root@archiso~] systemctl <span class="built_in">enable</span> dhcpcd</span><br></pre></td></tr></table></figure>
+<h3 id="5-引导系统">5.引导系统</h3>
+<p>GRUB进行UEFI引导执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] pacman -S dosfstools grub efibootmgr</span><br></pre></td></tr></table></figure>
 <p>安装引导工具</p>
 <p>执行:</p>
@@ -374,18 +405,23 @@
 <p>执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] grub-mkconfig -o /boot/grub/grub.cfg</span><br></pre></td></tr></table></figure>
 <p>进行配置grub</p>
-<h3 id="6-用户管理"><a href="#6-用户管理" class="headerlink" title="6.用户管理"></a>6.用户管理</h3><h4 id="（1）设置root密码"><a href="#（1）设置root密码" class="headerlink" title="（1）设置root密码"></a>（1）设置root密码</h4><p>执行:</p>
+<h3 id="6-用户管理">6.用户管理</h3>
+<h4 id="（1）设置root密码">（1）设置root密码</h4>
+<p>执行:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] passwd</span><br></pre></td></tr></table></figure>
-<h4 id="（2）添加用户"><a href="#（2）添加用户" class="headerlink" title="（2）添加用户"></a>（2）添加用户</h4><p>执行：</p>
+<h4 id="（2）添加用户">（2）添加用户</h4>
+<p>执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] useradd -m -G wheel 用户名</span><br></pre></td></tr></table></figure>
-<p>（务必添加一个 用户 ，否则后面sddm显示管理器登录的时候无法登录，sddm不会列出root用户）<br>执行：</p>
+<p>（务必添加一个 用户 ，否则后面sddm显示管理器登录的时候无法登录，sddm不会列出root用户）执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] passwd 用户名</span><br></pre></td></tr></table></figure>
 <p>为刚才添加的用户设置密码</p>
-<h4 id="3-给用户添加权限"><a href="#3-给用户添加权限" class="headerlink" title="(3) 给用户添加权限"></a>(3) 给用户添加权限</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] ln -S /usr/bin/vim /usr/bin/vi </span><br><span class="line">[root@archiso~] visudo</span><br></pre></td></tr></table></figure>
+<h4 id="3-给用户添加权限">(3) 给用户添加权限</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] ln -S /usr/bin/vim /usr/bin/vi </span><br><span class="line">[root@archiso~] visudo</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>%wheel All=(All)All “去掉这句话前的‘#’符号”</p>
 </blockquote>
-<h3 id="7-退出chroot重启"><a href="#7-退出chroot重启" class="headerlink" title="7.退出chroot重启"></a>7.退出chroot重启</h3><p>执行：</p>
+<h3 id="7-退出chroot重启">7.退出chroot重启</h3>
+<p>执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@archiso~] <span class="built_in">exit</span></span><br><span class="line">[root@archiso~] reboot</span><br></pre></td></tr></table></figure>
     </div>
     
@@ -471,7 +507,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">195k</span>
+    <span title="站点总字数">198k</span>
   </span>
 </div><!-- <a href="https://icp.gov.moe/?keyword=20180708" rel="external nofollow noreferrer" target="_blank" data-pjax-state="" style="
     border-bottom-width: 0px;

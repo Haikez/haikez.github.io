@@ -20,12 +20,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"haikez.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":13},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="hadoop分布式集群搭建1. 创建三台虚拟机虚拟机用的是CenOS 7镜像文件已打包好:天翼云盘：https:&#x2F;&#x2F;cloud.189.cn&#x2F;t&#x2F;bQr6VrB7Zzmu（访问码：1ck6）">
+<meta name="description" content="hadoop分布式集群搭建 1. 创建三台虚拟机 虚拟机用的是CenOS 7镜像文件已打包好: 天翼云盘：https:&#x2F;&#x2F;cloud.189.cn&#x2F;t&#x2F;bQr6VrB7Zzmu（访问码：1ck6）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hadoop分布式集群搭建">
 <meta property="og:url" content="https://haikez.github.io/posts/60572.html">
 <meta property="og:site_name" content="倪矗的BLOG">
-<meta property="og:description" content="hadoop分布式集群搭建1. 创建三台虚拟机虚拟机用的是CenOS 7镜像文件已打包好:天翼云盘：https:&#x2F;&#x2F;cloud.189.cn&#x2F;t&#x2F;bQr6VrB7Zzmu（访问码：1ck6）">
+<meta property="og:description" content="hadoop分布式集群搭建 1. 创建三台虚拟机 虚拟机用的是CenOS 7镜像文件已打包好: 天翼云盘：https:&#x2F;&#x2F;cloud.189.cn&#x2F;t&#x2F;bQr6VrB7Zzmu（访问码：1ck6）">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127132746.jpg">
 <meta property="og:image" content="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127133305.jpg">
@@ -160,7 +160,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hadoop%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA"><span class="nav-text">hadoop分布式集群搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E4%B8%89%E5%8F%B0%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-text">1. 创建三台虚拟机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%88%9B%E5%BB%BA%E5%AD%90%E7%BD%91%EF%BC%9A%E5%B0%86%E4%B8%89%E5%8F%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84IP%E8%BF%9E%E6%8E%A5%E5%88%B0%E5%AD%90%E7%BD%91%E4%B8%AD%E3%80%82"><span class="nav-text">2. 创建子网：将三台虚拟机的IP连接到子网中。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E9%85%8D%E7%BD%AE%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%9D%99%E6%80%81IP"><span class="nav-text">3. 配置虚拟机静态IP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E8%AE%BE%E7%BD%AEhadoop%E4%B8%BB%E6%9C%BA%E5%90%8D"><span class="nav-text">4. 设置hadoop主机名:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E9%85%8D%E7%BD%AE%E5%86%85%E7%BD%91%E5%9F%9F%E5%90%8D%E6%98%A0%E5%B0%84%EF%BC%9A"><span class="nav-text">5. 配置内网域名映射：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E9%85%8D%E7%BD%AEssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95%EF%BC%88%E4%BB%A5hadoop01%E4%B8%BA%E4%BE%8B%EF%BC%89%EF%BC%9A"><span class="nav-text">6. 配置ssh免密登录（以hadoop01为例）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E9%98%B2%E7%81%AB%E5%A2%99"><span class="nav-text">7. 防火墙</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E5%AE%89%E8%A3%85java"><span class="nav-text">8. 安装java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E5%AE%89%E8%A3%85hadoop%E9%9B%86%E7%BE%A4"><span class="nav-text">9. 安装hadoop集群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E4%BF%AE%E6%94%B9"><span class="nav-text">10. 配置文件的修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E5%90%AF%E5%8A%A8"><span class="nav-text">11. 启动</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">hadoop分布式集群搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E4%B8%89%E5%8F%B0%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-text">1. 创建三台虚拟机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%88%9B%E5%BB%BA%E5%AD%90%E7%BD%91%EF%BC%9A%E5%B0%86%E4%B8%89%E5%8F%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84IP%E8%BF%9E%E6%8E%A5%E5%88%B0%E5%AD%90%E7%BD%91%E4%B8%AD%E3%80%82"><span class="nav-text">2. 创建子网：将三台虚拟机的IP连接到子网中。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E9%85%8D%E7%BD%AE%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%9D%99%E6%80%81IP"><span class="nav-text">3. 配置虚拟机静态IP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E8%AE%BE%E7%BD%AEhadoop%E4%B8%BB%E6%9C%BA%E5%90%8D"><span class="nav-text">4. 设置hadoop主机名:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E9%85%8D%E7%BD%AE%E5%86%85%E7%BD%91%E5%9F%9F%E5%90%8D%E6%98%A0%E5%B0%84%EF%BC%9A"><span class="nav-text">5. 配置内网域名映射：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E9%85%8D%E7%BD%AEssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95%EF%BC%88%E4%BB%A5hadoop01%E4%B8%BA%E4%BE%8B%EF%BC%89%EF%BC%9A"><span class="nav-text">6. 配置ssh免密登录（以hadoop01为例）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E9%98%B2%E7%81%AB%E5%A2%99"><span class="nav-text">7. 防火墙</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E5%AE%89%E8%A3%85java"><span class="nav-text">8. 安装java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E5%AE%89%E8%A3%85hadoop%E9%9B%86%E7%BE%A4"><span class="nav-text">9. 安装hadoop集群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E4%BF%AE%E6%94%B9"><span class="nav-text">10. 配置文件的修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E5%90%AF%E5%8A%A8"><span class="nav-text">11. 启动</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -176,7 +176,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-count">81</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -314,54 +314,88 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="hadoop分布式集群搭建"><a href="#hadoop分布式集群搭建" class="headerlink" title="hadoop分布式集群搭建"></a>hadoop分布式集群搭建</h1><h3 id="1-创建三台虚拟机"><a href="#1-创建三台虚拟机" class="headerlink" title="1. 创建三台虚拟机"></a>1. 创建三台虚拟机</h3><p>虚拟机用的是<strong>CenOS 7</strong>镜像文件已打包好:<br>天翼云盘：<a target="_blank" rel="noopener" href="https://cloud.189.cn/t/bQr6VrB7Zzmu%EF%BC%88%E8%AE%BF%E9%97%AE%E7%A0%81%EF%BC%9A1ck6%EF%BC%89">https://cloud.189.cn/t/bQr6VrB7Zzmu（访问码：1ck6）</a></p>
-<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127132746.jpg"></p>
+        <h1>hadoop分布式集群搭建</h1>
+<h3 id="1-创建三台虚拟机">1. 创建三台虚拟机</h3>
+<p>虚拟机用的是<strong>CenOS 7</strong>镜像文件已打包好:<br>
+天翼云盘：<a target="_blank" rel="noopener" href="https://cloud.189.cn/t/bQr6VrB7Zzmu%EF%BC%88%E8%AE%BF%E9%97%AE%E7%A0%81%EF%BC%9A1ck6%EF%BC%89">https://cloud.189.cn/t/bQr6VrB7Zzmu（访问码：1ck6）</a></p>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127132746.jpg" alt></p>
 <a id="more"></a>
-<h3 id="2-创建子网：将三台虚拟机的IP连接到子网中。"><a href="#2-创建子网：将三台虚拟机的IP连接到子网中。" class="headerlink" title="2. 创建子网：将三台虚拟机的IP连接到子网中。"></a>2. 创建子网：将三台虚拟机的IP连接到子网中。</h3><p>进入子网配置界面：<strong>VMware Fusion &gt; 偏好设置 &gt; 网络。</strong><br>根据自己喜好，划分一个子网：<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127133305.jpg"><br>A类保留地址：10.0.0.0 ～ 10.255.255.255<br>B类保留地址：172.16.0.0 ～ 172.31.255.255<br>C类保留地址: 192.168.0.0 ～192.168.255.255</p>
+<h3 id="2-创建子网：将三台虚拟机的IP连接到子网中。">2. 创建子网：将三台虚拟机的IP连接到子网中。</h3>
+<p>进入子网配置界面：<strong>VMware Fusion &gt; 偏好设置 &gt; 网络。</strong><br>
+根据自己喜好，划分一个子网：<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127133305.jpg" alt><br>
+A类保留地址：10.0.0.0 ～ 10.255.255.255<br>
+B类保留地址：172.16.0.0 ～ 172.31.255.255<br>
+C类保留地址: 192.168.0.0 ～192.168.255.255</p>
 <p>查看子网：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 我的子网IP设置为：192.168.120.0</span></span><br><span class="line"><span class="comment"># 子网IP最好不要和主机的网关在一个网段!!!</span></span><br><span class="line">cat /Library/Preferences/VMware\ Fusion/networking</span><br></pre></td></tr></table></figure>
 <p>查看网关：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 网关IP默认为：192.168.120.2</span></span><br><span class="line">cat /Library/Preferences/VMware\ Fusion/vmnet3/nat.conf</span><br></pre></td></tr></table></figure>
-<h3 id="3-配置虚拟机静态IP"><a href="#3-配置虚拟机静态IP" class="headerlink" title="3. 配置虚拟机静态IP"></a>3. 配置虚拟机静态IP</h3><p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127135136.jpg"><br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127135303.jpg"><br>修改hadoop的网络（以hadoop01为例）</p>
+<h3 id="3-配置虚拟机静态IP">3. 配置虚拟机静态IP</h3>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127135136.jpg" alt><br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127135303.jpg" alt><br>
+修改hadoop的网络（以hadoop01为例）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysconfig/network-scripts/ifcfg-ens33</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在文件内追加</span></span><br><span class="line">BOOTPROTO=<span class="string">&quot;static&quot;</span></span><br><span class="line">ONBOOT=<span class="string">&quot;yes&quot;</span></span><br><span class="line">IPADDR=192.168.120.110  <span class="comment">#自定义IP</span></span><br><span class="line">GATEWAY=192.168.120.2   <span class="comment">#网关地址</span></span><br><span class="line">NETMASK=255.255.250.0   <span class="comment">#子网掩码</span></span><br><span class="line">DNS1=114.114.114.114</span><br><span class="line">DNS2=223.5.5.5</span><br><span class="line">DNS3=8.8.8.8</span><br></pre></td></tr></table></figure>
 <p>重启网络</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service network restart</span><br></pre></td></tr></table></figure>
-<p>修改hadoop02和hadoop03的IP。<br>我分配的IP分别是：<br>hadoop01: 192.168.120.110<br>hadoop02: 192.168.120.120<br>hadoop03: 192.168.120.130</p>
-<h3 id="4-设置hadoop主机名"><a href="#4-设置hadoop主机名" class="headerlink" title="4. 设置hadoop主机名:"></a>4. 设置hadoop主机名:</h3><figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">hostnamectl</span> <span class="built_in">set-hostname</span> <span class="string">hadoop01</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127142220.jpg"><br>修改hadoop02和hadoop03的主机名。</p>
-<h3 id="5-配置内网域名映射："><a href="#5-配置内网域名映射：" class="headerlink" title="5. 配置内网域名映射："></a>5. 配置内网域名映射：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vim  /etc/hosts</span><br><span class="line"></span><br><span class="line">192.168.120.110         hadoop01</span><br><span class="line">192.168.120.120         hadoop02</span><br><span class="line">192.168.120.130         hadoop03</span><br></pre></td></tr></table></figure>
-<h3 id="6-配置ssh免密登录（以hadoop01为例）："><a href="#6-配置ssh免密登录（以hadoop01为例）：" class="headerlink" title="6. 配置ssh免密登录（以hadoop01为例）："></a>6. 配置ssh免密登录（以hadoop01为例）：</h3><p>生成密钥</p>
+<p>修改hadoop02和hadoop03的IP。我分配的IP分别是：<br>
+hadoop01: 192.168.120.110<br>
+hadoop02: 192.168.120.120<br>
+hadoop03: 192.168.120.130</p>
+<h3 id="4-设置hadoop主机名">4. 设置hadoop主机名:</h3>
+<figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">hostnamectl</span> <span class="built_in">set-hostname</span> <span class="string">hadoop01</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127142220.jpg" alt><br>
+修改hadoop02和hadoop03的主机名。</p>
+<h3 id="5-配置内网域名映射：">5. 配置内网域名映射：</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vim  /etc/hosts</span><br><span class="line"></span><br><span class="line">192.168.120.110         hadoop01</span><br><span class="line">192.168.120.120         hadoop02</span><br><span class="line">192.168.120.130         hadoop03</span><br></pre></td></tr></table></figure>
+<h3 id="6-配置ssh免密登录（以hadoop01为例）：">6. 配置ssh免密登录（以hadoop01为例）：</h3>
+<p>生成密钥</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ssh-keygen -t rsa</span></span><br></pre></td></tr></table></figure>
 <p>将密钥分配到hadoop02和hadoop03</p>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh-<span class="keyword">copy</span>-<span class="built_in">id</span>  hadoop01</span><br><span class="line">ssh-<span class="keyword">copy</span>-<span class="built_in">id</span>  hadoop02</span><br><span class="line">ssh-<span class="keyword">copy</span>-<span class="built_in">id</span>  hadoop03</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127144711.jpg"><br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127144600.jpg"><br>注意：<br>还需要在hadoop02配置一下免登录到 hadoop01、hadoop02、hadoop03。<br>还需要在hadoop03配置一下免登录到 hadoop01、hadoop02、hadoop03。</p>
-<h3 id="7-防火墙"><a href="#7-防火墙" class="headerlink" title="7. 防火墙"></a>7. 防火墙</h3><p>查询防火墙的命令：</p>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127144711.jpg" alt><br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127144600.jpg" alt><br>
+注意：还需要在hadoop02配置一下免登录到 hadoop01、hadoop02、hadoop03。还需要在hadoop03配置一下免登录到 hadoop01、hadoop02、hadoop03。</p>
+<h3 id="7-防火墙">7. 防火墙</h3>
+<p>查询防火墙的命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
 <p>临时关闭防火墙：(注意 临时关闭之后，服务器再次重启，防火墙会自动开启)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
 <p>永久关闭防火墙：(注意 先临时关闭，再永久关闭)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br></pre></td></tr></table></figure>
-<h3 id="8-安装java"><a href="#8-安装java" class="headerlink" title="8. 安装java"></a>8. 安装java</h3><p>(1)、天翼云盘下载:<br><a target="_blank" rel="noopener" href="https://cloud.189.cn/t/AjAJZbiyYfAv%EF%BC%88%E8%AE%BF%E9%97%AE%E7%A0%81%EF%BC%9Ams9z%EF%BC%89">https://cloud.189.cn/t/AjAJZbiyYfAv（访问码：ms9z）</a><br>(2)、解压java的tar包</p>
+<h3 id="8-安装java">8. 安装java</h3>
+<p>(1)、天翼云盘下载:<br>
+<a target="_blank" rel="noopener" href="https://cloud.189.cn/t/AjAJZbiyYfAv%EF%BC%88%E8%AE%BF%E9%97%AE%E7%A0%81%EF%BC%9Ams9z%EF%BC%89">https://cloud.189.cn/t/AjAJZbiyYfAv（访问码：ms9z）</a><br>
+(2)、解压java的tar包</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">tar</span> -zxvf jdk-<span class="number">8</span>u<span class="number">211</span>-linux-x<span class="number">64</span>.tar.gz -C /usr/local</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127160343.jpg"></p>
-<h3 id="9-安装hadoop集群"><a href="#9-安装hadoop集群" class="headerlink" title="9. 安装hadoop集群"></a>9. 安装hadoop集群</h3><p>(1)、去官网下载:<br><a target="_blank" rel="noopener" href="https://hadoop.apache.org/">https://hadoop.apache.org/</a><br>天翼云盘下载:<br><a target="_blank" rel="noopener" href="https://cloud.189.cn/t/367zaeiuEFfu%EF%BC%88%E8%AE%BF%E9%97%AE%E7%A0%81%EF%BC%9Apjj1%EF%BC%89">https://cloud.189.cn/t/367zaeiuEFfu（访问码：pjj1）</a></p>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127160343.jpg" alt></p>
+<h3 id="9-安装hadoop集群">9. 安装hadoop集群</h3>
+<p>(1)、去官网下载:<br>
+<a target="_blank" rel="noopener" href="https://hadoop.apache.org/">https://hadoop.apache.org/</a><br>
+天翼云盘下载:<br>
+<a target="_blank" rel="noopener" href="https://cloud.189.cn/t/367zaeiuEFfu%EF%BC%88%E8%AE%BF%E9%97%AE%E7%A0%81%EF%BC%9Apjj1%EF%BC%89">https://cloud.189.cn/t/367zaeiuEFfu（访问码：pjj1）</a></p>
 <p>(2)、解压hadoop的tar包</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">tar</span> -zxvf hadoop-<span class="number">2</span>.<span class="number">7</span>.<span class="number">3</span>.tar.gz -C /usr/local</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127160459.jpg"><br>(3)、配置环境变量</p>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127160459.jpg" alt><br>
+(3)、配置环境变量</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim <span class="regexp">/etc/</span>profile</span><br></pre></td></tr></table></figure>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">export</span> <span class="attribute">JAVA_HOME</span>=/usr/local/jdk1.8.0_211</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">HADOOP_HOME</span>=/usr/local/hadoop-2.7.3</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">PATH</span>=<span class="variable">$PATH</span>:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin</span><br></pre></td></tr></table></figure>
 <p>记得source</p>
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">source</span> <span class="regexp">/etc/</span>profile</span><br></pre></td></tr></table></figure>
-<h3 id="10-配置文件的修改"><a href="#10-配置文件的修改" class="headerlink" title="10. 配置文件的修改"></a>10. 配置文件的修改</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd <span class="regexp">/usr/</span>local<span class="regexp">/hadoop-2.7.3/</span>etc/hadoop</span><br></pre></td></tr></table></figure>
+<h3 id="10-配置文件的修改">10. 配置文件的修改</h3>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd <span class="regexp">/usr/</span>local<span class="regexp">/hadoop-2.7.3/</span>etc/hadoop</span><br></pre></td></tr></table></figure>
 <p>(1)、修改hadoop的依赖环境java</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">vi</span> hadoop-env.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
-<p>把jdk的依赖加进去就OK<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127161352.jpg"><br>(2)、配置hadoop的访问客户端</p>
+<p>把jdk的依赖加进去就OK<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127161352.jpg" alt><br>
+(2)、配置hadoop的访问客户端</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">vi</span> <span class="selector-tag">core-site</span><span class="selector-class">.xml</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="params">&lt;configuration&gt;</span></span><br><span class="line"><span class="params">&lt;property&gt;</span></span><br><span class="line"><span class="params">&lt;name&gt;</span>fs.defaultFS<span class="params">&lt;/name&gt;</span></span><br><span class="line"><span class="params">&lt;value&gt;</span>hdfs:<span class="comment">//hadoop01:9000&lt;/value&gt;</span></span><br><span class="line"><span class="params">&lt;/property&gt;</span></span><br><span class="line"><span class="params">&lt;property&gt;</span></span><br><span class="line"><span class="params">&lt;name&gt;</span>hadoop.tmp.dir<span class="params">&lt;/name&gt;</span></span><br><span class="line"><span class="params">&lt;value&gt;</span><span class="meta-keyword">/usr/</span>local/hadoop<span class="number">-2.7</span><span class="number">.3</span>/tmp<span class="params">&lt;/value&gt;</span></span><br><span class="line"><span class="params">&lt;/property&gt;</span></span><br><span class="line"><span class="params">&lt;/configuration&gt;</span></span><br></pre></td></tr></table></figure>
 <p>(3)、配置元数据与真实数据的存储路径信息</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">vi</span> <span class="selector-tag">hdfs-site</span><span class="selector-class">.xml</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="params">&lt;configuration&gt;</span></span><br><span class="line"><span class="params">&lt;property&gt;</span></span><br><span class="line"><span class="params">&lt;name&gt;</span>dfs.namenode.name.dir<span class="params">&lt;/name&gt;</span></span><br><span class="line"><span class="params">&lt;value&gt;</span><span class="meta-keyword">/usr/</span>local/hadoop<span class="number">-2.7</span><span class="number">.3</span><span class="meta-keyword">/data/</span>name<span class="params">&lt;/value&gt;</span></span><br><span class="line"><span class="params">&lt;/property&gt;</span></span><br><span class="line"><span class="params">&lt;property&gt;</span></span><br><span class="line"><span class="params">&lt;name&gt;</span>dfs.datanode.data.dir<span class="params">&lt;/name&gt;</span></span><br><span class="line"><span class="params">&lt;value&gt;</span><span class="meta-keyword">/usr/</span>local/hadoop<span class="number">-2.7</span><span class="number">.3</span><span class="meta-keyword">/data/</span>data<span class="params">&lt;/value&gt;</span></span><br><span class="line"><span class="params">&lt;/property&gt;</span></span><br><span class="line"><span class="params">&lt;property&gt;</span></span><br><span class="line"><span class="params">&lt;name&gt;</span>dfs.replication<span class="params">&lt;/name&gt;</span></span><br><span class="line"><span class="params">&lt;value&gt;</span><span class="number">3</span><span class="params">&lt;/value&gt;</span></span><br><span class="line"><span class="params">&lt;/property&gt;</span></span><br><span class="line"><span class="params">&lt;property&gt;</span></span><br><span class="line"><span class="params">&lt;name&gt;</span>dfs.secondary.http.address<span class="params">&lt;/name&gt;</span></span><br><span class="line"><span class="params">&lt;value&gt;</span>hadoop01:<span class="number">50090</span><span class="params">&lt;/value&gt;</span></span><br><span class="line"><span class="params">&lt;/property&gt;</span></span><br><span class="line"><span class="params">&lt;/configuration&gt;</span></span><br></pre></td></tr></table></figure>
-<p>(4)、配置计算框架mapreduce<br>先把临时的文件修改成非临时</p>
+<p>(4)、配置计算框架mapreduce<br>
+先把临时的文件修改成非临时</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">mv</span> <span class="selector-tag">mapred-site</span><span class="selector-class">.xml</span><span class="selector-class">.template</span> <span class="selector-tag">mapred-site</span><span class="selector-class">.xml</span></span><br></pre></td></tr></table></figure>
 <p>修改：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">vi</span> <span class="selector-tag">mapred-site</span><span class="selector-class">.xml</span></span><br></pre></td></tr></table></figure>
@@ -371,14 +405,18 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.hostname<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>hadoop01<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.aux-services<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>mapreduce_shuffle<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>(6)、配置从节点</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">vi slaves</span></span><br></pre></td></tr></table></figure>
-<p>把localhost删掉，添加<br>hadoop02<br>hadoop03</p>
-<h3 id="11-启动"><a href="#11-启动" class="headerlink" title="11. 启动"></a>11. 启动</h3><p>(1)、分发</p>
+<p>把localhost删掉，添加<br>
+hadoop02<br>
+hadoop03</p>
+<h3 id="11-启动">11. 启动</h3>
+<p>(1)、分发</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">scp -r <span class="regexp">/usr/</span>local<span class="regexp">/jdk1.8.0_211  hadoop02:/u</span>sr<span class="regexp">/local/</span></span><br><span class="line">scp -r <span class="regexp">/usr/</span>local<span class="regexp">/jdk1.8.0_211  hadoop03:/u</span>sr<span class="regexp">/local/</span></span><br><span class="line">scp -r <span class="regexp">/usr/</span>local<span class="regexp">/hadoop-2.7.3  hadoop02:/u</span>sr<span class="regexp">/local/</span></span><br><span class="line">scp -r <span class="regexp">/usr/</span>local<span class="regexp">/hadoop-2.7.3  hadoop03:/u</span>sr<span class="regexp">/local/</span></span><br><span class="line">scp <span class="regexp">/etc/</span>profile hadoop02:<span class="regexp">/etc/</span>profile</span><br><span class="line">scp <span class="regexp">/etc/</span>profile hadoop03:<span class="regexp">/etc/</span>profile</span><br></pre></td></tr></table></figure>
 <p>(2)、初始化namenode (只执行一次)</p>
 <figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop  namenode -<span class="built_in">format</span> </span><br></pre></td></tr></table></figure>
 <p>(3)、启动</p>
 <figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">start</span>-<span class="keyword">all</span>.sh</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127162752.jpg"><br>(4)、停止</p>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/bigdata/20211127162752.jpg" alt><br>
+(4)、停止</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">stop</span>-<span class="keyword">all</span>.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
     </div>
     
@@ -461,7 +499,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">195k</span>
+    <span title="站点总字数">198k</span>
   </span>
 </div><!-- <a href="https://icp.gov.moe/?keyword=20180708" rel="external nofollow noreferrer" target="_blank" data-pjax-state="" style="
     border-bottom-width: 0px;

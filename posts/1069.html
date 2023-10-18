@@ -20,12 +20,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"haikez.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":13},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="ESP-01S实现智能灯控前言随着HomeAssistant和HomeBridge的接入，我屋内的智能家居开始变得完备起来，智能风扇，智能加湿器，智能温湿度传感器。这一切都归功于树莓派和这一颗热爱折腾的心😄。剩下的问题就是把家用灯也变得智能起来，只有这个实现了，这一套才算是入门级智能家居了吧。 问题分析:智能风扇的实现得益于小米智能插座，湿度传感器是接在树莓派上的。显然我不能把家用灯接在智能插座">
+<meta name="description" content="ESP-01S实现智能灯控 前言 随着HomeAssistant和HomeBridge的接入，我屋内的智能家居开始变得完备起来，智能风扇，智能加湿器，智能温湿度传感器。这一切都归功于树莓派和这一颗热爱折腾的心😄。剩下的问题就是把家用灯也变得智能起来，只有这个实现了，这一套才算是入门级智能家居了吧。 问题分析: 智能风扇的实现得益于小米智能插座，湿度传感器是接在树莓派上的。显然我不能把家用灯接在智">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ESP-01S实现智能灯控">
 <meta property="og:url" content="https://haikez.github.io/posts/1069.html">
 <meta property="og:site_name" content="倪矗的BLOG">
-<meta property="og:description" content="ESP-01S实现智能灯控前言随着HomeAssistant和HomeBridge的接入，我屋内的智能家居开始变得完备起来，智能风扇，智能加湿器，智能温湿度传感器。这一切都归功于树莓派和这一颗热爱折腾的心😄。剩下的问题就是把家用灯也变得智能起来，只有这个实现了，这一套才算是入门级智能家居了吧。 问题分析:智能风扇的实现得益于小米智能插座，湿度传感器是接在树莓派上的。显然我不能把家用灯接在智能插座">
+<meta property="og:description" content="ESP-01S实现智能灯控 前言 随着HomeAssistant和HomeBridge的接入，我屋内的智能家居开始变得完备起来，智能风扇，智能加湿器，智能温湿度传感器。这一切都归功于树莓派和这一颗热爱折腾的心😄。剩下的问题就是把家用灯也变得智能起来，只有这个实现了，这一套才算是入门级智能家居了吧。 问题分析: 智能风扇的实现得益于小米智能插座，湿度传感器是接在树莓派上的。显然我不能把家用灯接在智">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915173231.jpeg">
 <meta property="og:image" content="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915173349.png">
@@ -164,7 +164,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ESP-01S%E5%AE%9E%E7%8E%B0%E6%99%BA%E8%83%BD%E7%81%AF%E6%8E%A7"><span class="nav-text">ESP-01S实现智能灯控</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87"><span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%B7%E6%9C%BA"><span class="nav-text">刷机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="nav-text">下载:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B7%E5%86%99%E5%9B%BA%E4%BB%B6%EF%BC%9A"><span class="nav-text">刷写固件：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E7%BA%BF"><span class="nav-text">接线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0-HomeKit-%E8%AE%BE%E5%A4%87"><span class="nav-text">添加 HomeKit 设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">ESP-01S实现智能灯控</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87"><span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%B7%E6%9C%BA"><span class="nav-text">刷机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="nav-text">下载:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B7%E5%86%99%E5%9B%BA%E4%BB%B6%EF%BC%9A"><span class="nav-text">刷写固件：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E7%BA%BF"><span class="nav-text">接线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0-HomeKit-%E8%AE%BE%E5%A4%87"><span class="nav-text">添加 HomeKit 设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -180,7 +180,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-count">81</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -309,18 +309,24 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="ESP-01S实现智能灯控"><a href="#ESP-01S实现智能灯控" class="headerlink" title="ESP-01S实现智能灯控"></a>ESP-01S实现智能灯控</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着HomeAssistant和HomeBridge的接入，我屋内的智能家居开始变得完备起来，智能风扇，智能加湿器，智能温湿度传感器。这一切都归功于树莓派和这一颗热爱折腾的心😄。剩下的问题就是把家用灯也变得智能起来，只有这个实现了，这一套才算是入门级智能家居了吧。</p>
-<p><strong>问题分析:</strong><br>智能风扇的实现得益于小米智能插座，湿度传感器是接在树莓派上的。显然我不能把家用灯接在智能插座或树莓派上—-太臃肿。</p>
-<p><strong>机缘巧合</strong><br>一个偶然的瞬间我在网上发现，可以通过ESP-01S模块加继电器实现对家用灯的控制。</p>
+        <h1>ESP-01S实现智能灯控</h1>
+<h2 id="前言">前言</h2>
+<p>随着HomeAssistant和HomeBridge的接入，我屋内的智能家居开始变得完备起来，智能风扇，智能加湿器，智能温湿度传感器。这一切都归功于树莓派和这一颗热爱折腾的心😄。剩下的问题就是把家用灯也变得智能起来，只有这个实现了，这一套才算是入门级智能家居了吧。</p>
+<p><strong>问题分析:</strong><br>
+智能风扇的实现得益于小米智能插座，湿度传感器是接在树莓派上的。显然我不能把家用灯接在智能插座或树莓派上----太臃肿。</p>
+<p><strong>机缘巧合</strong><br>
+一个偶然的瞬间我在网上发现，可以通过ESP-01S模块加继电器实现对家用灯的控制。</p>
 <a id="more"></a>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><table>
+<h2 id="准备">准备</h2>
+<table>
 <thead>
 <tr>
 <th>材料</th>
 <th>价格</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>ESP-01s模块</td>
 <td>5.65</td>
 </tr>
@@ -344,39 +350,58 @@
 <td>除了这些以外，还需要杜邦线若干。</td>
 <td></td>
 </tr>
-</tbody></table>
-<p>从左到右分别为ESP-01/ESP-01s芯片 、 继电器模块 、 ESP-01/ESP-01s烧录器<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915173231.jpeg"></p>
-<p>降压模块:<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915173349.png"></p>
-<h2 id="刷机"><a href="#刷机" class="headerlink" title="刷机"></a>刷机</h2><p>需要在Windows电脑上运行！！！</p>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载:"></a>下载:</h3><ul>
-<li><p>固件驱动: <a target="_blank" rel="noopener" href="https://github.com/Haikez/ESP_smart_lights.git">https://github.com/Haikez/ESP_smart_lights.git</a></p>
+</tbody>
+</table>
+<p>从左到右分别为ESP-01/ESP-01s芯片 、 继电器模块 、 ESP-01/ESP-01s烧录器<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915173231.jpeg" alt></p>
+<p>降压模块:<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915173349.png" alt></p>
+<h2 id="刷机">刷机</h2>
+<p>需要在Windows电脑上运行！！！</p>
+<h3 id="下载">下载:</h3>
+<ul>
+<li>
+<p>固件驱动: <a target="_blank" rel="noopener" href="https://github.com/Haikez/ESP_smart_lights.git">https://github.com/Haikez/ESP_smart_lights.git</a></p>
 </li>
-<li><p>工具: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1Lamp5MbUz9Cwf5_NhCgrIg">https://pan.baidu.com/s/1Lamp5MbUz9Cwf5_NhCgrIg</a> 提取码: r9fg</p>
-<h3 id="刷写固件："><a href="#刷写固件：" class="headerlink" title="刷写固件："></a>刷写固件：</h3><p>打开下载好的文件夹，安装烧录器驱动。<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915173658.png"><br>用flash_download_tool工具将文件夹内的fullhaaboot.bin固件烧录到模块中。<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915174618.jpg"><br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915172021.jpg"></p>
+<li>
+<p>工具: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1Lamp5MbUz9Cwf5_NhCgrIg">https://pan.baidu.com/s/1Lamp5MbUz9Cwf5_NhCgrIg</a> 提取码: r9fg</p>
 </li>
 </ul>
-<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915172032.jpg"></p>
-<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915172107.jpg"><br>这里COM口根据你实际选择</p>
+<h3 id="刷写固件：">刷写固件：</h3>
+<p>打开下载好的文件夹，安装烧录器驱动。<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915173658.png" alt><br>
+用flash_download_tool工具将文件夹内的fullhaaboot.bin固件烧录到模块中。<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915174618.jpg" alt><br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915172021.jpg" alt></p>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915172032.jpg" alt></p>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915172107.jpg" alt><br>
+这里COM口根据你实际选择</p>
 <p>点击START进行刷写</p>
-<p>如下显示时为刷写完成<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915172131.jpg"></p>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>完成之后，ESP-01s 会建立一个 SSID 为 HAA-XXXXXX 的开放 2.4GHz WiFi 热点，连接它，等待几秒钟，就会跳转到 Home Accessory Architect 的配置页面。（如果为未自动跳转，进入<strong>192.168.4.1:4567</strong>）</p>
-<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915172501.png"></p>
+<p>如下显示时为刷写完成<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915172131.jpg" alt></p>
+<h2 id="配置">配置</h2>
+<p>完成之后，ESP-01s 会建立一个 SSID 为 HAA-XXXXXX 的开放 2.4GHz WiFi 热点，连接它，等待几秒钟，就会跳转到 Home Accessory Architect 的配置页面。（如果为未自动跳转，进入<strong>192.168.4.1:4567</strong>）</p>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915172501.png" alt></p>
 <p>这里我们需要写一个 JSON 来配置 ESP-01 的功能，HAA 提供了相当丰富的物联网设备类型供我们选择，这里我们选择相对简单的的开关（Switch）来配置。</p>
 <p><strong>将 wiki 中提供的范例 JSON 稍加修改：</strong></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;c&quot;</span>: &#123; <span class="attr">&quot;l&quot;</span>: <span class="number">1</span>, <span class="attr">&quot;b&quot;</span>: [&#123; <span class="attr">&quot;g&quot;</span>: <span class="number">2</span>, <span class="attr">&quot;t&quot;</span>: <span class="number">5</span> &#125;] &#125;,</span><br><span class="line">  <span class="attr">&quot;a&quot;</span>: [&#123;</span><br><span class="line">    <span class="attr">&quot;t&quot;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">&quot;s&quot;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">&quot;0&quot;</span>: &#123; <span class="attr">&quot;r&quot;</span>: [&#123; <span class="attr">&quot;g&quot;</span>: <span class="number">0</span>, <span class="attr">&quot;v&quot;</span>: <span class="number">1</span> &#125;] &#125;,</span><br><span class="line">    <span class="attr">&quot;1&quot;</span>: &#123; <span class="attr">&quot;r&quot;</span>: [&#123; <span class="attr">&quot;g&quot;</span>: <span class="number">0</span>, <span class="attr">&quot;v&quot;</span>: <span class="number">0</span> &#125;] &#125;,</span><br><span class="line">    <span class="attr">&quot;b&quot;</span>: [&#123; <span class="attr">&quot;g&quot;</span>: <span class="number">2</span> &#125;]</span><br><span class="line">  &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里表示了一个基本类型的开关（”t”: 1），通过 GPIO 0 控制继电器，因为这个继电器模块是 GPIO 0 低电平时闭合，所以在下面的 “0” 表示开关关闭的选项中 “v”: 1 表示高电平，而 “1” 与之相反。LED 指示灯定义为 GPIO 1，按钮定义为 GPIO 2，”s”: 1 表示通电后默认为开关打开状态。</p>
+<p>这里表示了一个基本类型的开关（“t”: 1），通过 GPIO 0 控制继电器，因为这个继电器模块是 GPIO 0 低电平时闭合，所以在下面的 “0” 表示开关关闭的选项中 “v”: 1 表示高电平，而 “1” 与之相反。LED 指示灯定义为 GPIO 1，按钮定义为 GPIO 2，“s”: 1 表示通电后默认为开关打开状态。</p>
 <p>详细的配置规则可以参阅原项目的 <a target="_blank" rel="noopener" href="https://github.com/RavenSystem/esp-homekit-devices/wiki/Switches">Wiki</a>。</p>
 <p>将 JSON 填入配置页面，并在下方连接 WiFi，注意 ESP-01 仅能连接 2.4GHz 的 WiFi。</p>
 <p>之后点击保存并等待 7 分钟左右，完成后 LED 会亮起几秒钟。</p>
-<h2 id="接线"><a href="#接线" class="headerlink" title="接线"></a>接线</h2><p>将 220V 的火线与零线接到 220V 转 5V 降压模块上。</p>
-<p>降压模块输出 5V 电接入继电器的 VCC 与 GND。将 ESP-01 插在继电器上，因为该继电器自带一个 5V 转 3.3V，所以可以直接给 ESP-01 供电。<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915175850.jpg"></p>
+<h2 id="接线">接线</h2>
+<p>将 220V 的火线与零线接到 220V 转 5V 降压模块上。</p>
+<p>降压模块输出 5V 电接入继电器的 VCC 与 GND。将 ESP-01 插在继电器上，因为该继电器自带一个 5V 转 3.3V，所以可以直接给 ESP-01 供电。<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915175850.jpg" alt></p>
 <p>由于我房间是两个开关控制一个灯，分别是门口和床头。所以只用对其中一个开关安装这套硬件。保持电路闭合，模块才可控制灯的状态，同时物理开关也可以控制灯的状态。</p>
-<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915180609.JPG"></p>
-<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915180627.jpg"></p>
-<h2 id="添加-HomeKit-设备"><a href="#添加-HomeKit-设备" class="headerlink" title="添加 HomeKit 设备"></a>添加 HomeKit 设备</h2><p>在 iOS 设备中打开「家庭」App，通过下方的设置代码，按照正常步骤添加新配件。大约等待 30 秒即可添加完成。<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915180750.png"></p>
-<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915180800.png"></p>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915180609.JPG" alt></p>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915180627.jpg" alt></p>
+<h2 id="添加-HomeKit-设备">添加 HomeKit 设备</h2>
+<p>在 iOS 设备中打开「家庭」App，通过下方的设置代码，按照正常步骤添加新配件。大约等待 30 秒即可添加完成。<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915180750.png" alt></p>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915180800.png" alt></p>
 <p>现在我们就可以在 iOS 设备上通过 HomeKit 控制灯泡了。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>优点: ESP-01s脱离了树莓派的控制，是一个单独的模块。所以具有更强的稳定性和实用性。由于是单片机，在单方面的性能上更好，延迟更低，是个非常有意义的项目。</p>
+<h2 id="总结">总结</h2>
+<p>优点: ESP-01s脱离了树莓派的控制，是一个单独的模块。所以具有更强的稳定性和实用性。由于是单片机，在单方面的性能上更好，延迟更低，是个非常有意义的项目。</p>
 
     </div>
     
@@ -462,7 +487,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">195k</span>
+    <span title="站点总字数">198k</span>
   </span>
 </div><!-- <a href="https://icp.gov.moe/?keyword=20180708" rel="external nofollow noreferrer" target="_blank" data-pjax-state="" style="
     border-bottom-width: 0px;

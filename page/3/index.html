@@ -161,7 +161,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-count">81</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -238,6 +238,213 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://haikez.github.io/posts/17454.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Haikez">
+      <meta itemprop="description" content="每一个不曾起舞的日子，都是对生命的辜负。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="倪矗的BLOG">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/17454.html" class="post-title-link" itemprop="url">Spring配置</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-09-12 10:13:25" itemprop="dateCreated datePublished" datetime="2021-09-12T10:13:25+08:00">2021-09-12</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-05-25 16:31:28" itemprop="dateModified" datetime="2022-05-25T16:31:28+08:00">2022-05-25</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Spring5%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">Spring5学习</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>758</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1>Spring配置</h1>
+<h2 id="一、别名">一、别名</h2>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--别名，如果添加了别名，我们也可以使用别名获取到这个对象--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">alias</span> <span class="attr">name</span>=<span class="string">&quot;user&quot;</span> <span class="attr">alias</span>=<span class="string">&quot;userNew&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="二、Bean的配置">二、Bean的配置</h2>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">id：bean的唯一标识符，也就是相当于我们学的对象名</span></span><br><span class="line"><span class="comment">class：bean对象所对应的全限定名：包名+类名</span></span><br><span class="line"><span class="comment">name：也是别名，而且name可以同时取多个别名</span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;userT&quot;</span> <span class="attr">class</span>=<span class="string">&quot;com.kuang.pojo.UserT&quot;</span> <span class="attr">name</span>=<span class="string">&quot;user2 u2,u3;u4&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;name&quot;</span> <span class="attr">value</span>=<span class="string">&quot;黑心白莲&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/17454.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+
+    
+    
+    
+
+    <div>
+        
+    </div>
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://haikez.github.io/posts/12515.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Haikez">
+      <meta itemprop="description" content="每一个不曾起舞的日子，都是对生命的辜负。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="倪矗的BLOG">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/12515.html" class="post-title-link" itemprop="url">HelloSpring</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-09-11 21:34:29" itemprop="dateCreated datePublished" datetime="2021-09-11T21:34:29+08:00">2021-09-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2023-01-13 23:00:19" itemprop="dateModified" datetime="2023-01-13T23:00:19+08:00">2023-01-13</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Spring5%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">Spring5学习</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.5k</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1>HelloSpring</h1>
+<h2 id="一、新建maven项目，编写实体类。">一、新建maven项目，编写实体类。</h2>
+<ol>
+<li>导包</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-webmvc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.3.7<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/12515.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+
+    
+    
+    
+
+    <div>
+        
+    </div>
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://haikez.github.io/posts/36444.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -298,7 +505,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="IOC理论推导"><a href="#IOC理论推导" class="headerlink" title="IOC理论推导"></a>IOC理论推导</h1><h2 id="IOC本质"><a href="#IOC本质" class="headerlink" title="IOC本质"></a>IOC本质</h2><p><strong>控制反转IoC（Inversion of Control）</strong>，是一种设计思想，<strong>DI（依赖注入）</strong> 是实现IoC的一种方法，也有人认为DI只是IoC的另一种说法。没有IoC的程序中，我们使用面向对象编程，对象的创建与对象间的依赖关系完全硬编码在程序中，对象的创建由程序自己控制，控制反转后将对象的创建转移给第三方，个人认为所谓控制反转就是：获得依赖对象的方式反转了。</p>
+          <h1>IOC理论推导</h1>
+<h2 id="IOC本质">IOC本质</h2>
+<p><strong>控制反转IoC（Inversion of Control）</strong>，是一种设计思想，<strong>DI（依赖注入）</strong> 是实现IoC的一种方法，也有人认为DI只是IoC的另一种说法。没有IoC的程序中，我们使用面向对象编程，对象的创建与对象间的依赖关系完全硬编码在程序中，对象的创建由程序自己控制，控制反转后将对象的创建转移给第三方，个人认为所谓控制反转就是：获得依赖对象的方式反转了。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/36444.html#more" rel="contents">
@@ -368,7 +577,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-05-25 16:31:28" itemprop="dateModified" datetime="2022-05-25T16:31:28+08:00">2022-05-25</time>
+        <time title="修改时间：2023-03-29 10:45:28" itemprop="dateModified" datetime="2023-03-29T10:45:28+08:00">2023-03-29</time>
       </span>
 
   
@@ -388,8 +597,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/iTerm2%E7%BE%8E%E5%8C%96%E9%85%8D%E7%BD%AE/20210827193307.png"></p>
-<h1 id="iTerm2配置和美化"><a href="#iTerm2配置和美化" class="headerlink" title="iTerm2配置和美化"></a>iTerm2配置和美化</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>近日换了新电脑，软件和环境需要重新配置，就关于iTerm2的配置和美化整理一份文章出来，方便自己之后的工作。</p>
+          <p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/iTerm2%E7%BE%8E%E5%8C%96%E9%85%8D%E7%BD%AE/20210827193307.png" alt></p>
+<h1>iTerm2配置和美化</h1>
+<h2 id="前言">前言</h2>
+<p>近日换了新电脑，软件和环境需要重新配置，就关于iTerm2的配置和美化整理一份文章出来，方便自己之后的工作。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/11083.html#more" rel="contents">
@@ -488,13 +699,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="一、Spring简介"><a href="#一、Spring简介" class="headerlink" title="一、Spring简介"></a>一、Spring简介</h2><p><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-framework/docs/current/reference/html/">官方文档</a></p>
+          <h2 id="一、Spring简介">一、Spring简介</h2>
+<p><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-framework/docs/current/reference/html/">官方文档</a></p>
 <ul>
 <li>Spring：春天—&gt;给软件行业带来春天</li>
 <li>2002年首次推出spring雏形：interface 21架构</li>
 <li>spring理念：使现有的技术更加容易使用，本身是一个大杂烩，整合了现有的技术框架！解决企业应用开发的复杂性。</li>
 <li>SSH：Struct2+Spring+Hibernate</li>
-<li>SSM：SpringMVC+Spring+Mybatis</li></ul>
+<li>SSM：SpringMVC+Spring+Mybatis</li>
+</ul>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/47931.html#more" rel="contents">
@@ -593,11 +806,21 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Mybatis缓存"><a href="#Mybatis缓存" class="headerlink" title="Mybatis缓存"></a>Mybatis缓存</h1><h2 id="一、缓存"><a href="#一、缓存" class="headerlink" title="一、缓存"></a>一、缓存</h2><h3 id="1-什么是缓存【Cache】？"><a href="#1-什么是缓存【Cache】？" class="headerlink" title="1. 什么是缓存【Cache】？"></a>1. 什么是缓存【Cache】？</h3><ul>
+          <h1>Mybatis缓存</h1>
+<h2 id="一、缓存">一、缓存</h2>
+<h3 id="1-什么是缓存【Cache】？">1. 什么是缓存【Cache】？</h3>
+<ul>
 <li>存在内存中的临时数据</li>
-<li>将用户经常查询的数据放在缓存（内存）中，用户去查询数据就不用从磁盘上（关系型数据库数据文件）查询，从缓存中查询，从而提高查询效率，解决了高并发系统的性能问题<h3 id="2-为什么使用缓存？"><a href="#2-为什么使用缓存？" class="headerlink" title="2. 为什么使用缓存？"></a>2. 为什么使用缓存？</h3></li>
-<li>减少和数据库交互的次数，减少系统开销，提高系统的效率<h3 id="3-什么样的数据能使用缓存？"><a href="#3-什么样的数据能使用缓存？" class="headerlink" title="3. 什么样的数据能使用缓存？"></a>3. 什么样的数据能使用缓存？</h3></li>
-<li>经常查询并且不经常使用的数据</li></ul>
+<li>将用户经常查询的数据放在缓存（内存）中，用户去查询数据就不用从磁盘上（关系型数据库数据文件）查询，从缓存中查询，从而提高查询效率，解决了高并发系统的性能问题</li>
+</ul>
+<h3 id="2-为什么使用缓存？">2. 为什么使用缓存？</h3>
+<ul>
+<li>减少和数据库交互的次数，减少系统开销，提高系统的效率</li>
+</ul>
+<h3 id="3-什么样的数据能使用缓存？">3. 什么样的数据能使用缓存？</h3>
+<ul>
+<li>经常查询并且不经常使用的数据</li>
+</ul>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/11971.html#more" rel="contents">
@@ -696,8 +919,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="动态SQL详解"><a href="#动态SQL详解" class="headerlink" title="动态SQL详解"></a>动态SQL详解</h1><h2 id="什么是动态SQL：动态SQL就是指根据不同的条件生成不同的SQL语句"><a href="#什么是动态SQL：动态SQL就是指根据不同的条件生成不同的SQL语句" class="headerlink" title="什么是动态SQL：动态SQL就是指根据不同的条件生成不同的SQL语句"></a>什么是动态SQL：动态SQL就是指根据不同的条件生成不同的SQL语句</h2><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">如果你之前用过 JSTL 或任何基于类 XML 语言的文本处理器，你对动态 SQL 元素可能会感觉似曾相识。在 MyBatis 之前的版本中，需要花时间了解大量的元素。借助功能强大的基于 OGNL 的表达式，MyBatis 3 替换了之前的大部分元素，大大精简了元素种类，现在要学习的元素种类比原来的一半还要少。</span><br><span class="line">if</span><br><span class="line">choose (when, otherwise)</span><br><span class="line">trim (where, set)</span><br><span class="line">foreach</span><br></pre></td></tr></table></figure>
-<h3 id="所谓的动态SQL本质上还是SQL语句，只是我们可以在SQL层面上，去执行逻辑代码。"><a href="#所谓的动态SQL本质上还是SQL语句，只是我们可以在SQL层面上，去执行逻辑代码。" class="headerlink" title="所谓的动态SQL本质上还是SQL语句，只是我们可以在SQL层面上，去执行逻辑代码。"></a>所谓的动态SQL本质上还是SQL语句，只是我们可以在SQL层面上，去执行逻辑代码。</h3>
+          <h1>动态SQL详解</h1>
+<h2 id="什么是动态SQL：动态SQL就是指根据不同的条件生成不同的SQL语句">什么是动态SQL：动态SQL就是指根据不同的条件生成不同的SQL语句</h2>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">如果你之前用过 JSTL 或任何基于类 XML 语言的文本处理器，你对动态 SQL 元素可能会感觉似曾相识。在 MyBatis 之前的版本中，需要花时间了解大量的元素。借助功能强大的基于 OGNL 的表达式，MyBatis 3 替换了之前的大部分元素，大大精简了元素种类，现在要学习的元素种类比原来的一半还要少。</span><br><span class="line">if</span><br><span class="line">choose (when, otherwise)</span><br><span class="line">trim (where, set)</span><br><span class="line">foreach</span><br></pre></td></tr></table></figure>
+<h3 id="所谓的动态SQL本质上还是SQL语句，只是我们可以在SQL层面上，去执行逻辑代码。">所谓的动态SQL本质上还是SQL语句，只是我们可以在SQL层面上，去执行逻辑代码。</h3>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/62398.html#more" rel="contents">
@@ -796,7 +1021,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Mybatis的一对多"><a href="#Mybatis的一对多" class="headerlink" title="Mybatis的一对多"></a>Mybatis的一对多</h1><h2 id="一、对应关系"><a href="#一、对应关系" class="headerlink" title="一、对应关系"></a>一、对应关系</h2><p>比如：一个老师拥有多个学生！对老师而言，就是一对多的关系！</p>
+          <h1>Mybatis的一对多</h1>
+<h2 id="一、对应关系">一、对应关系</h2>
+<p>比如：一个老师拥有多个学生！对老师而言，就是一对多的关系！</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/48548.html#more" rel="contents">
@@ -895,10 +1122,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Mybatis的多对一"><a href="#Mybatis的多对一" class="headerlink" title="Mybatis的多对一"></a>Mybatis的多对一</h1><h2 id="一、对应关系"><a href="#一、对应关系" class="headerlink" title="一、对应关系"></a>一、对应关系</h2><ul>
+          <h1>Mybatis的多对一</h1>
+<h2 id="一、对应关系">一、对应关系</h2>
+<ul>
 <li>多个学生，对应一个老师。</li>
 <li>对于学生这边而言， <strong>关联：</strong> 多个学生关联一个老师。</li>
-<li>对于老师而言，<strong>集合：</strong> 一个老师有很多学生。<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Mybatis/20210528211429.png"></li>
+<li>对于老师而言，<strong>集合：</strong> 一个老师有很多学生。<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Mybatis/20210528211429.png" alt></li>
 </ul>
           <!--noindex-->
             <div class="post-button">
@@ -998,10 +1228,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="一、Lombok简介"><a href="#一、Lombok简介" class="headerlink" title="一、Lombok简介"></a>一、Lombok简介</h1><p>Lombok是一个可以通过简单的注解形式来帮助我们简化消除一些必须有但显得很臃肿的Java代码的工具，通过使用对应的注解，可以在编译源码的时候生成对应的方法</p>
-<h1 id="二、IntelliJ-IDEA-使用它的方法"><a href="#二、IntelliJ-IDEA-使用它的方法" class="headerlink" title="二、IntelliJ IDEA 使用它的方法"></a>二、IntelliJ IDEA 使用它的方法</h1><p> <strong>引入lombok的jar包</strong></p>
+          <h1>一、Lombok简介</h1>
+<p>Lombok是一个可以通过简单的注解形式来帮助我们简化消除一些必须有但显得很臃肿的Java代码的工具，通过使用对应的注解，可以在编译源码的时候生成对应的方法</p>
+<h1>二、IntelliJ IDEA 使用它的方法</h1>
+<p><strong>引入lombok的jar包</strong></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.projectlombok/lombok --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.18.20<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h1 id="三、Lombok的简单使用"><a href="#三、Lombok的简单使用" class="headerlink" title="三、Lombok的简单使用"></a>三、Lombok的简单使用</h1><ul>
+<h1>三、Lombok的简单使用</h1>
+<ul>
 <li>@Getter / @Setter: 自动生成Getter/Setter方法。把@Getter / @Setter单独放在属性上，则只生成该属性的Getter和Setter。</li>
 <li>@NoArgsConstructor: 自动生成无参数构造函数。</li>
 <li>@AllArgsConstructor: 自动生成全参数构造函数。</li>
@@ -1030,208 +1263,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://haikez.github.io/posts/24871.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Haikez">
-      <meta itemprop="description" content="每一个不曾起舞的日子，都是对生命的辜负。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="倪矗的BLOG">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/24871.html" class="post-title-link" itemprop="url">Mybatis使用注解开发</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-05-27 22:32:28" itemprop="dateCreated datePublished" datetime="2021-05-27T22:32:28+08:00">2021-05-27</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-05-25 16:31:28" itemprop="dateModified" datetime="2022-05-25T16:31:28+08:00">2022-05-25</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Mybatis%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">Mybatis学习</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2k</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="一、使用注解开发"><a href="#一、使用注解开发" class="headerlink" title="一、使用注解开发"></a>一、使用注解开发</h2><h3 id="1-注解在接口上实现"><a href="#1-注解在接口上实现" class="headerlink" title="1. 注解在接口上实现"></a>1. 注解在接口上实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserMapper</span> </span>&#123;</span><br><span class="line">     <span class="meta">@Select(&quot;select * from user&quot;)</span></span><br><span class="line">     <span class="function">List&lt;User&gt; <span class="title">getUser</span><span class="params">()</span></span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2-需要在核心配置文件中绑定接口！"><a href="#2-需要在核心配置文件中绑定接口！" class="headerlink" title="2. 需要在核心配置文件中绑定接口！"></a>2. 需要在核心配置文件中绑定接口！</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--绑定接口--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mappers</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mapper</span> <span class="attr">class</span>=<span class="string">&quot;com.nichu.dao.UserMapper&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mappers</span>&gt;</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/24871.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-
-    
-    
-    
-
-    <div>
-        
-    </div>
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://haikez.github.io/posts/6770.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Haikez">
-      <meta itemprop="description" content="每一个不曾起舞的日子，都是对生命的辜负。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="倪矗的BLOG">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/6770.html" class="post-title-link" itemprop="url">Mybatis分页</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-05-25 21:18:31" itemprop="dateCreated datePublished" datetime="2021-05-25T21:18:31+08:00">2021-05-25</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-05-25 16:31:28" itemprop="dateModified" datetime="2022-05-25T16:31:28+08:00">2022-05-25</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Mybatis%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">Mybatis学习</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.5k</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Mybatis分页"><a href="#Mybatis分页" class="headerlink" title="Mybatis分页"></a>Mybatis分页</h1><h2 id="一、为什么要分页？"><a href="#一、为什么要分页？" class="headerlink" title="一、为什么要分页？"></a>一、为什么要分页？</h2><ul>
-<li>减少数据处理<h2 id="二、SQL分页语句limit"><a href="#二、SQL分页语句limit" class="headerlink" title="二、SQL分页语句limit"></a>二、SQL分页语句limit</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 语法：select * from mybatis.user limit startIndex,pageSize;</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> mybatis.user limit <span class="number">0</span>,<span class="number">2</span>;</span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> mybatis.user limit <span class="number">3</span>; #[<span class="number">0</span>,<span class="number">3</span>]</span><br></pre></td></tr></table></figure></li></ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/6770.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-
-    
-    
-    
-
-    <div>
-        
-    </div>
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>
@@ -1254,7 +1287,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">195k</span>
+    <span title="站点总字数">198k</span>
   </span>
 </div><!-- <a href="https://icp.gov.moe/?keyword=20180708" rel="external nofollow noreferrer" target="_blank" data-pjax-state="" style="
     border-bottom-width: 0px;

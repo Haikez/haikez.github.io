@@ -20,12 +20,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"haikez.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":13},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="一、Spring简介官方文档  Spring：春天—&gt;给软件行业带来春天 2002年首次推出spring雏形：interface 21架构 spring理念：使现有的技术更加容易使用，本身是一个大杂烩，整合了现有的技术框架！解决企业应用开发的复杂性。 SSH：Struct2+Spring+Hibernate SSM：SpringMVC+Spring+Mybatis">
+<meta name="description" content="一、Spring简介 官方文档  Spring：春天—&gt;给软件行业带来春天 2002年首次推出spring雏形：interface 21架构 spring理念：使现有的技术更加容易使用，本身是一个大杂烩，整合了现有的技术框架！解决企业应用开发的复杂性。 SSH：Struct2+Spring+Hibernate SSM：SpringMVC+Spring+Mybatis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring简介">
 <meta property="og:url" content="https://haikez.github.io/posts/47931.html">
 <meta property="og:site_name" content="倪矗的BLOG">
-<meta property="og:description" content="一、Spring简介官方文档  Spring：春天—&gt;给软件行业带来春天 2002年首次推出spring雏形：interface 21架构 spring理念：使现有的技术更加容易使用，本身是一个大杂烩，整合了现有的技术框架！解决企业应用开发的复杂性。 SSH：Struct2+Spring+Hibernate SSM：SpringMVC+Spring+Mybatis">
+<meta property="og:description" content="一、Spring简介 官方文档  Spring：春天—&gt;给软件行业带来春天 2002年首次推出spring雏形：interface 21架构 spring理念：使现有的技术更加容易使用，本身是一个大杂烩，整合了现有的技术框架！解决企业应用开发的复杂性。 SSH：Struct2+Spring+Hibernate SSM：SpringMVC+Spring+Mybatis">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20230113153326.png">
 <meta property="article:published_time" content="2021-05-31T08:01:47.000Z">
@@ -166,7 +166,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-count">81</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -304,39 +304,48 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="一、Spring简介"><a href="#一、Spring简介" class="headerlink" title="一、Spring简介"></a>一、Spring简介</h2><p><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-framework/docs/current/reference/html/">官方文档</a></p>
+        <h2 id="一、Spring简介">一、Spring简介</h2>
+<p><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-framework/docs/current/reference/html/">官方文档</a></p>
 <ul>
 <li>Spring：春天—&gt;给软件行业带来春天</li>
 <li>2002年首次推出spring雏形：interface 21架构</li>
 <li>spring理念：使现有的技术更加容易使用，本身是一个大杂烩，整合了现有的技术框架！解决企业应用开发的复杂性。</li>
 <li>SSH：Struct2+Spring+Hibernate</li>
-<li>SSM：SpringMVC+Spring+Mybatis<a id="more"></a>
-官网：<a target="_blank" rel="noopener" href="https://spring.io/projects/spring-framework#overview">https://spring.io/projects/spring-framework#overview</a></li>
+<li>SSM：SpringMVC+Spring+Mybatis</li>
 </ul>
+<a id="more"></a>
+<p>官网：<a target="_blank" rel="noopener" href="https://spring.io/projects/spring-framework#overview">https://spring.io/projects/spring-framework#overview</a></p>
 <p>官方下载地址：<a target="_blank" rel="noopener" href="https://repo.spring.io/release/org/springframework/spring/">https://repo.spring.io/release/org/springframework/spring/</a></p>
 <p>Github地址：<a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-framework">https://github.com/spring-projects/spring-framework</a></p>
 <p>导入jar包</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-webmvc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.3.7<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-jdbc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.3.7<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="二、优点"><a href="#二、优点" class="headerlink" title="二、优点"></a>二、优点</h2><ul>
+<h2 id="二、优点">二、优点</h2>
+<ul>
 <li>Spring是一个开源的免费的框架（容器）！</li>
 <li>Spring是一个轻量级的、非入侵式的框架！</li>
 <li>控制反转（IOC），面向切面编程（AOP）</li>
 <li>支持事务处理，对框架整合的支持！</li>
 </ul>
 <p>总结一句话：Spring就是一个轻量级的控制反转（IOC）和面向切面编程的框架！</p>
-<h2 id="三、组成"><a href="#三、组成" class="headerlink" title="三、组成"></a>三、组成</h2><p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20230113153326.png"></p>
-<h2 id="四、扩展"><a href="#四、扩展" class="headerlink" title="四、扩展"></a>四、扩展</h2><p>在Spring的官网有这个介绍：现代化的java开发就是基于Spring的开发！</p>
-<p>构建一切 Spring Boot build Anything<br>协调一切 Spring cloud coordinate Anything<br>连接一切 Spring cloud Data Flow Connect Everything</p>
-<h3 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h3><ul>
+<h2 id="三、组成">三、组成</h2>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20230113153326.png" alt></p>
+<h2 id="四、扩展">四、扩展</h2>
+<p>在Spring的官网有这个介绍：现代化的java开发就是基于Spring的开发！</p>
+<p>构建一切 Spring Boot build Anything<br>
+协调一切 Spring cloud coordinate Anything<br>
+连接一切 Spring cloud Data Flow Connect Everything</p>
+<h3 id="SpringBoot">SpringBoot</h3>
+<ul>
 <li>一个快速开发的脚手架</li>
 <li>基于SpringBoot可以快速开发单个微服务。</li>
 <li>约定大于配置</li>
 </ul>
-<h3 id="SpringCloud"><a href="#SpringCloud" class="headerlink" title="SpringCloud"></a>SpringCloud</h3><ul>
+<h3 id="SpringCloud">SpringCloud</h3>
+<ul>
 <li>SpringCloud是基于SpringBoot实现的</li>
 </ul>
 <p>因为现在大多数公司都在使用SpringBoot开发，学习SpringBoot前提是，需要完全掌握Spring及SpringMVC！Spring起承上启下的作用！</p>
-<p>弊端：发展太久之后，违背了原来的理念！配置十分繁琐，人称：”配置地狱！”</p>
+<p>弊端：发展太久之后，违背了原来的理念！配置十分繁琐，人称：“配置地狱！”</p>
 
     </div>
     
@@ -419,7 +428,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">195k</span>
+    <span title="站点总字数">198k</span>
   </span>
 </div><!-- <a href="https://icp.gov.moe/?keyword=20180708" rel="external nofollow noreferrer" target="_blank" data-pjax-state="" style="
     border-bottom-width: 0px;

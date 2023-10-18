@@ -20,12 +20,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"haikez.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":13},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="树莓派机器人前言去年在b站上看到一个树莓派机器人视频，心血来潮就像自己也DIY弄一个。无奈由于采购的硬件过于粗糙，弄出来的机器人可操作性不是很强。后来突发奇想，在某鱼上入手了一台废弃的扫地机器人。在经历了一番改造之后，就有了今天的这篇文章。😋">
+<meta name="description" content="树莓派机器人 前言 去年在b站上看到一个树莓派机器人视频，心血来潮就像自己也DIY弄一个。无奈由于采购的硬件过于粗糙，弄出来的机器人可操作性不是很强。后来突发奇想，在某鱼上入手了一台废弃的扫地机器人。在经历了一番改造之后，就有了今天的这篇文章。😋">
 <meta property="og:type" content="article">
 <meta property="og:title" content="树莓派机器人">
 <meta property="og:url" content="https://haikez.github.io/posts/11879.html">
 <meta property="og:site_name" content="倪矗的BLOG">
-<meta property="og:description" content="树莓派机器人前言去年在b站上看到一个树莓派机器人视频，心血来潮就像自己也DIY弄一个。无奈由于采购的硬件过于粗糙，弄出来的机器人可操作性不是很强。后来突发奇想，在某鱼上入手了一台废弃的扫地机器人。在经历了一番改造之后，就有了今天的这篇文章。😋">
+<meta property="og:description" content="树莓派机器人 前言 去年在b站上看到一个树莓派机器人视频，心血来潮就像自己也DIY弄一个。无奈由于采购的硬件过于粗糙，弄出来的机器人可操作性不是很强。后来突发奇想，在某鱼上入手了一台废弃的扫地机器人。在经历了一番改造之后，就有了今天的这篇文章。😋">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210914215256.jpeg">
 <meta property="og:image" content="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210914215445.PNG">
@@ -156,7 +156,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%91%E8%8E%93%E6%B4%BE%E6%9C%BA%E5%99%A8%E4%BA%BA"><span class="nav-text">树莓派机器人</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%99%E6%98%AF%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%80%E4%BB%A3%EF%BC%88%E7%96%AF%E7%8B%97%E7%89%88%EF%BC%89"><span class="nav-text">这是机器人一代（疯狗版）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%B1%E8%B4%A5%E6%80%BB%E7%BB%93"><span class="nav-text">失败总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BA%8C%E4%BB%A3%E8%AF%9E%E7%94%9F"><span class="nav-text">机器人二代诞生</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6%E5%87%86%E5%A4%87"><span class="nav-text">硬件准备:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E7%BA%BF"><span class="nav-text">接线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E6%94%AF%E6%8C%81"><span class="nav-text">软件支持</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8"><span class="nav-text">启动</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">树莓派机器人</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%99%E6%98%AF%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%80%E4%BB%A3%EF%BC%88%E7%96%AF%E7%8B%97%E7%89%88%EF%BC%89"><span class="nav-text">这是机器人一代（疯狗版）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%B1%E8%B4%A5%E6%80%BB%E7%BB%93"><span class="nav-text">失败总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BA%8C%E4%BB%A3%E8%AF%9E%E7%94%9F"><span class="nav-text">机器人二代诞生</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6%E5%87%86%E5%A4%87"><span class="nav-text">硬件准备:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E7%BA%BF"><span class="nav-text">接线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E6%94%AF%E6%8C%81"><span class="nav-text">软件支持</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8"><span class="nav-text">启动</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -172,7 +172,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-count">81</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -310,13 +310,21 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="树莓派机器人"><a href="#树莓派机器人" class="headerlink" title="树莓派机器人"></a>树莓派机器人</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>去年在<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14g4y1q7yf?spm_id_from=333.999.0.0">b站</a>上看到一个树莓派机器人视频，心血来潮就像自己也DIY弄一个。无奈由于采购的硬件过于粗糙，弄出来的机器人可操作性不是很强。后来突发奇想，在某鱼上入手了一台废弃的扫地机器人。在经历了一番改造之后，就有了今天的这篇文章。😋</strong></p>
+        <h1>树莓派机器人</h1>
+<h2 id="前言">前言</h2>
+<p><strong>去年在<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14g4y1q7yf?spm_id_from=333.999.0.0">b站</a>上看到一个树莓派机器人视频，心血来潮就像自己也DIY弄一个。无奈由于采购的硬件过于粗糙，弄出来的机器人可操作性不是很强。后来突发奇想，在某鱼上入手了一台废弃的扫地机器人。在经历了一番改造之后，就有了今天的这篇文章。😋</strong></p>
 <a id="more"></a>
-<h2 id="这是机器人一代（疯狗版）"><a href="#这是机器人一代（疯狗版）" class="headerlink" title="这是机器人一代（疯狗版）"></a>这是机器人一代（疯狗版）</h2><p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210914215256.jpeg"><br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210914215445.PNG"></p>
+<h2 id="这是机器人一代（疯狗版）">这是机器人一代（疯狗版）</h2>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210914215256.jpeg" alt><br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210914215445.PNG" alt></p>
 <p>此类机器人的主要功能就是通过浏览器对机器人进行前后左右的实时控制。使机器人用于移动能力。</p>
-<h2 id="失败总结"><a href="#失败总结" class="headerlink" title="失败总结"></a>失败总结</h2><p>由于tt马达的稳定性不好，对速度的把控不是很好。一但机器人启动，两个马达的速度差存在严重的问题，导致机器人在原地转圈😌。其次软件方面的支持不是很好，无法做到对机器人的速度进行控制，其根本原因是没读懂大佬写的代码🐶。</p>
-<h2 id="机器人二代诞生"><a href="#机器人二代诞生" class="headerlink" title="机器人二代诞生"></a>机器人二代诞生</h2><p>汲取了上一代的教训，在硬件方面，这次选用稳定性更好的家用扫地机器人。软件方面，经过对代码的逐行解析，终于弄懂了其中的奥义。于是第二代机器人诞生！！！<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210914221836.jpeg"></p>
-<h3 id="硬件准备"><a href="#硬件准备" class="headerlink" title="硬件准备:"></a>硬件准备:</h3><ul>
+<h2 id="失败总结">失败总结</h2>
+<p>由于tt马达的稳定性不好，对速度的把控不是很好。一但机器人启动，两个马达的速度差存在严重的问题，导致机器人在原地转圈😌。其次软件方面的支持不是很好，无法做到对机器人的速度进行控制，其根本原因是没读懂大佬写的代码🐶。</p>
+<h2 id="机器人二代诞生">机器人二代诞生</h2>
+<p>汲取了上一代的教训，在硬件方面，这次选用稳定性更好的家用扫地机器人。软件方面，经过对代码的逐行解析，终于弄懂了其中的奥义。于是第二代机器人诞生！！！<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210914221836.jpeg" alt></p>
+<h3 id="硬件准备">硬件准备:</h3>
+<ul>
 <li>树莓派4b</li>
 <li>废弃的扫地机器人（电机得有用）</li>
 <li>L298N电机驱动模块</li>
@@ -325,8 +333,10 @@
 <li>额定电压12V锂电池（给电机供电）</li>
 <li>杜邦线若干</li>
 </ul>
-<h3 id="接线"><a href="#接线" class="headerlink" title="接线"></a>接线</h3><p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210914224912.jpeg"></p>
-<p><strong>树莓派针脚图:</strong><br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210914224525.PNG"></p>
+<h3 id="接线">接线</h3>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210914224912.jpeg" alt></p>
+<p><strong>树莓派针脚图:</strong><br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210914224525.PNG" alt></p>
 <ul>
 <li>四个输出端口分别接两侧电机</li>
 <li>IN1接 GPIO 12</li>
@@ -336,10 +346,13 @@
 <li>使能端1 接 GPIO 19</li>
 <li>使能端2 接 GPIO 26</li>
 </ul>
-<p>如果自定义接，可以修改twowheel.py文件<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210914225912.png"></p>
-<h3 id="软件支持"><a href="#软件支持" class="headerlink" title="软件支持"></a>软件支持</h3><p>安装必要的环境</p>
+<p>如果自定义接，可以修改twowheel.py文件<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210914225912.png" alt></p>
+<h3 id="软件支持">软件支持</h3>
+<p>安装必要的环境</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/Haikez/raspi-robot.git</span><br><span class="line">cd raspi-robot</span><br><span class="line">./install.sh</span><br></pre></td></tr></table></figure>
-<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./rpi-robot.sh</span><br></pre></td></tr></table></figure>
+<h2 id="启动">启动</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./rpi-robot.sh</span><br></pre></td></tr></table></figure>
 <p>打开浏览器，到树莓派ip下的5000端口即可控制访问。</p>
 
     </div>
@@ -426,7 +439,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">195k</span>
+    <span title="站点总字数">198k</span>
   </span>
 </div><!-- <a href="https://icp.gov.moe/?keyword=20180708" rel="external nofollow noreferrer" target="_blank" data-pjax-state="" style="
     border-bottom-width: 0px;

@@ -20,12 +20,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"haikez.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":13},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="一、Java的抽象类抽象类的知识点: public abstract class 类名 {} 。 抽象类里可以写普通方法和抽象方法。 抽象类不能被实例化！！！ 抽象类的使用：通过别的类继承抽像类并必须对类中的抽象方法进行重写。 抽象类的抽象方法在本类中不一定要实现。 抽象类是一种约束，规定本类中必须要有的一些方法。抽象类的定义(abstract关键字):">
+<meta name="description" content="一、Java的抽象类 抽象类的知识点:  public abstract class 类名 {} 。 抽象类里可以写普通方法和抽象方法。 抽象类不能被实例化！！！ 抽象类的使用：通过别的类继承抽像类并必须对类中的抽象方法进行重写。 抽象类的抽象方法在本类中不一定要实现。 抽象类是一种约束，规定本类中必须要有的一些方法。  抽象类的定义(abstract关键字):">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java的抽象类和接口">
 <meta property="og:url" content="https://haikez.github.io/posts/11057.html">
 <meta property="og:site_name" content="倪矗的BLOG">
-<meta property="og:description" content="一、Java的抽象类抽象类的知识点: public abstract class 类名 {} 。 抽象类里可以写普通方法和抽象方法。 抽象类不能被实例化！！！ 抽象类的使用：通过别的类继承抽像类并必须对类中的抽象方法进行重写。 抽象类的抽象方法在本类中不一定要实现。 抽象类是一种约束，规定本类中必须要有的一些方法。抽象类的定义(abstract关键字):">
+<meta property="og:description" content="一、Java的抽象类 抽象类的知识点:  public abstract class 类名 {} 。 抽象类里可以写普通方法和抽象方法。 抽象类不能被实例化！！！ 抽象类的使用：通过别的类继承抽像类并必须对类中的抽象方法进行重写。 抽象类的抽象方法在本类中不一定要实现。 抽象类是一种约束，规定本类中必须要有的一些方法。  抽象类的定义(abstract关键字):">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Java%E5%9F%BA%E7%A1%80/20210420155818.png">
 <meta property="article:published_time" content="2021-04-20T07:17:14.000Z">
@@ -150,7 +150,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81Java%E7%9A%84%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="nav-text">一、Java的抽象类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-text">抽象类的知识点:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89-abstract%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-text">抽象类的定义(abstract关键字):</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#abstract%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-text">abstract关键字:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA%E7%B1%BB%EF%BC%9A"><span class="nav-text">1. 定义一个类：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E9%80%9A%E8%BF%87abstract%E5%85%B3%E9%94%AE%E5%AD%97%E5%AE%9A%E4%B9%89%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="nav-text">2. 通过abstract关键字定义抽象方法:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8%EF%BC%9A%E5%9B%A0%E4%B8%BA%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8D%E8%83%BD%E8%A2%AB%E5%AE%9E%E4%BE%8B%E5%8C%96%E4%B8%BA%E5%AF%B9%E8%B1%A1%EF%BC%8C%E5%9B%A0%E6%AD%A4%E5%8F%AA%E8%83%BD%E4%BD%9C%E4%B8%BA%E7%88%B6%E7%B1%BB%E8%A2%AB%E5%88%AB%E7%9A%84%E7%B1%BB%E7%BB%A7%E6%89%BF%E3%80%82%E5%B9%B6%E4%B8%94%E5%AD%90%E7%B1%BB%E5%BF%85%E9%A1%BB%E9%87%8D%E5%86%99%E7%88%B6%E7%B1%BB%E7%9A%84%E6%89%80%E6%9C%89%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95%EF%BC%81%EF%BC%81%EF%BC%81"><span class="nav-text">抽象类的使用：因为抽象类不能被实例化为对象，因此只能作为父类被别的类继承。并且子类必须重写父类的所有抽象方法！！！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="nav-text">抽象类与抽象方法：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%AD%E5%8F%AF%E4%BB%A5%E5%86%99%E4%B8%80%E4%BA%9B%E6%99%AE%E9%80%9A%E6%96%B9%E6%B3%95%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%AD%90%E7%B1%BB%E7%BB%A7%E6%89%BF%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%90%8E%E8%BF%99%E4%BA%9B%E6%99%AE%E9%80%9A%E6%96%B9%E6%B3%95%E6%97%A0%E9%9C%80%E9%87%8D%E5%86%99"><span class="nav-text">1. 抽象类中可以写一些普通方法，并且子类继承抽象类后这些普通方法无需重写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%AD%E5%8F%AF%E4%BB%A5%E6%B2%A1%E6%9C%89%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95%EF%BC%8C%E4%BD%86%E6%98%AF%E6%9C%89%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95%E7%9A%84%E7%B1%BB%E4%B8%80%E5%AE%9A%E6%98%AF%E6%8A%BD%E8%B1%A1%E7%B1%BB%E3%80%82"><span class="nav-text">2. 抽象类中可以没有抽象方法，但是有抽象方法的类一定是抽象类。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81Java%E7%9A%84%E6%8E%A5%E5%8F%A3"><span class="nav-text">二、Java的接口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-text">接口的知识点:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%AE%9A%E4%B9%89-public-interface-%E6%8E%A5%E5%8F%A3%E5%90%8D"><span class="nav-text">接口的定义: public interface 接口名{}</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#interface%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-text">interface关键字</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-text">接口的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#implements%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-text">implements关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-implements%E5%AE%9E%E7%8E%B0%E6%8E%A5%E5%8F%A3"><span class="nav-text">1. implements实现接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-implements%E5%8F%AF%E4%BB%A5%E5%90%8C%E6%97%B6%E5%AE%9E%E7%8E%B0%E5%A4%9A%E4%B8%AA%E6%8E%A5%E5%8F%A3"><span class="nav-text">2. implements可以同时实现多个接口</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">一、Java的抽象类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-text">抽象类的知识点:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89-abstract%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-text">抽象类的定义(abstract关键字):</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#abstract%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-text">abstract关键字:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA%E7%B1%BB%EF%BC%9A"><span class="nav-text">1. 定义一个类：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E9%80%9A%E8%BF%87abstract%E5%85%B3%E9%94%AE%E5%AD%97%E5%AE%9A%E4%B9%89%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="nav-text">2. 通过abstract关键字定义抽象方法:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8%EF%BC%9A%E5%9B%A0%E4%B8%BA%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8D%E8%83%BD%E8%A2%AB%E5%AE%9E%E4%BE%8B%E5%8C%96%E4%B8%BA%E5%AF%B9%E8%B1%A1%EF%BC%8C%E5%9B%A0%E6%AD%A4%E5%8F%AA%E8%83%BD%E4%BD%9C%E4%B8%BA%E7%88%B6%E7%B1%BB%E8%A2%AB%E5%88%AB%E7%9A%84%E7%B1%BB%E7%BB%A7%E6%89%BF%E3%80%82%E5%B9%B6%E4%B8%94%E5%AD%90%E7%B1%BB%E5%BF%85%E9%A1%BB%E9%87%8D%E5%86%99%E7%88%B6%E7%B1%BB%E7%9A%84%E6%89%80%E6%9C%89%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95%EF%BC%81%EF%BC%81%EF%BC%81"><span class="nav-text">抽象类的使用：因为抽象类不能被实例化为对象，因此只能作为父类被别的类继承。并且子类必须重写父类的所有抽象方法！！！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="nav-text">抽象类与抽象方法：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%AD%E5%8F%AF%E4%BB%A5%E5%86%99%E4%B8%80%E4%BA%9B%E6%99%AE%E9%80%9A%E6%96%B9%E6%B3%95%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%AD%90%E7%B1%BB%E7%BB%A7%E6%89%BF%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%90%8E%E8%BF%99%E4%BA%9B%E6%99%AE%E9%80%9A%E6%96%B9%E6%B3%95%E6%97%A0%E9%9C%80%E9%87%8D%E5%86%99"><span class="nav-text">1. 抽象类中可以写一些普通方法，并且子类继承抽象类后这些普通方法无需重写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%AD%E5%8F%AF%E4%BB%A5%E6%B2%A1%E6%9C%89%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95%EF%BC%8C%E4%BD%86%E6%98%AF%E6%9C%89%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95%E7%9A%84%E7%B1%BB%E4%B8%80%E5%AE%9A%E6%98%AF%E6%8A%BD%E8%B1%A1%E7%B1%BB%E3%80%82"><span class="nav-text">2. 抽象类中可以没有抽象方法，但是有抽象方法的类一定是抽象类。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">二、Java的接口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-text">接口的知识点:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%AE%9A%E4%B9%89-public-interface-%E6%8E%A5%E5%8F%A3%E5%90%8D"><span class="nav-text">接口的定义: public interface 接口名{}</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#interface%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-text">interface关键字</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-text">接口的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#implements%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-text">implements关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-implements%E5%AE%9E%E7%8E%B0%E6%8E%A5%E5%8F%A3"><span class="nav-text">1. implements实现接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-implements%E5%8F%AF%E4%BB%A5%E5%90%8C%E6%97%B6%E5%AE%9E%E7%8E%B0%E5%A4%9A%E4%B8%AA%E6%8E%A5%E5%8F%A3"><span class="nav-text">2. implements可以同时实现多个接口</span></a></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -166,7 +166,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-count">81</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -293,7 +293,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>928</span>
+      <span>924</span>
     </span>
 </div>
 
@@ -304,26 +304,47 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="一、Java的抽象类"><a href="#一、Java的抽象类" class="headerlink" title="一、Java的抽象类"></a>一、Java的抽象类</h1><h2 id="抽象类的知识点"><a href="#抽象类的知识点" class="headerlink" title="抽象类的知识点:"></a>抽象类的知识点:</h2><ol>
+        <h1>一、Java的抽象类</h1>
+<h2 id="抽象类的知识点">抽象类的知识点:</h2>
+<ol>
 <li>public <strong>abstract</strong> class 类名 {} 。</li>
 <li>抽象类里可以写<strong>普通方法</strong>和<strong>抽象方法</strong>。</li>
 <li>抽象类<strong>不能被实例化</strong>！！！</li>
 <li>抽象类的使用：通过别的类<strong>继承</strong>抽像类并<strong>必须</strong>对类中的<strong>抽象方法</strong>进行<strong>重写</strong>。</li>
 <li>抽象类的抽象方法在本类中<strong>不一定要实现</strong>。</li>
-<li>抽象类是一种<strong>约束</strong>，规定本类中必须要有的一些方法。<h2 id="抽象类的定义-abstract关键字"><a href="#抽象类的定义-abstract关键字" class="headerlink" title="抽象类的定义(abstract关键字):"></a>抽象类的定义(abstract关键字):</h2><a id="more"></a>
-<h3 id="abstract关键字"><a href="#abstract关键字" class="headerlink" title="abstract关键字:"></a>abstract关键字:</h3><h4 id="1-定义一个类："><a href="#1-定义一个类：" class="headerlink" title="1. 定义一个类："></a>1. 定义一个类：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> 类名 </span>&#123; </span><br><span class="line">&#125; <span class="comment">/*被abstract关键字修饰的类不能被实例化，</span></span><br><span class="line"><span class="comment">只能作为父类被别的类继承使用*/</span></span><br></pre></td></tr></table></figure>
-<h4 id="2-通过abstract关键字定义抽象方法"><a href="#2-通过abstract关键字定义抽象方法" class="headerlink" title="2. 通过abstract关键字定义抽象方法:"></a>2. 通过abstract关键字定义抽象方法:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span>;</span><br><span class="line"><span class="comment">/*被abstract关键字修饰的方法无需写方法体，</span></span><br><span class="line"><span class="comment">因为当别的类继承本类时，该方法一定要被重写。*/</span></span><br></pre></td></tr></table></figure>
-<h2 id="抽象类的使用：因为抽象类不能被实例化为对象，因此只能作为父类被别的类继承。并且子类必须重写父类的所有抽象方法！！！"><a href="#抽象类的使用：因为抽象类不能被实例化为对象，因此只能作为父类被别的类继承。并且子类必须重写父类的所有抽象方法！！！" class="headerlink" title="抽象类的使用：因为抽象类不能被实例化为对象，因此只能作为父类被别的类继承。并且子类必须重写父类的所有抽象方法！！！"></a>抽象类的使用：因为抽象类不能被实例化为对象，因此只能作为父类被别的类继承。并且子类必须重写父类的所有抽象方法！！！</h2><h2 id="抽象类与抽象方法："><a href="#抽象类与抽象方法：" class="headerlink" title="抽象类与抽象方法："></a>抽象类与抽象方法：</h2><h3 id="1-抽象类中可以写一些普通方法，并且子类继承抽象类后这些普通方法无需重写"><a href="#1-抽象类中可以写一些普通方法，并且子类继承抽象类后这些普通方法无需重写" class="headerlink" title="1. 抽象类中可以写一些普通方法，并且子类继承抽象类后这些普通方法无需重写"></a>1. 抽象类中可以写一些普通方法，并且子类继承抽象类后这些普通方法<em>无需重写</em></h3><h3 id="2-抽象类中可以没有抽象方法，但是有抽象方法的类一定是抽象类。"><a href="#2-抽象类中可以没有抽象方法，但是有抽象方法的类一定是抽象类。" class="headerlink" title="2. 抽象类中可以没有抽象方法，但是有抽象方法的类一定是抽象类。"></a>2. 抽象类中可以没有抽象方法，但是有抽象方法的类一定是抽象类。</h3><h1 id="二、Java的接口"><a href="#二、Java的接口" class="headerlink" title="二、Java的接口"></a>二、Java的接口</h1><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Java%E5%9F%BA%E7%A1%80/20210420155818.png"><h2 id="接口的知识点"><a href="#接口的知识点" class="headerlink" title="接口的知识点:"></a>接口的知识点:</h2></li>
+<li>抽象类是一种<strong>约束</strong>，规定本类中必须要有的一些方法。</li>
+</ol>
+<h2 id="抽象类的定义-abstract关键字">抽象类的定义(abstract关键字):</h2>
+<a id="more"></a>
+<h3 id="abstract关键字">abstract关键字:</h3>
+<h4 id="1-定义一个类：">1. 定义一个类：</h4>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> 类名 </span>&#123; </span><br><span class="line">&#125; <span class="comment">/*被abstract关键字修饰的类不能被实例化，</span></span><br><span class="line"><span class="comment">只能作为父类被别的类继承使用*/</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-通过abstract关键字定义抽象方法">2. 通过abstract关键字定义抽象方法:</h4>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span></span>;</span><br><span class="line"><span class="comment">/*被abstract关键字修饰的方法无需写方法体，</span></span><br><span class="line"><span class="comment">因为当别的类继承本类时，该方法一定要被重写。*/</span></span><br></pre></td></tr></table></figure>
+<h2 id="抽象类的使用：因为抽象类不能被实例化为对象，因此只能作为父类被别的类继承。并且子类必须重写父类的所有抽象方法！！！">抽象类的使用：因为抽象类不能被实例化为对象，因此只能作为父类被别的类继承。并且子类必须重写父类的所有抽象方法！！！</h2>
+<h2 id="抽象类与抽象方法：">抽象类与抽象方法：</h2>
+<h3 id="1-抽象类中可以写一些普通方法，并且子类继承抽象类后这些普通方法无需重写">1. 抽象类中可以写一些普通方法，并且子类继承抽象类后这些普通方法<em>无需重写</em></h3>
+<h3 id="2-抽象类中可以没有抽象方法，但是有抽象方法的类一定是抽象类。">2. 抽象类中可以没有抽象方法，但是有抽象方法的类一定是抽象类。</h3>
+<h1>二、Java的接口</h1>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Java%E5%9F%BA%E7%A1%80/20210420155818.png" alt></p>
+<h2 id="接口的知识点">接口的知识点:</h2>
+<ol>
 <li>public interface 接口名 {}</li>
 <li>接口完全只是约束。接口中的所有方法都无需具体实现。</li>
 <li>接口<strong>不能被实例化</strong>！！！</li>
-<li>接口中的所有方法默认都用 <strong><em>public abstract</em></strong> 修饰。</li>
-<li>接口都要有<strong>实现类</strong>来实现，实现接口的关键字 <strong><em>implements</em></strong> 。</li>
+<li>接口中的所有方法默认都用 <em><strong>public abstract</strong></em> 修饰。</li>
+<li>接口都要有<strong>实现类</strong>来实现，实现接口的关键字 <em><strong>implements</strong></em> 。</li>
 <li>接口的实现类本质就是对接口中<strong>所有方法的重写</strong>。</li>
-<li><em>接口中定义的变量都是常量（ **</em>public static final*** ）<h2 id="接口的定义-public-interface-接口名"><a href="#接口的定义-public-interface-接口名" class="headerlink" title="接口的定义: public interface 接口名{}"></a>接口的定义: public interface 接口名{}</h2><h3 id="interface关键字"><a href="#interface关键字" class="headerlink" title="interface关键字"></a>interface关键字</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> 接口名</span>&#123;</span><br><span class="line">&#125; <span class="comment">//通过interface关键字定义接口</span></span><br></pre></td></tr></table></figure>
-<h2 id="接口的使用"><a href="#接口的使用" class="headerlink" title="接口的使用"></a>接口的使用</h2><h3 id="implements关键字"><a href="#implements关键字" class="headerlink" title="implements关键字"></a>implements关键字</h3><h4 id="1-implements实现接口"><a href="#1-implements实现接口" class="headerlink" title="1. implements实现接口"></a>1. implements实现接口</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 实现类 <span class="keyword">implements</span> 接口1,接口2</span>&#123;</span><br><span class="line">&#125; <span class="comment">/*实现类通过implements关键字实现接口。</span></span><br><span class="line"><span class="comment">接口的实现类必须对接口中的所有方法的重写!!!*/</span></span><br></pre></td></tr></table></figure>
-<h4 id="2-implements可以同时实现多个接口"><a href="#2-implements可以同时实现多个接口" class="headerlink" title="2. implements可以同时实现多个接口"></a>2. implements可以同时实现多个接口</h4></li>
+<li>*接口中定义的变量都是常量（ <em><strong>public static final</strong></em> ）</li>
 </ol>
+<h2 id="接口的定义-public-interface-接口名">接口的定义: public interface 接口名{}</h2>
+<h3 id="interface关键字">interface关键字</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> 接口名</span>&#123;</span><br><span class="line">&#125; <span class="comment">//通过interface关键字定义接口</span></span><br></pre></td></tr></table></figure>
+<h2 id="接口的使用">接口的使用</h2>
+<h3 id="implements关键字">implements关键字</h3>
+<h4 id="1-implements实现接口">1. implements实现接口</h4>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 实现类 <span class="keyword">implements</span> 接口1,接口2</span>&#123;</span><br><span class="line">&#125; <span class="comment">/*实现类通过implements关键字实现接口。</span></span><br><span class="line"><span class="comment">接口的实现类必须对接口中的所有方法的重写!!!*/</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-implements可以同时实现多个接口">2. implements可以同时实现多个接口</h4>
 
     </div>
     
@@ -406,7 +427,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">195k</span>
+    <span title="站点总字数">198k</span>
   </span>
 </div><!-- <a href="https://icp.gov.moe/?keyword=20180708" rel="external nofollow noreferrer" target="_blank" data-pjax-state="" style="
     border-bottom-width: 0px;

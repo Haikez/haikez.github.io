@@ -20,12 +20,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"haikez.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":13},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="Web基本概念1、 基本概念1.1、前言web开发：  静态web html，css 提供给所有人看的数据始终不发生改变！   动态web 淘宝，几乎所有的网站； 提供给所有人看的数据始终发生改变，每个人在不同时间，不同地点看到的信息各不相同。 技术栈：Servlet&#x2F;JSP , ASP, PHP    在Java中，动态web资源开发的技术统称为JavaWeb。">
+<meta name="description" content="Web基本概念 1、 基本概念 1.1、前言 web开发：  静态web  html，css 提供给所有人看的数据始终不发生改变！   动态web  淘宝，几乎所有的网站； 提供给所有人看的数据始终发生改变，每个人在不同时间，不同地点看到的信息各不相同。 技术栈：Servlet&#x2F;JSP , ASP, PHP    在Java中，动态web资源开发的技术统称为JavaWeb。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Web基本概念">
 <meta property="og:url" content="https://haikez.github.io/posts/10881.html">
 <meta property="og:site_name" content="倪矗的BLOG">
-<meta property="og:description" content="Web基本概念1、 基本概念1.1、前言web开发：  静态web html，css 提供给所有人看的数据始终不发生改变！   动态web 淘宝，几乎所有的网站； 提供给所有人看的数据始终发生改变，每个人在不同时间，不同地点看到的信息各不相同。 技术栈：Servlet&#x2F;JSP , ASP, PHP    在Java中，动态web资源开发的技术统称为JavaWeb。">
+<meta property="og:description" content="Web基本概念 1、 基本概念 1.1、前言 web开发：  静态web  html，css 提供给所有人看的数据始终不发生改变！   动态web  淘宝，几乎所有的网站； 提供给所有人看的数据始终发生改变，每个人在不同时间，不同地点看到的信息各不相同。 技术栈：Servlet&#x2F;JSP , ASP, PHP    在Java中，动态web资源开发的技术统称为JavaWeb。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427153352.png">
 <meta property="og:image" content="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427154538.png">
@@ -152,7 +152,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Web%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">Web基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">1、 基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1%E3%80%81%E5%89%8D%E8%A8%80"><span class="nav-text">1.1、前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2%E3%80%81-web%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="nav-text">1.2、 web应用程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3%E3%80%81%E9%9D%99%E6%80%81web"><span class="nav-text">1.3、静态web</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4%E3%80%81%E5%8A%A8%E6%80%81web"><span class="nav-text">1.4、动态web</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81web%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-text">2、web服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ASP"><span class="nav-text">ASP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#php"><span class="nav-text">php</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSP-Servlet"><span class="nav-text">JSP&#x2F;Servlet:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2%E3%80%81web%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-text">2.2、web服务器</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">Web基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">1、 基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1%E3%80%81%E5%89%8D%E8%A8%80"><span class="nav-text">1.1、前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2%E3%80%81-web%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="nav-text">1.2、 web应用程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3%E3%80%81%E9%9D%99%E6%80%81web"><span class="nav-text">1.3、静态web</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4%E3%80%81%E5%8A%A8%E6%80%81web"><span class="nav-text">1.4、动态web</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81web%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-text">2、web服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ASP"><span class="nav-text">ASP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#php"><span class="nav-text">php</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSP-Servlet"><span class="nav-text">JSP&#x2F;Servlet:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2%E3%80%81web%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-text">2.2、web服务器</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -168,7 +168,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-count">81</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -295,7 +295,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>956</span>
+      <span>955</span>
     </span>
 </div>
 
@@ -306,14 +306,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="Web基本概念"><a href="#Web基本概念" class="headerlink" title="Web基本概念"></a>Web基本概念</h1><h2 id="1、-基本概念"><a href="#1、-基本概念" class="headerlink" title="1、 基本概念"></a>1、 基本概念</h2><h3 id="1-1、前言"><a href="#1-1、前言" class="headerlink" title="1.1、前言"></a>1.1、前言</h3><p>web开发：</p>
+        <h1>Web基本概念</h1>
+<h2 id="1、-基本概念">1、 基本概念</h2>
+<h3 id="1-1、前言">1.1、前言</h3>
+<p>web开发：</p>
 <ul>
-<li>静态web<ul>
+<li>静态web
+<ul>
 <li>html，css</li>
 <li>提供给所有人看的数据始终不发生改变！</li>
 </ul>
 </li>
-<li>动态web<ul>
+<li>动态web
+<ul>
 <li>淘宝，几乎所有的网站；</li>
 <li>提供给所有人看的数据始终发生改变，每个人在不同时间，不同地点看到的信息各不相同。</li>
 <li>技术栈：<strong>Servlet/JSP</strong> , <strong>ASP</strong>, <strong>PHP</strong></li>
@@ -322,11 +327,13 @@
 </ul>
 <p>在Java中，动态web资源开发的技术统称为JavaWeb。</p>
 <a id="more"></a>
-<h3 id="1-2、-web应用程序"><a href="#1-2、-web应用程序" class="headerlink" title="1.2、 web应用程序"></a>1.2、 web应用程序</h3><p>web应用程序：可以提供浏览器访问的程序；</p>
+<h3 id="1-2、-web应用程序">1.2、 web应用程序</h3>
+<p>web应用程序：可以提供浏览器访问的程序；</p>
 <ul>
 <li>a.html、b.html等多个web资源可以被外界访问，对外界提供服务；</li>
 <li>统一的web资源都会被放在同一个文件夹下，web应用程序–&gt;Tomcat：服务器</li>
-<li>一个web应用由多部分组成（静态web，动态web）<ul>
+<li>一个web应用由多部分组成（静态web，动态web）
+<ul>
 <li>html，css，js</li>
 <li>jsp，servlet</li>
 <li>java程序</li>
@@ -336,42 +343,71 @@
 </li>
 </ul>
 <p>web应用程序编写完成之后，若想提供给外界访问需要一个服务器进行统一管理。</p>
-<h3 id="1-3、静态web"><a href="#1-3、静态web" class="headerlink" title="1.3、静态web"></a>1.3、静态web</h3><ul>
-<li>*.htm、 *.html这些都是网页的后缀，如果服务器上一直存在这些东西，我们就可以直接进行读取。<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427153352.png"></li>
-<li>静态web的缺点<ul>
-<li>Web页面无法动态更新，所有用户看到的都是同一个页面<ul>
+<h3 id="1-3、静态web">1.3、静态web</h3>
+<ul>
+<li>*.htm、 *.html这些都是网页的后缀，如果服务器上一直存在这些东西，我们就可以直接进行读取。<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427153352.png" alt></li>
+<li>静态web的缺点
+<ul>
+<li>Web页面无法动态更新，所有用户看到的都是同一个页面
+<ul>
 <li>轮播图，点击特效：伪动态</li>
 <li>JavaScript</li>
 <li>VBScript</li>
 </ul>
 </li>
-<li>它无法和数据库交互（数据无法持久化，用户无法交互）<h3 id="1-4、动态web"><a href="#1-4、动态web" class="headerlink" title="1.4、动态web"></a>1.4、动态web</h3>页面会动态展示：Web的页面展示效果会因人而异；<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427154538.png"></li>
+<li>它无法和数据库交互（数据无法持久化，用户无法交互）</li>
 </ul>
 </li>
-<li>缺点<ul>
-<li>假如服务器的动态web资源出现错误，我们需要重新编写<strong>后台程序</strong>，重新发布；<ul>
+</ul>
+<h3 id="1-4、动态web">1.4、动态web</h3>
+<p>页面会动态展示：Web的页面展示效果会因人而异；<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427154538.png" alt></p>
+<ul>
+<li>缺点
+<ul>
+<li>假如服务器的动态web资源出现错误，我们需要重新编写<strong>后台程序</strong>，重新发布；
+<ul>
 <li>停机维护</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>优点<ul>
+<li>优点
+<ul>
 <li>web页面可以动态更新，所有用户看到的都不是同一页面</li>
-<li>它可以与数据库交互（数据持久化：注册、商品信息、用户信息……）<br><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427155033.png"><h2 id="2、web服务器"><a href="#2、web服务器" class="headerlink" title="2、web服务器"></a>2、web服务器</h2><h3 id="ASP"><a href="#ASP" class="headerlink" title="ASP"></a>ASP</h3></li>
+<li>它可以与数据库交互（数据持久化：注册、商品信息、用户信息…）<br>
+<img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/oud.com/images_bed/JavaWeb/20210427155033.png" alt></li>
 </ul>
 </li>
+</ul>
+<h2 id="2、web服务器">2、web服务器</h2>
+<h3 id="ASP">ASP</h3>
+<ul>
 <li>微软：国内最早流行的就是ASP；</li>
 <li>在HTML中嵌套了VB的脚本，ASP+COM；</li>
 <li>维护成本高</li>
 <li>C#</li>
-<li>IIS<h3 id="php"><a href="#php" class="headerlink" title="php"></a>php</h3></li>
-<li> PHP开发速度很快，功能很强大，跨平台，代码简单</li>
-<li> 无法承受大访问量（局限性）<h3 id="JSP-Servlet"><a href="#JSP-Servlet" class="headerlink" title="JSP/Servlet:"></a>JSP/Servlet:</h3>B/S:浏览器和服务器<br>C/S：客户端和服务器</li>
+<li>IIS</li>
+</ul>
+<h3 id="php">php</h3>
+<ul>
+<li>PHP开发速度很快，功能很强大，跨平台，代码简单</li>
+<li>无法承受大访问量（局限性）</li>
+</ul>
+<h3 id="JSP-Servlet">JSP/Servlet:</h3>
+<p>B/S:浏览器和服务器<br>
+C/S：客户端和服务器</p>
+<ul>
 <li>sun公司主推的B/S架构</li>
 <li>基于java语言的</li>
 <li>可以承载三高问题带来的影响</li>
-<li>语法很像ASP，加强市场强度<h3 id="2-2、web服务器"><a href="#2-2、web服务器" class="headerlink" title="2.2、web服务器"></a>2.2、web服务器</h3>服务器是一种被动的操作，用来处理用户的请求，和给用户一些响应信息。<br>IIS：微软的；Windows自带；ASP<br>Tomcat：开源免费的轻量级web服务器，实际上运行JSP页面和Servlet</li>
+<li>语法很像ASP，加强市场强度</li>
 </ul>
+<h3 id="2-2、web服务器">2.2、web服务器</h3>
+<p>服务器是一种被动的操作，用来处理用户的请求，和给用户一些响应信息。<br>
+IIS：微软的；Windows自带；ASP<br>
+Tomcat：开源免费的轻量级web服务器，实际上运行JSP页面和Servlet</p>
 
     </div>
     
@@ -454,7 +490,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">195k</span>
+    <span title="站点总字数">198k</span>
   </span>
 </div><!-- <a href="https://icp.gov.moe/?keyword=20180708" rel="external nofollow noreferrer" target="_blank" data-pjax-state="" style="
     border-bottom-width: 0px;

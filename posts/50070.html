@@ -20,12 +20,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"haikez.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":13},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="树莓派安装HomeBridge一、什么是HomeBridgeHomebridge是一个轻量级的NodeJS服务器，它是为了模拟iOS HomeKit API而构建的。利用这款软件，可以将家里的设备与Apple Home进行整合。还可以利用Homebridge来连接各种不被Apple Home支持的第三方应用。 HomeBridge和HomeAssistant区别:homebridge是用于连接苹果">
+<meta name="description" content="树莓派安装HomeBridge 一、什么是HomeBridge Homebridge是一个轻量级的NodeJS服务器，它是为了模拟iOS HomeKit API而构建的。利用这款软件，可以将家里的设备与Apple Home进行整合。还可以利用Homebridge来连接各种不被Apple Home支持的第三方应用。 HomeBridge和HomeAssistant区别: homebridge是用于连">
 <meta property="og:type" content="article">
 <meta property="og:title" content="树莓派安装HomeBridge">
 <meta property="og:url" content="https://haikez.github.io/posts/50070.html">
 <meta property="og:site_name" content="倪矗的BLOG">
-<meta property="og:description" content="树莓派安装HomeBridge一、什么是HomeBridgeHomebridge是一个轻量级的NodeJS服务器，它是为了模拟iOS HomeKit API而构建的。利用这款软件，可以将家里的设备与Apple Home进行整合。还可以利用Homebridge来连接各种不被Apple Home支持的第三方应用。 HomeBridge和HomeAssistant区别:homebridge是用于连接苹果">
+<meta property="og:description" content="树莓派安装HomeBridge 一、什么是HomeBridge Homebridge是一个轻量级的NodeJS服务器，它是为了模拟iOS HomeKit API而构建的。利用这款软件，可以将家里的设备与Apple Home进行整合。还可以利用Homebridge来连接各种不被Apple Home支持的第三方应用。 HomeBridge和HomeAssistant区别: homebridge是用于连">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915112925.png">
 <meta property="og:image" content="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915113218.png">
@@ -152,7 +152,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85HomeBridge"><span class="nav-text">树莓派安装HomeBridge</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFHomeBridge"><span class="nav-text">一、什么是HomeBridge</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%B8%BA%E5%AE%89%E8%A3%85Homebridge%E5%87%86%E5%A4%87Raspberry-Pi"><span class="nav-text">二、为安装Homebridge准备Raspberry Pi</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86Node-js%E5%AE%89%E8%A3%85%E5%88%B0Raspberry-Pi%E4%B8%8A%E4%B8%BAHomebridge%E5%81%9A%E5%87%86%E5%A4%87%E3%80%82"><span class="nav-text">将Node.js安装到Raspberry Pi上为Homebridge做准备。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BB%BB%E5%8A%A1%E6%98%AF%E5%B0%86Node-js%E5%AE%98%E6%96%B9%E4%BB%93%E5%BA%93%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%8C%85%E5%88%97%E8%A1%A8%E4%B8%AD%E3%80%82"><span class="nav-text">1. 第一个任务是将Node.js官方仓库添加到包列表中。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E7%8E%B0%E5%9C%A8%E6%8A%8Anode-js%E3%80%81Python%E4%BB%A5%E5%8F%8AGCC%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85%E5%88%B0Raspberry-Pi%E4%B8%8A%E3%80%82"><span class="nav-text">2. 现在把node.js、Python以及GCC编译器安装到Raspberry Pi上。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E8%BF%90%E8%A1%8C%E4%B8%8B%E9%9D%A2%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%8C%E9%AA%8C%E8%AF%81nodejs%E6%98%AF%E5%90%A6%E5%B7%B2%E7%BB%8F%E5%AE%89%E8%A3%85%E5%AE%8C%E6%AF%95%E3%80%82"><span class="nav-text">3. 运行下面的命令，验证nodejs是否已经安装完毕。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E7%8E%B0%E5%9C%A8%E9%80%9A%E8%BF%87%E8%BF%90%E8%A1%8C%E4%B8%8B%E9%9D%A2%E7%9A%84%E5%91%BD%E4%BB%A4%E6%9D%A5%E7%A1%AE%E4%BF%9Dnpm%E7%9A%84%E7%89%88%E6%9C%AC%E6%98%AF%E6%9C%80%E6%96%B0%E7%9A%84%E3%80%82"><span class="nav-text">4. 现在通过运行下面的命令来确保npm的版本是最新的。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8Raspberry-Pi%E4%B8%8A%E5%AE%89%E8%A3%85%E4%BA%86NodeJS%E5%92%8Cnpm%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%BB%A7%E7%BB%AD%E4%BD%BF%E7%94%A8%E5%AE%83%E4%BB%AC%E6%9D%A5%E5%AE%89%E8%A3%85Homebridge%E3%80%82"><span class="nav-text">在Raspberry Pi上安装了NodeJS和npm之后，可以继续使用它们来安装Homebridge。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E8%BF%90%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%E5%9C%A8Raspberry-Pi%E4%B8%8A%E5%AE%89%E8%A3%85Homebridge%E5%92%8CHomebridge-Config-UI-X%E6%A8%A1%E5%9D%97%E3%80%82"><span class="nav-text">1. 运行以下命令在Raspberry Pi上安装Homebridge和Homebridge Config UI X模块。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%A6%81%E6%83%B3%E8%AE%A9Homebridge%E8%BD%AF%E4%BB%B6%E5%9C%A8%E5%BC%80%E6%9C%BA%E6%97%B6%E5%90%AF%E5%8A%A8%EF%BC%8C%E5%8F%AF%E4%BB%A5%E8%BF%90%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%E3%80%82"><span class="nav-text">2. 要想让Homebridge软件在开机时启动，可以运行以下命令。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E8%A6%81%E8%BF%9B%E5%85%A5%E7%BD%91%E9%A1%B5%E7%95%8C%E9%9D%A2%EF%BC%8C%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93Raspberry-Pi%E7%9A%84IP%E5%9C%B0%E5%9D%80%E3%80%82"><span class="nav-text">1. 要进入网页界面，需要知道Raspberry Pi的IP地址。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%9C%A8%E7%BD%91%E7%BB%9C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%EF%BC%8C%E8%BF%9B%E5%85%A5%E4%BB%A5%E4%B8%8B%E5%9C%B0%E5%9D%80%E3%80%82"><span class="nav-text">2. 在网络浏览器中，进入以下地址。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E7%8E%B0%E5%9C%A8%E5%B0%86%E5%87%BA%E7%8E%B0%E4%BB%A5%E4%B8%8B%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2%E3%80%82"><span class="nav-text">3. 现在将出现以下登录界面。</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">树莓派安装HomeBridge</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFHomeBridge"><span class="nav-text">一、什么是HomeBridge</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%B8%BA%E5%AE%89%E8%A3%85Homebridge%E5%87%86%E5%A4%87Raspberry-Pi"><span class="nav-text">二、为安装Homebridge准备Raspberry Pi</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86Node-js%E5%AE%89%E8%A3%85%E5%88%B0Raspberry-Pi%E4%B8%8A%E4%B8%BAHomebridge%E5%81%9A%E5%87%86%E5%A4%87%E3%80%82"><span class="nav-text">将Node.js安装到Raspberry Pi上为Homebridge做准备。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BB%BB%E5%8A%A1%E6%98%AF%E5%B0%86Node-js%E5%AE%98%E6%96%B9%E4%BB%93%E5%BA%93%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%8C%85%E5%88%97%E8%A1%A8%E4%B8%AD%E3%80%82"><span class="nav-text">1. 第一个任务是将Node.js官方仓库添加到包列表中。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E7%8E%B0%E5%9C%A8%E6%8A%8Anode-js%E3%80%81Python%E4%BB%A5%E5%8F%8AGCC%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85%E5%88%B0Raspberry-Pi%E4%B8%8A%E3%80%82"><span class="nav-text">2. 现在把node.js、Python以及GCC编译器安装到Raspberry Pi上。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E8%BF%90%E8%A1%8C%E4%B8%8B%E9%9D%A2%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%8C%E9%AA%8C%E8%AF%81nodejs%E6%98%AF%E5%90%A6%E5%B7%B2%E7%BB%8F%E5%AE%89%E8%A3%85%E5%AE%8C%E6%AF%95%E3%80%82"><span class="nav-text">3. 运行下面的命令，验证nodejs是否已经安装完毕。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E7%8E%B0%E5%9C%A8%E9%80%9A%E8%BF%87%E8%BF%90%E8%A1%8C%E4%B8%8B%E9%9D%A2%E7%9A%84%E5%91%BD%E4%BB%A4%E6%9D%A5%E7%A1%AE%E4%BF%9Dnpm%E7%9A%84%E7%89%88%E6%9C%AC%E6%98%AF%E6%9C%80%E6%96%B0%E7%9A%84%E3%80%82"><span class="nav-text">4. 现在通过运行下面的命令来确保npm的版本是最新的。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8Raspberry-Pi%E4%B8%8A%E5%AE%89%E8%A3%85%E4%BA%86NodeJS%E5%92%8Cnpm%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%BB%A7%E7%BB%AD%E4%BD%BF%E7%94%A8%E5%AE%83%E4%BB%AC%E6%9D%A5%E5%AE%89%E8%A3%85Homebridge%E3%80%82"><span class="nav-text">在Raspberry Pi上安装了NodeJS和npm之后，可以继续使用它们来安装Homebridge。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E8%BF%90%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%E5%9C%A8Raspberry-Pi%E4%B8%8A%E5%AE%89%E8%A3%85Homebridge%E5%92%8CHomebridge-Config-UI-X%E6%A8%A1%E5%9D%97%E3%80%82"><span class="nav-text">1. 运行以下命令在Raspberry Pi上安装Homebridge和Homebridge Config UI X模块。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%A6%81%E6%83%B3%E8%AE%A9Homebridge%E8%BD%AF%E4%BB%B6%E5%9C%A8%E5%BC%80%E6%9C%BA%E6%97%B6%E5%90%AF%E5%8A%A8%EF%BC%8C%E5%8F%AF%E4%BB%A5%E8%BF%90%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%E3%80%82"><span class="nav-text">2. 要想让Homebridge软件在开机时启动，可以运行以下命令。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E8%A6%81%E8%BF%9B%E5%85%A5%E7%BD%91%E9%A1%B5%E7%95%8C%E9%9D%A2%EF%BC%8C%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93Raspberry-Pi%E7%9A%84IP%E5%9C%B0%E5%9D%80%E3%80%82"><span class="nav-text">1. 要进入网页界面，需要知道Raspberry Pi的IP地址。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%9C%A8%E7%BD%91%E7%BB%9C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%EF%BC%8C%E8%BF%9B%E5%85%A5%E4%BB%A5%E4%B8%8B%E5%9C%B0%E5%9D%80%E3%80%82"><span class="nav-text">2. 在网络浏览器中，进入以下地址。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E7%8E%B0%E5%9C%A8%E5%B0%86%E5%87%BA%E7%8E%B0%E4%BB%A5%E4%B8%8B%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2%E3%80%82"><span class="nav-text">3. 现在将出现以下登录界面。</span></a></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -168,7 +168,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-count">81</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -306,30 +306,45 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="树莓派安装HomeBridge"><a href="#树莓派安装HomeBridge" class="headerlink" title="树莓派安装HomeBridge"></a>树莓派安装HomeBridge</h1><h2 id="一、什么是HomeBridge"><a href="#一、什么是HomeBridge" class="headerlink" title="一、什么是HomeBridge"></a>一、什么是HomeBridge</h2><p>Homebridge是一个轻量级的NodeJS服务器，它是为了模拟iOS HomeKit API而构建的。利用这款软件，可以将家里的设备与Apple Home进行整合。还可以利用Homebridge来连接各种不被Apple Home支持的第三方应用。</p>
-<p><strong>HomeBridge和HomeAssistant区别:</strong><br>homebridge是用于连接苹果homekit的工具，而homeassistant是一个独立智能家居控制系统。</p>
+        <h1>树莓派安装HomeBridge</h1>
+<h2 id="一、什么是HomeBridge">一、什么是HomeBridge</h2>
+<p>Homebridge是一个轻量级的NodeJS服务器，它是为了模拟iOS HomeKit API而构建的。利用这款软件，可以将家里的设备与Apple Home进行整合。还可以利用Homebridge来连接各种不被Apple Home支持的第三方应用。</p>
+<p><strong>HomeBridge和HomeAssistant区别:</strong><br>
+homebridge是用于连接苹果homekit的工具，而homeassistant是一个独立智能家居控制系统。</p>
 <a id="more"></a>
-<h2 id="二、为安装Homebridge准备Raspberry-Pi"><a href="#二、为安装Homebridge准备Raspberry-Pi" class="headerlink" title="二、为安装Homebridge准备Raspberry Pi"></a>二、为安装Homebridge准备Raspberry Pi</h2><h3 id="将Node-js安装到Raspberry-Pi上为Homebridge做准备。"><a href="#将Node-js安装到Raspberry-Pi上为Homebridge做准备。" class="headerlink" title="将Node.js安装到Raspberry Pi上为Homebridge做准备。"></a>将Node.js安装到Raspberry Pi上为Homebridge做准备。</h3><p>Homebridge服务器是基于Node.js运行时构建的。</p>
-<h4 id="1-第一个任务是将Node-js官方仓库添加到包列表中。"><a href="#1-第一个任务是将Node-js官方仓库添加到包列表中。" class="headerlink" title="1. 第一个任务是将Node.js官方仓库添加到包列表中。"></a>1. 第一个任务是将Node.js官方仓库添加到包列表中。</h4><p>这样做可以让安装更多最新版本的服务器软件，而不是默认的Raspbian软件库中的软件。</p>
+<h2 id="二、为安装Homebridge准备Raspberry-Pi">二、为安装Homebridge准备Raspberry Pi</h2>
+<h3 id="将Node-js安装到Raspberry-Pi上为Homebridge做准备。">将Node.js安装到Raspberry Pi上为Homebridge做准备。</h3>
+<p>Homebridge服务器是基于Node.js运行时构建的。</p>
+<h4 id="1-第一个任务是将Node-js官方仓库添加到包列表中。">1. 第一个任务是将Node.js官方仓库添加到包列表中。</h4>
+<p>这样做可以让安装更多最新版本的服务器软件，而不是默认的Raspbian软件库中的软件。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -</span><br></pre></td></tr></table></figure>
 <p>这个命令把Node Source网站上的bash脚本管到bash中，可以直接在网页浏览器中去验证这个脚本的内容。</p>
-<h4 id="2-现在把node-js、Python以及GCC编译器安装到Raspberry-Pi上。"><a href="#2-现在把node-js、Python以及GCC编译器安装到Raspberry-Pi上。" class="headerlink" title="2. 现在把node.js、Python以及GCC编译器安装到Raspberry Pi上。"></a>2. 现在把node.js、Python以及GCC编译器安装到Raspberry Pi上。</h4><p>运行以下命令来安装这些软件包。</p>
+<h4 id="2-现在把node-js、Python以及GCC编译器安装到Raspberry-Pi上。">2. 现在把node.js、Python以及GCC编译器安装到Raspberry Pi上。</h4>
+<p>运行以下命令来安装这些软件包。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install -y nodejs gcc g++ make python</span><br></pre></td></tr></table></figure>
-<h4 id="3-运行下面的命令，验证nodejs是否已经安装完毕。"><a href="#3-运行下面的命令，验证nodejs是否已经安装完毕。" class="headerlink" title="3. 运行下面的命令，验证nodejs是否已经安装完毕。"></a>3. 运行下面的命令，验证nodejs是否已经安装完毕。</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+<h4 id="3-运行下面的命令，验证nodejs是否已经安装完毕。">3. 运行下面的命令，验证nodejs是否已经安装完毕。</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
 <p>如果NodeJS软件已正确安装，该命令将返回当前版本。</p>
-<h4 id="4-现在通过运行下面的命令来确保npm的版本是最新的。"><a href="#4-现在通过运行下面的命令来确保npm的版本是最新的。" class="headerlink" title="4. 现在通过运行下面的命令来确保npm的版本是最新的。"></a>4. 现在通过运行下面的命令来确保npm的版本是最新的。</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g npm</span><br></pre></td></tr></table></figure>
-<p>npm是NodsJS模块的包管理器，也是安装Homebridge软件所要用到的。<br>在Raspberry Pi上安装Homebridge</p>
-<h3 id="在Raspberry-Pi上安装了NodeJS和npm之后，可以继续使用它们来安装Homebridge。"><a href="#在Raspberry-Pi上安装了NodeJS和npm之后，可以继续使用它们来安装Homebridge。" class="headerlink" title="在Raspberry Pi上安装了NodeJS和npm之后，可以继续使用它们来安装Homebridge。"></a>在Raspberry Pi上安装了NodeJS和npm之后，可以继续使用它们来安装Homebridge。</h3><h4 id="1-运行以下命令在Raspberry-Pi上安装Homebridge和Homebridge-Config-UI-X模块。"><a href="#1-运行以下命令在Raspberry-Pi上安装Homebridge和Homebridge-Config-UI-X模块。" class="headerlink" title="1. 运行以下命令在Raspberry Pi上安装Homebridge和Homebridge Config UI X模块。"></a>1. 运行以下命令在Raspberry Pi上安装Homebridge和Homebridge Config UI X模块。</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g --unsafe-perm homebridge homebridge-config-ui-x</span><br></pre></td></tr></table></figure>
+<h4 id="4-现在通过运行下面的命令来确保npm的版本是最新的。">4. 现在通过运行下面的命令来确保npm的版本是最新的。</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g npm</span><br></pre></td></tr></table></figure>
+<p>npm是NodsJS模块的包管理器，也是安装Homebridge软件所要用到的。在Raspberry Pi上安装Homebridge</p>
+<h3 id="在Raspberry-Pi上安装了NodeJS和npm之后，可以继续使用它们来安装Homebridge。">在Raspberry Pi上安装了NodeJS和npm之后，可以继续使用它们来安装Homebridge。</h3>
+<h4 id="1-运行以下命令在Raspberry-Pi上安装Homebridge和Homebridge-Config-UI-X模块。">1. 运行以下命令在Raspberry Pi上安装Homebridge和Homebridge Config UI X模块。</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g --unsafe-perm homebridge homebridge-config-ui-x</span><br></pre></td></tr></table></figure>
 <p>在安装Homebridge的同时安装Homebridge Config UI X，因为它提供了一个易于使用的基于网络的Homebridge软件管理工具。</p>
-<h4 id="2-要想让Homebridge软件在开机时启动，可以运行以下命令。"><a href="#2-要想让Homebridge软件在开机时启动，可以运行以下命令。" class="headerlink" title="2. 要想让Homebridge软件在开机时启动，可以运行以下命令。"></a>2. 要想让Homebridge软件在开机时启动，可以运行以下命令。</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hb-service install --user homebridge</span><br></pre></td></tr></table></figure>
-<p>该命令将使用提供的hb-service工具来设置并安装Homebridge作为服务。<br>访问Homebridge配置界面X</p>
-<h4 id="1-要进入网页界面，需要知道Raspberry-Pi的IP地址。"><a href="#1-要进入网页界面，需要知道Raspberry-Pi的IP地址。" class="headerlink" title="1. 要进入网页界面，需要知道Raspberry Pi的IP地址。"></a>1. 要进入网页界面，需要知道Raspberry Pi的IP地址。</h4><p>可以通过运行以下命令获取Raspberry Pi的本地IP地址。</p>
+<h4 id="2-要想让Homebridge软件在开机时启动，可以运行以下命令。">2. 要想让Homebridge软件在开机时启动，可以运行以下命令。</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hb-service install --user homebridge</span><br></pre></td></tr></table></figure>
+<p>该命令将使用提供的hb-service工具来设置并安装Homebridge作为服务。访问Homebridge配置界面X</p>
+<h4 id="1-要进入网页界面，需要知道Raspberry-Pi的IP地址。">1. 要进入网页界面，需要知道Raspberry Pi的IP地址。</h4>
+<p>可以通过运行以下命令获取Raspberry Pi的本地IP地址。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostname -I</span><br></pre></td></tr></table></figure>
-<h4 id="2-在网络浏览器中，进入以下地址。"><a href="#2-在网络浏览器中，进入以下地址。" class="headerlink" title="2. 在网络浏览器中，进入以下地址。"></a>2. 在网络浏览器中，进入以下地址。</h4><p>请确保将”[RASPBERRYPIIPADDRESS]”替换为上一步检索到的IP地址。</p>
+<h4 id="2-在网络浏览器中，进入以下地址。">2. 在网络浏览器中，进入以下地址。</h4>
+<p>请确保将”[RASPBERRYPIIPADDRESS]”替换为上一步检索到的IP地址。</p>
 <p>http://[RASPBERRYPIIPADDRESS]:8581</p>
-<h4 id="3-现在将出现以下登录界面。"><a href="#3-现在将出现以下登录界面。" class="headerlink" title="3. 现在将出现以下登录界面。"></a>3. 现在将出现以下登录界面。</h4><p>登录Homebridge软件，可以使用默认的用户名admin和默认的密码admin。</p>
-<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915112925.png"></p>
-<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915113218.png"></p>
+<h4 id="3-现在将出现以下登录界面。">3. 现在将出现以下登录界面。</h4>
+<p>登录Homebridge软件，可以使用默认的用户名admin和默认的密码admin。</p>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915112925.png" alt></p>
+<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/Spring5/20210915113218.png" alt></p>
 
     </div>
     
@@ -415,7 +430,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">195k</span>
+    <span title="站点总字数">198k</span>
   </span>
 </div><!-- <a href="https://icp.gov.moe/?keyword=20180708" rel="external nofollow noreferrer" target="_blank" data-pjax-state="" style="
     border-bottom-width: 0px;
