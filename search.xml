@@ -4749,4 +4749,17 @@ Tomcat：开源免费的轻量级web服务器，实际上运行JSP页面和Servl
 <p>三个地址一个不能少，也不能错，修改成功后重新输入otool -L libqsqlmysql.dylib 可以查看到地址已经被修改成正确的文件路径</p>
 ]]></content>
   </entry>
+  <entry>
+    <title></title>
+    <url>/posts/0.html</url>
+    <content><![CDATA[<p>函数的连续与间断</p>
+<p>各位老师大家下午好，接下来我要分享的是函数的连续与间断，这一部分在历年的考研中一般作为选择题和填空题出现，或者是大题里面的某一个步骤，通常的分值在5到10分，可见这一块的知识点还是非常重要的，所以希望大家掌握好这一章节的内容。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Test</title>
+    <url>/posts/14373.html</url>
+    <content><![CDATA[<h1>这是一级标题</h1>
+]]></content>
+  </entry>
 </search>
