@@ -20,30 +20,25 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"haikez.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":13},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="MVC三层架构 什么是MVC：Model、View、Controller  模型 视图 控制器 早些年">
-<meta property="og:type" content="article">
-<meta property="og:title" content="MVC三层架构">
-<meta property="og:url" content="https://haikez.github.io/posts/30326.html">
+<meta name="description" content="每一个不曾起舞的日子，都是对生命的辜负。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="倪矗的BLOG">
+<meta property="og:url" content="https://haikez.github.io/archives/2024/04/index.html">
 <meta property="og:site_name" content="倪矗的BLOG">
-<meta property="og:description" content="MVC三层架构 什么是MVC：Model、View、Controller  模型 视图 控制器 早些年">
+<meta property="og:description" content="每一个不曾起舞的日子，都是对生命的辜负。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/JavaWeb/20210511161128.png">
-<meta property="og:image" content="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/JavaWeb/20210511161725.png">
-<meta property="article:published_time" content="2021-05-11T08:07:46.000Z">
-<meta property="article:modified_time" content="2022-05-25T08:31:28.000Z">
 <meta property="article:author" content="Haikez">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/JavaWeb/20210511161128.png">
 
 
-<link rel="canonical" href="https://haikez.github.io/posts/30326.html">
+<link rel="canonical" href="https://haikez.github.io/archives/2024/04/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://haikez.github.io/posts/30326.html","path":"posts/30326.html","title":"MVC三层架构"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2024/04/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>MVC三层架构 | 倪矗的BLOG</title>
+<title>归档 | 倪矗的BLOG</title>
   
 
 
@@ -138,7 +133,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -151,7 +146,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">MVC三层架构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A9%E4%BA%9B%E5%B9%B4"><span class="nav-text">早些年</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%B1%82%EF%BC%8C%E6%8E%A7%E5%88%B6%E5%B1%82%E5%B0%B1%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-text">用户直接访问控制层，控制层就可以直接操作数据库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84"><span class="nav-text">MVC三层架构:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Model"><span class="nav-text">Model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#View"><span class="nav-text">View</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Controller%EF%BC%88Servlet%EF%BC%89"><span class="nav-text">Controller（Servlet）</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -234,163 +228,50 @@
 </noscript>
 
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner archive posts-collapse">
 
 
   
-
-
-<div class="post-block">
   
   
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://haikez.github.io/posts/30326.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Haikez">
-      <meta itemprop="description" content="每一个不曾起舞的日子，都是对生命的辜负。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="倪矗的BLOG">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          MVC三层架构
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-05-11 16:07:46" itemprop="dateCreated datePublished" datetime="2021-05-11T16:07:46+08:00">2021-05-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-05-25 16:31:28" itemprop="dateModified" datetime="2022-05-25T16:31:28+08:00">2022-05-25</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/JavaWeb%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">JavaWeb学习</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>332</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <h1>MVC三层架构</h1>
-<p>什么是MVC：Model、View、Controller  模型 视图 控制器</p>
-<h2 id="早些年">早些年</h2>
-<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/JavaWeb/20210511161128.png" alt></p>
-<a id="more"></a>
-<h3 id="用户直接访问控制层，控制层就可以直接操作数据库">用户直接访问控制层，控制层就可以直接操作数据库</h3>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Servlet--&gt;CRUD--&gt;数据库</span><br><span class="line">弊端: 程序十分臃肿，不利于维护</span><br><span class="line">Servlet的代码中包含：处理请求、响应、视图跳转、处理JDBC、处理业务代码、处理逻辑代码</span><br><span class="line">架构:没有什么是加一层解决不了的！</span><br></pre></td></tr></table></figure>
-<h2 id="MVC三层架构">MVC三层架构:</h2>
-<p><img src="https://img-bed-1300797451.cos.ap-nanjing.myqcloud.com/images_bed/JavaWeb/20210511161725.png" alt></p>
-<h3 id="Model">Model</h3>
-<ul>
-<li>业务处理:业务逻辑（Service）</li>
-<li>数据持久层：CRUD （Dao)</li>
-</ul>
-<h3 id="View">View</h3>
-<ul>
-<li>展示数据</li>
-<li>提供链路发起Servlet请求（a,form,img）</li>
-</ul>
-<h3 id="Controller（Servlet）">Controller（Servlet）</h3>
-<ul>
-<li>接收用户的请求：req请求参数、Session信息…</li>
-<li>交给业务层处理对应的代码</li>
-<li>控制视图的跳转（请求转发、重定向）</li>
-</ul>
-
-    </div>
-    
-
-    
-    
-    
-
-    <div>
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
         
-        <div>
-    
-        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
-    
-</div>
-
-        
-    </div>
-
-    <footer class="post-footer">
-          <div class="reward-container">
-  <div></div>
-  <button>
-    赞赏
-  </button>
-  <div class="post-reward">
-      <div>
-        <img src="/images/wechatpay.jpg" alt="Haikez 微信">
-        <span>微信</span>
-      </div>
-      <div>
-        <img src="/images/alipay.jpg" alt="Haikez 支付宝">
-        <span>支付宝</span>
+        <span class="collection-header">很好! 目前共计 82 篇日志。 继续努力。</span>
       </div>
 
-  </div>
-</div>
+      
+    <div class="collection-year">
+      <span class="collection-header">2024</span>
+    </div>
 
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2024-04-21T13:29:59+08:00"
+              content="2024-04-21">
+          04-21
+        </time>
+      </div>
 
-        
+      <div class="post-title">
+          <a class="post-title-link" href="/posts/14373.html" itemprop="url">
+            <span itemprop="name">Test</span>
+          </a>
+      </div>
 
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/posts/35329.html" rel="prev" title="JSP详解">
-                  <i class="fa fa-chevron-left"></i> JSP详解
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/posts/32674.html" rel="next" title="过滤器与监听器">
-                  过滤器与监听器 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
+      
+    </header>
   </article>
-</div>
 
 
-
-
-
+    </div>
+  </div>
+  
+  
+  
 
 </div>
   </main>
